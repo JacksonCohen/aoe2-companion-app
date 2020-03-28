@@ -11,15 +11,19 @@
     "gh-pages": "gatsby build --prefix-paths && gh-pages -d public",
     "lint": "eslint src --fix",
     "dev": "(shx --silent rm -rf public || shx true) && gatsby develop",
-    "server": "cross-env NODE_ENV=development DEBUG=api nodemon server.js"
+    "server": "cross-env NODE_ENV=development DEBUG=api nodemon server.js",
+    "type-check": "tsc --noEmit"
   },
   "author": "Prototype Interactive",
   "license": "MIT",
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
     "basic-auth": "^2.0.1",
     "compression": "^1.7.3",
     "debug": "^4.1.1",
     "express": "^4.16.4",
+    "gatsby-plugin-typescript": "^2.3.1",
     "helmet": "^3.15.0",
     "react-helmet": "^5.2.0",
     "serve-static": "^1.13.2"
