@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import Civilizations from "../Civilizations/";
+import Civilization from "../../interfaces/Civilization.interface";
 
-class App extends Component {
+class App extends Component<{}, { civilizations: Civilization[] }> {
   constructor(props: any) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      civilizations: []
+    };
   }
 
   componentDidMount() {
@@ -26,7 +29,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Civilizations data={this.state.civilizations} />
+        {this.state.civilizations && (
+          <Civilizations data={this.state.civilizations} />
+        )}
       </div>
     );
   }
