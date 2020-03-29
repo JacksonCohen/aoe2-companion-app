@@ -1,6 +1,5 @@
-import React, { Component, useEffect, useState } from "react";
-import Civilizations from "../Civilizations/";
-import Civilization from "../../interfaces/Civilization.interface";
+import React, { useEffect, useState } from "react";
+import CivilizationsList from "../CivilizationsList";
 
 const App = () => {
   const [civilizations, setCivilizations] = useState([]);
@@ -17,7 +16,7 @@ const App = () => {
 
   return (
     <div>
-      <Civilizations data={civilizations} />
+      <CivilizationsList data={civilizations} />
     </div>
   );
 };
