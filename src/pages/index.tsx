@@ -1,7 +1,8 @@
 import React from "react";
+import App from "../components/App/";
+
 export default () => (
-  <div style={{ color: `teal` }}>
-    <h1>About Gatsby</h1>
-    <p>Such wow. Very React.</p>
+  <div>
+    <App />
   </div>
 );
