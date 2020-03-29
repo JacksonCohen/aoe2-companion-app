@@ -1,0 +1,352 @@
+[
+  {
+    "Name": "Britons",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/a/ae/CivIcon-Britons.png/revision/latest?cb=20191107173130",
+    "Speciality": "Specialty: Foot archers",
+    "Unique unit": "Unique unit:  Longbowman",
+    "Unique technologies": "Unique technologies:\n Yeomen\n Warwolf",
+    "Wonder": "Wonder: Aachen Cathedral (before Definitive Edition)\nChichester Cathedral (in the Definitive Edition)",
+    "Civilization bonuses": "Civilization bonuses:\nTown Centers cost -50% wood starting in the Castle Age.\nFoot archers (except Skirmishers) have +1/+2 range in the Castle/Imperial Age.\nShepherds work 25% faster.",
+    "Team bonus": "Team bonus: Archery Ranges work 20% faster."
+  },
+  {
+    "Name": "Byzantines",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/2/27/CivIcon-Byzantines.png/revision/latest?cb=20191107173131",
+    "Speciality": "Specialty: Defense",
+    "Unique unit": "Unique unit:  Cataphract",
+    "Unique technologies": "Unique technologies:\n Greek Fire\n Logistica",
+    "Wonder": "Wonder: Hagia Sophia",
+    "Civilization bonuses": "Civilization bonuses:\nBuildings have +10%/+20%/+30%/+40% HP in the Dark/Feudal/Castle/Imperial Age.\nCamel Riders, Skirmishers, and the Spearman lines are 25% cheaper.\nFire Ships attack 20% faster.\nAdvancing to the Imperial Age is 33% cheaper.\nTown Watch is free.",
+    "Team bonus": "Team bonus: Monks heal 50% faster."
+  },
+  {
+    "Name": "Celts",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/5/59/CivIcon-Celts.png/revision/latest?cb=20191107173132",
+    "Speciality": "Specialty: Infantry and siege weapons",
+    "Unique unit": "Unique unit:  Woad Raider",
+    "Unique technologies": "Unique technologies:\n Stronghold\n Furor Celtica",
+    "Wonder": "Wonder: Rock of Cashel",
+    "Civilization bonuses": "Civilization bonuses:\nInfantry units move 15% faster.\nLumberjacks work 15% faster.\nSiege weapons fire +20% faster.\nEnemy herdables can be converted regardless of enemy units next to them.",
+    "Team bonus": "Team bonus: Siege Workshops work 20% faster."
+  },
+  {
+    "Name": "Chinese",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/c/cc/CivIcon-Chinese.png/revision/latest?cb=20191107173132",
+    "Speciality": "Specialty: Archers",
+    "Unique unit": "Unique unit:  Chu Ko Nu",
+    "Unique technologies": "Unique technologies:\n Great Wall\n Rocketry",
+    "Wonder": "Wonder: Temple of Heaven",
+    "Civilization bonuses": "Civilization bonuses:\nStart game with three extra Villagers, but with -200 food and -50 wood.\nTown Center supports ten population (instead of five).\nTechnologies are 10%/15%/20% cheaper in the Feudal/Castle/Imperial Age.\nDemolition Ships have +50% HP.",
+    "Team bonus": "Team bonus: Farms start with +45 food."
+  },
+  {
+    "Name": "Franks",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/1/1b/CivIcon-Franks.png/revision/latest?cb=20191107173237",
+    "Speciality": "Specialty: Cavalry",
+    "Unique unit": "Unique unit:  Throwing Axeman",
+    "Unique technologies": "Unique technologies:\n Chivalry\n Bearded Axe",
+    "Wonder": "Wonder: St. Vitus Cathedral",
+    "Civilization bonuses": "Civilization bonuses:\nFarm upgrades are free.\nCastles are 25% cheaper.\nCavalry have +20% HP.\nForagers work 25% faster.",
+    "Team bonus": "Team bonus: Knights have +2 Line of Sight."
+  },
+  {
+    "Name": "Goths",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/2/24/CivIcon-Goths.png/revision/latest?cb=20191107173238",
+    "Speciality": "Specialty: Infantry",
+    "Unique unit": "Unique unit:  Huskarl",
+    "Unique technologies": "Unique technologies:\n Anarchy\n Perfusion",
+    "Wonder": "Wonder: Mausoleum of Theoderic I",
+    "Civilization bonuses": "Civilization bonuses:\nInfantry are 35% cheaper starting in the Feudal Age.\nInfantry have +1 attack bonus against standard buildings.\nVillagers have +5 attack against Wild Boars and carry +15 food from hunting.\n+10 population cap in the Imperial Age.",
+    "Team bonus": "Team bonus: Barracks work 20% faster."
+  },
+  {
+    "Name": "Japanese",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/9/9a/CivIcon-Japanese.png/revision/latest?cb=20191107173240",
+    "Speciality": "Specialty: Infantry",
+    "Unique unit": "Unique unit:  Samurai",
+    "Unique technologies": "Unique technologies:\n Yasama\n Kataparuto",
+    "Wonder": "Wonder: Tōdai-ji",
+    "Civilization bonuses": "Civilization bonuses:\nFishing Ships have double HP, +2 pierce armor, and work 5%/10%/15%/20% faster in the Dark/Feudal/Castle/Imperial Age.\nMills, Lumber Camps and Mining Camps are 50% cheaper.\nInfantry attack 25% faster starting in the Feudal Age.",
+    "Team bonus": "Team bonus: Galleys have a +50% longer Line of Sight."
+  },
+  {
+    "Name": "Mongols",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/1/10/CivIcon-Mongols.png/revision/latest?cb=20191107173335",
+    "Speciality": "Specialty: Cavalry archers",
+    "Unique unit": "Unique unit:  Mangudai",
+    "Unique technologies": "Unique technologies:\n Nomads\n Drill",
+    "Wonder": "Wonder: Great Tent of Genghis Khan",
+    "Civilization bonuses": "Civilization bonuses:\nCavalry archers fire 25% faster.\nLight Cavalry and Hussars have +30% HP.\nHunters work +50% faster.",
+    "Team bonus": "Team bonus: The Scout Cavalry line has +2 Line of Sight."
+  },
+  {
+    "Name": "Persians",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/a/ad/CivIcon-Persians.png/revision/latest?cb=20191107173335",
+    "Speciality": "Specialty: Cavalry",
+    "Unique unit": "Unique unit:  War Elephant",
+    "Unique technologies": "Unique technologies:\n Kamandaran\n Mahouts",
+    "Wonder": "Wonder: Taq Kasra",
+    "Civilization bonuses": "Civilization bonuses:\nStart game with +50 food and +50 wood.\nTown Centers and Docks have double HP and work 10%/15%/20% faster in the Feudal/Castle/Imperial Age.",
+    "Team bonus": "Team bonus: Knights have +2 attack against archers."
+  },
+  {
+    "Name": "Saracens",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/5/59/CivIcon-Saracens.png/revision/latest?cb=20191107173336",
+    "Speciality": "Specialty: Cavalry and navy",
+    "Unique unit": "Unique unit:  Mameluke",
+    "Unique technologies": "Unique technologies:\n Madrasah\n Zealotry",
+    "Wonder": "Wonder: Great Mosque of Samarra",
+    "Civilization bonuses": "Civilization bonuses:\nThe commodity trading fee is 5%.\nMarkets cost -75 wood.\nTransport Ships have double HP and +5 carry capacity.\nGalleys attack 20% faster.\nCavalry Archers have +4 attack against standard buildings.",
+    "Team bonus": "Team bonus: : Foot archers have +2 attack against standard buildings."
+  },
+  {
+    "Name": "Teutons",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/3/3f/CivIcon-Teutons.png/revision/latest?cb=20191107173408",
+    "Speciality": "Specialty: Infantry",
+    "Unique unit": "Unique unit:  Teutonic Knight",
+    "Unique technologies": "Unique technologies:\n Ironclad\n Crenellations",
+    "Wonder": "Wonder: Maria Laach Abbey",
+    "Civilization bonuses": "Civilization bonuses:\nMonks have double healing range.\nTowers garrison twice as many units.\nMurder Holes are free.\nFarms are 33% cheaper.\nTown Centers can garrison +10 units.",
+    "Team bonus": "Team bonus: Units resist conversion."
+  },
+  {
+    "Name": "Turks",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/1/1c/CivIcon-Turks.png/revision/latest?cb=20191107173409",
+    "Speciality": "Specialty: Gunpowder units",
+    "Unique unit": "Unique unit:  Janissary",
+    "Unique technologies": "Unique technologies:\n Sipahi\n Artillery",
+    "Wonder": "Wonder: Selimiye Mosque",
+    "Civilization bonuses": "Civilization bonuses:\nGunpowder units have +25% HP.\nGunpowder technologies are 50% cheaper.\nChemistry is free.\nGold Miners work 20% faster.\nLight Cavalry and Hussar upgrades are free.",
+    "Team bonus": "Team bonus: Gunpowder units are created 20% faster."
+  },
+  {
+    "Name": "Vikings",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/c/c9/CivIcon-Vikings.png/revision/latest?cb=20191107173410",
+    "Speciality": "Specialty: Infantry and navy",
+    "Unique unit": "Unique units:\n Berserk\n Longboat",
+    "Unique technologies": "Unique technologies:\n Chieftains\n Berserkergang",
+    "Wonder": "Wonder: Borgund Stave Church",
+    "Civilization bonuses": "Civilization bonuses:\nWarships are 15%/15%/20% cheaper in the Feudal/Castle/Imperial Age.\nInfantry have +10%/+15%/+20% HP in the Feudal/Castle/Imperial Age.\nWheelbarrow and Hand Cart are free.",
+    "Team bonus": "Team bonus: Docks are 15% cheaper."
+  },
+  {
+    "Name": "Aztecs",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/0/0c/CivIcon-Aztecs.png/revision/latest?cb=20191107173129",
+    "Speciality": "Specialty: Monks and infantry",
+    "Unique unit": "Unique unit:  Jaguar Warrior",
+    "Unique technologies": "Unique technologies:\n Atlatl\n Garland Wars",
+    "Wonder": "Wonder: Great Pyramid of Tenochtitlan",
+    "Civilization bonuses": "Civilization bonuses:\nStart the game with an Eagle Scout.\nVillagers carry +5 extra resources.\nAll military units are created 15% faster.\nMonks gain 5 HP for every researched Monastery technology.\nStart with +50 gold.",
+    "Team bonus": "Team bonus: Relics generate +33% gold."
+  },
+  {
+    "Name": "Huns",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/1/17/CivIcon-Huns.png/revision/latest?cb=20191107173238",
+    "Speciality": "Specialty: Cavalry",
+    "Unique unit": "Unique unit:  Tarkan",
+    "Unique technologies": "Unique technologies:\n Marauders\n Atheism",
+    "Wonder": "Wonder: Arch of Constantine (ruined)",
+    "Civilization bonuses": "Civilization bonuses:\nStart the game with -100 wood, but with the population cap at the maximum.\nCavalry Archers are 10%/20% cheaper in the Castle/Imperial Age.\nTrebuchets have +35% accuracy against units.",
+    "Team bonus": "Team bonus: Stables work 20% faster."
+  },
+  {
+    "Name": "Koreans",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/7/73/CivIcon-Koreans.png/revision/latest?cb=20191107173241",
+    "Speciality": "Specialty: Towers and navy",
+    "Unique unit": "Unique units:\n War Wagon\n Turtle Ship",
+    "Unique technologies": "Unique technologies:\n Panokseon\n Shinkichon",
+    "Wonder": "Wonder: Hwangnyong Temple",
+    "Civilization bonuses": "Civilization bonuses:\nVillagers have +3 Line of Sight.\nStone Miners work 20% faster.\nTower upgrades are free (Bombard Tower requires Chemistry).\nTowers (except Bombard Towers) have +1/+2 range in the Castle/Imperial Age.\nFortifications are built 33% faster.",
+    "Team bonus": "Team bonus: Mangonel line minimum range reduced."
+  },
+  {
+    "Name": "Mayans",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/0/05/CivIcon-Mayans.png/revision/latest?cb=20191107173335",
+    "Speciality": "Specialty: Archers",
+    "Unique unit": "Unique unit:  Plumed Archer",
+    "Unique technologies": "Unique technologies:\n Obsidian Arrows\n El Dorado",
+    "Wonder": "Wonder: Tikal Temple I",
+    "Civilization bonuses": "Civilization bonuses:\nStart the game with an Eagle Scout.\nStart the game with +1 Villager, but with -50 food.\nResources last 15% longer.\nFoot archers are 10%/20%/30% cheaper in the Feudal/Castle/Imperial Age.",
+    "Team bonus": "Team bonus: Walls are 50% cheaper."
+  },
+  {
+    "Name": "Spanish",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/0/0a/CivIcon-Spanish.png/revision/latest?cb=20191107173337",
+    "Speciality": "Specialty: Monks and gunpowder units",
+    "Unique unit": "Unique units:\n Conquistador\n Missionary",
+    "Unique technologies": "Unique technologies:\n Inquisition\n Supremacy",
+    "Wonder": "Wonder: Torre del Oro",
+    "Civilization bonuses": "Civilization bonuses:\nBuilders work 30% faster.\nBlacksmith upgrades cost no gold.\nCannon Galleons have better accuracy and faster cannonballs.\nHand Cannoneers and Bombard Cannons fire 15% faster.",
+    "Team bonus": "Team bonus: Trade units generate +25% gold."
+  },
+  {
+    "Name": "Incas",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/5/5e/CivIcon-Incas.png/revision/latest?cb=20191107173239",
+    "Speciality": "Specialty: Infantry",
+    "Unique unit": "Unique units:\n Kamayuk\n Slinger",
+    "Unique technologies": "Unique technologies:\n Andean Sling\n Couriers",
+    "Wonder": "Wonder: Temple of the Sun at Macchu Picchu",
+    "Civilization bonuses": "Civilization bonuses:\nStart the game with an Eagle Scout.\nStart with a free Llama.\nVillagers benefit from Blacksmith infantry upgrades.\nHouses support 10 population.\nBuildings cost -15% stone.",
+    "Team bonus": "Team bonus: Farms are built 50% faster."
+  },
+  {
+    "Name": "Indians",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/8/8b/CivIcon-Indians.png/revision/latest?cb=20191107173239",
+    "Speciality": "Specialty: Camel Riders and gunpowder units",
+    "Unique unit": "Unique units:\n Elephant Archer\n Imperial Camel Rider",
+    "Unique technologies": "Unique technologies:\n Sultans\n Shatagni",
+    "Wonder": "Wonder:\nGol Gumbaz (before Rise of the Rajas)\nBrihadeeswarar Temple (since Rise of the Rajas)",
+    "Civilization bonuses": "Civilization bonuses:\nFishermen work 15% faster and carry +15 food.\nVillagers are 10%/15%/20%/25% cheaper in the Dark/Feudal/Castle/Imperial Age.\nCamel Riders have +1 pierce armor.",
+    "Team bonus": "Team bonus: Camels have +6 attack against buildings."
+  },
+  {
+    "Name": "Italians",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/e/e1/CivIcon-Italians.png/revision/latest?cb=20191116050557",
+    "Speciality": "Specialty: Navy and archers",
+    "Unique unit": "Unique units:\n Genoese Crossbowman\n Condottiero",
+    "Unique technologies": "Unique technologies:\n Pavise\n Silk Road",
+    "Wonder": "Wonder: Genoa Cathedral, Cathedral of St. Lawrence",
+    "Civilization bonuses": "Civilization bonuses:\nAdvancing to the next Age is 15% cheaper.\nDock technologies are 50% cheaper.\nFishing Ships are 20% cheaper.\nGunpowder units are 20% cheaper.",
+    "Team bonus": "Team bonus: Condottieri are available at the Barracks."
+  },
+  {
+    "Name": "Magyars",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/6/68/CivIcon-Magyars.png/revision/latest?cb=20191107173242",
+    "Speciality": "Specialty: Cavalry",
+    "Unique unit": "Unique unit:  Magyar Huszar",
+    "Unique technologies": "Unique technologies:\n Corvinian Army\n Recurve Bow",
+    "Wonder": "Wonder: Hunyad Castle",
+    "Civilization bonuses": "Civilization bonuses:\nForging, Iron Casting, and Blast Furnace are free.\nScout Cavalry line is 15% cheaper.\nVillagers kill wild animals in one strike.",
+    "Team bonus": "Team bonus: Foot archers have +2 Line of Sight."
+  },
+  {
+    "Name": "Slavs",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/1/12/CivIcon-Slavs.png/revision/latest?cb=20191107173337",
+    "Speciality": "Specialty: Infantry and siege weapons",
+    "Unique unit": "Unique unit:  Boyar",
+    "Unique technologies": "Unique technologies:\n Orthodoxy\n Druzhina",
+    "Wonder": "Wonder: Kizhi Pogost",
+    "Civilization bonuses": "Civilization bonuses:\nFarmers work 15% faster.\nTracking is free.\nSiege Workshop units are 15% cheaper.",
+    "Team bonus": "Team bonus: Military buildings (excluding Castles and Docks) provide +5 population."
+  },
+  {
+    "Name": "Berbers",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/7/71/CivIcon-Berbers.png/revision/latest?cb=20191107173130",
+    "Speciality": "Specialty: Navy and cavalry",
+    "Unique unit": "Unique units:\n Camel Archer\n Genitour",
+    "Unique technologies": "Unique technologies:\n Kasbah\n Maghrabi Camels",
+    "Wonder": "Wonder: Hassan Tower",
+    "Civilization bonuses": "Civilization bonuses:\nVillagers move +10% faster.\nStable units are 15%/20% cheaper in the Castle/Imperial Age.\nShips move +10% faster.",
+    "Team bonus": "Team bonus: Genitour are available at the Archery Range."
+  },
+  {
+    "Name": "Ethiopians",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/c/cb/CivIcon-Ethiopians.png/revision/latest?cb=20191107173133",
+    "Speciality": "Specialty: Archers and siege weapons",
+    "Unique unit": "Unique unit:  Shotel Warrior",
+    "Unique technologies": "Unique technologies:\n Royal Heirs\n Torsion Engines",
+    "Wonder": "Wonder: Biete Amanuel",
+    "Civilization bonuses": "Civilization bonuses:\nArchers fire +15% faster.\nReceive +100 food and +100 gold whenever a new Age is reached.\nThe Pikeman upgrade is free.",
+    "Team bonus": "Team bonus: Towers and Outposts have +3 Line of Sight."
+  },
+  {
+    "Name": "Malians",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/8/80/CivIcon-Malians.png/revision/latest?cb=20191107173334",
+    "Speciality": "Specialty: Infantry",
+    "Unique unit": "Unique unit:  Gbeto",
+    "Unique technologies": "Unique technologies:\n Tigui\n Farimba",
+    "Wonder": "Wonder: Great Mosque of Djenné",
+    "Civilization bonuses": "Civilization bonuses:\nBuildings cost -15% wood (except Farms).\nBarracks units have +1/+2/+3 pierce armor in the Feudal/Castle/Imperial Age.\nGold Mining is free.",
+    "Team bonus": "Team bonus: Universities research +80% faster."
+  },
+  {
+    "Name": "Portuguese",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/6/60/CivIcon-Portuguese.png/revision/latest?cb=20191107173336",
+    "Speciality": "Specialty: Navy and gunpowder units",
+    "Unique unit": "Unique units:\n Organ Gun\n Caravel",
+    "Unique technologies": "Unique technologies:\n Carrack\n Arquebus",
+    "Wonder": "Wonder: Belém Tower",
+    "Civilization bonuses": "Civilization bonuses:\nAll units cost -15% gold.\nAll ships have +10% HP.\nThe Feitoria becomes available for building in the Imperial Age.",
+    "Team bonus": "Team bonus: Free Cartography from the beginning of the game."
+  },
+  {
+    "Name": "Burmese",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/7/79/CivIcon-Burmese.png/revision/latest?cb=20191107173131",
+    "Speciality": "Specialty: Monks and elephants",
+    "Unique unit": "Unique unit:  Arambai",
+    "Unique technologies": "Unique technologies:\n Howdah\n Manipur Cavalry",
+    "Wonder": "Wonder: Shwezigon Pagoda",
+    "Civilization bonuses": "Civilization bonuses:\nLumber Camp technologies are free.\nInfantry has +1/+2/+3 attack in the Feudal/Castle/Imperial Age.\nMonastery technologies are 50% cheaper.",
+    "Team bonus": "Team bonus: Relics are visible on the map from the game start."
+  },
+  {
+    "Name": "Khmer",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/e/ec/CivIcon-Khmer.png/revision/latest?cb=20191107173240",
+    "Speciality": "Specialty: Siege weapons and elephants",
+    "Unique unit": "Unique unit:  Ballista Elephant",
+    "Unique technologies": "Unique technologies:\n Tusk Swords\n Double Crossbow",
+    "Wonder": "Wonder: Angkor Wat",
+    "Civilization bonuses": "Civilization bonuses:\nNo buildings are required to construct certain buildings or advance in Age.\nBattle Elephants move +15% faster.\nKhmer Villagers drop off food from farms (1 unit at a time) without needing a drop site.\nVillagers can garrison in Houses.",
+    "Team bonus": "Team bonus: Scorpions have +1 range."
+  },
+  {
+    "Name": "Malay",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/c/c3/CivIcon-Malay.png/revision/latest?cb=20191107173334",
+    "Speciality": "Specialty: Navy",
+    "Unique unit": "Unique unit:  Karambit Warrior",
+    "Unique technologies": "Unique technologies:\n Thalassocracy\n Forced Levy",
+    "Wonder": "Wonder: Kalasan Temple",
+    "Civilization bonuses": "Civilization bonuses:\nAdvancing in Age is +80% faster.\nFish Traps are 33% cheaper.\nFish Traps provide unlimited food.\nBattle Elephants are 30% cheaper.",
+    "Team bonus": "Team bonus: Docks have double Line of Sight."
+  },
+  {
+    "Name": "Vietnamese",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/0/07/CivIcon-Vietnamese.png/revision/latest?cb=20191107173409",
+    "Speciality": "Specialty: Archers",
+    "Unique unit": "Unique units:\n Rattan Archer\n Imperial Skirmisher",
+    "Unique technologies": "Unique technologies:\n Chatras\n Paper Money",
+    "Wonder": "Wonder: Bút Tháp",
+    "Civilization bonuses": "Civilization bonuses:\nReveal enemy positions at game start.\nArchery Range units have +20% HP.\nConscription is free.",
+    "Team bonus": "Team bonus: Imperial Skirmishers are available at the Archery Range."
+  },
+  {
+    "Name": "Bulgarians",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/c/ce/CivIcon-Bulgarians.png/revision/latest?cb=20191107173130",
+    "Speciality": "Specialty: Infantry and Cavalry",
+    "Unique unit": "Unique units:  Konnik",
+    "Unique technologies": "Unique technologies:\n Stirrups\n Bagains",
+    "Wonder": "Wonder: Preslav Round Church",
+    "Civilization bonuses": "Civilization bonuses:\nMilitia-line upgrades free.\nTown Centers cost -50% stone.\nCan build Krepost.",
+    "Team bonus": "Team bonus: Blacksmiths work 50% faster."
+  },
+  {
+    "Name": "Cumans",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/c/cc/CivIcon-Cumans.png/revision/latest?cb=20191107173133",
+    "Speciality": "Specialty: Cavalry",
+    "Unique unit": "Unique units:  Kipchak",
+    "Unique technologies": "Unique technologies:\n Steppe Husbandry\n Cuman Mercenaries",
+    "Wonder": "Wonder: Sarkel Fortress (ruined)",
+    "Civilization bonuses": "Civilization bonuses:\nAdditional Town Center can be built in the Feudal Age.\nSiege Workshops and Battering Ram available in the Feudal Age.\nCavalry move 5% faster in the Feudal Age, 10% faster in Castle Age, and 15% faster in Imperial Age.",
+    "Team bonus": "Team bonus: Palisade Walls have +50% hit points."
+  },
+  {
+    "Name": "Lithuanians",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/0/0d/CivIcon-Lithuanians.png/revision/latest?cb=20191107173241",
+    "Speciality": "Specialty: Cavalry and Monks",
+    "Unique unit": "Unique units:  Leitis",
+    "Unique technologies": "Unique technologies:\n Hill Forts\n Tower Shields",
+    "Wonder": "Wonder: Trakai Island Castle",
+    "Civilization bonuses": "Civilization bonuses:\nStart with +150 food.\nSpearman-line and Skirmishers move 10% faster.\nEach garrisoned Relic gives +1 attack to Knights and Leitis (maximum +4).",
+    "Team bonus": "Team bonus: Monastery works 20% faster."
+  },
+  {
+    "Name": "Tatars",
+    "Coat of Arms": "https://vignette.wikia.nocookie.net/ageofempires/images/f/f2/CivIcon-Tatars.png/revision/latest?cb=20191107173338",
+    "Speciality": "Specialty: Cavalry archers",
+    "Unique unit": "Unique units:  Keshik",
+    "Unique technologies": "Unique technologies:\n Silk Armor\n Timurid Siegecraft",
+    "Wonder": "Wonder: Ulugh Beg Observatory",
+    "Civilization bonuses": "Civilization bonuses:\nHerdables contain +50% food.\nUnits deal +25% damage when attacking from hills (stacks with the regular hill attack bonus).\nParthian Tactics are free.",
+    "Team bonus": "Team bonus: Cavalry Archers +2 LOS."
+  }
+]
