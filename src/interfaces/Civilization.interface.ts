@@ -3,8 +3,9 @@ export default interface Civilization {
   name: string;
   "coat of arms": string;
   speciality: string;
-  uniqueunit: string[];
+  "unique unit": string[];
   "unique technologies": string[];
+  wonder: string;
   "civilization bonuses": string[];
-  team_bonus: string;
+  "team bonus": string;
 }
