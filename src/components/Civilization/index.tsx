@@ -1,21 +1,31 @@
 import React from "react";
+import "./_Civilization.scss";
 
 const Civilization = ({
   id,
   name,
   coat,
-  handleClick
+  checked,
+  handleChange
 }: {
   id: number;
   name: string;
   coat: string;
-  handleClick: Function;
+  checked: boolean;
+  handleChange: Function;
 }) => {
   return (
-    <div className="civilization">
-      <input type="checkbox" id={name} onClick={() => handleClick(id)} />
+    <div className="civilization col-2">
+      <input
+        className="checkbox"
+        type="checkbox"
+        checked={checked}
+        id={name}
+        onChange={() => handleChange(id)}
+      />
+      <span className="checkmark"></span>
       <label htmlFor={name}>
-        <img src={coat} alt={`${name} logo`} />
+        <img className="" src={coat} alt={`${name} logo`} />
         {name}
       </label>
     </div>
