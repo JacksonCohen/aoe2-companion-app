@@ -1,10 +1,23 @@
 import React from "react";
 
-const Civilization = ({ civ }: any) => {
+const Civilization = ({
+  id,
+  name,
+  coat,
+  handleClick
+}: {
+  id: number;
+  name: string;
+  coat: string;
+  handleClick: Function;
+}) => {
   return (
-    <div className="civ">
-      <input type="checkbox" id={civ} />
-      <label htmlFor={civ}>{civ}</label>
+    <div className="civilization">
+      <input type="checkbox" id={name} onClick={() => handleClick(id)} />
+      <label htmlFor={name}>
+        <img src={coat} alt={`${name} logo`} />
+        {name}
+      </label>
     </div>
   );
 };
