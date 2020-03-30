@@ -16,7 +16,6 @@ const CivilizationsList = () => {
     // the ! represents non null assertion operator telling the compiler that the expression cannot be null or undefined
     let civs = [...civilizations!];
     civs[id].checked = !civs[id].checked;
-    console.log(civs[id], civs[id].checked, civs);
     setCivilizations(civs);
   };
 
@@ -39,6 +38,23 @@ const CivilizationsList = () => {
     setCivilizations(civs);
   };
 
+  const selectCiv = () => {
+    const validCivs = [];
+
+    for (const civ of civilizations!) {
+      if (civ.checked) {
+        validCivs.push(civ.id);
+      }
+    }
+    console.log(
+      civilizations![validCivs![Math.floor(Math.random() * validCivs!.length)]]
+        .name
+    );
+    return civilizations![
+      validCivs![Math.floor(Math.random() * validCivs!.length)]
+    ];
+  };
+
   return (
     <Fragment>
       <button onClick={selectAll}>Select all</button>
@@ -59,6 +75,10 @@ const CivilizationsList = () => {
                 />
               );
             })}
+        </div>
+
+        <div className="my-3 text-center">
+          <button onClick={selectCiv}>Randomize!</button>
         </div>
       </div>
     </Fragment>
