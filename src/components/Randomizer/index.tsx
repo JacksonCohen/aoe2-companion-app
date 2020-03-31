@@ -1,9 +1,9 @@
-import React from "react";
-import CivilizationsList from "../CivilizationsList";
+import React from 'react';
+import CivilizationsList from '../CivilizationsList';
 
 const Randomizer = () => {
   return (
-    <div className="container">
+    <div className='container'>
       <CivilizationsList />
     </div>
   );

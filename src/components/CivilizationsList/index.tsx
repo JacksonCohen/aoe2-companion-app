@@ -1,12 +1,10 @@
-import React, { Fragment, useState, useEffect } from "react";
-import CivilizationInterface from "../../interfaces/Civilization.interface";
-import Civilization from "../Civilization";
-import { civilizationData } from "../../data/civs";
+import React, { Fragment, useState, useEffect } from 'react';
+import CivilizationInterface from '../../interfaces/Civilization.interface';
+import Civilization from '../Civilization';
+import { civilizationData } from '../../data/civs';
 
 const CivilizationsList = () => {
-  const [civilizations, setCivilizations] = useState<
-    CivilizationInterface[] | undefined
-  >([]);
+  const [civilizations, setCivilizations] = useState<CivilizationInterface[] | undefined>([]);
 
   useEffect(() => {
     civilizationData.forEach(civ => {
@@ -29,13 +27,9 @@ const CivilizationsList = () => {
   };
 
   const selectCiv = () => {
-    const validCivs: CivilizationInterface[] = civilizations!.filter(
-      civ => civ.checked
-    );
+    const validCivs: CivilizationInterface[] = civilizations!.filter(civ => civ.checked);
 
-    return civilizations![
-      validCivs![Math.floor(Math.random() * validCivs!.length)].id
-    ];
+    return civilizations![validCivs![Math.floor(Math.random() * validCivs!.length)].id];
   };
 
   return (
@@ -43,24 +37,22 @@ const CivilizationsList = () => {
       <button onClick={() => selectOrClearAll(true)}>Select all</button>
       <button onClick={() => selectOrClearAll(false)}>Clear all</button>
 
-      <div className="container civ-list">
-        <div className="row">
-          {civilizations &&
-            civilizations.map((civ: CivilizationInterface) => {
-              return (
-                <Civilization
-                  key={civ.id}
-                  id={civ.id}
-                  name={civ.name}
-                  coat={civ.coatOfArms}
-                  checked={civ.checked || false}
-                  handleChange={handleChange}
-                />
-              );
-            })}
-        </div>
+      <div className='civ-list'>
+        {civilizations &&
+          civilizations.map((civ: CivilizationInterface) => {
+            return (
+              <Civilization
+                key={civ.id}
+                id={civ.id}
+                name={civ.name}
+                coat={civ.coatOfArms}
+                checked={civ.checked || false}
+                handleChange={handleChange}
+              />
+            );
+          })}
 
-        <div className="my-3 text-center">
+        <div>
           <button onClick={selectCiv}>Randomize!</button>
         </div>
       </div>

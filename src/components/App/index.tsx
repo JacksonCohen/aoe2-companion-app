@@ -1,8 +1,8 @@
-import React from "react";
-import Randomizer from "../Randomizer";
+import React from 'react';
+import Randomizer from '../Randomizer';
 
-import "../../../sass/style.scss";
-import "./_App.scss";
+import '../../../sass/style.scss';
+import './_App.scss';
 
 const App = () => {
   return (

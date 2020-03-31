@@ -1,5 +1,5 @@
-import React from "react";
-import "./_Civilization.scss";
+import React from 'react';
+import './_Civilization.scss';
 
 interface CivilizationData {
   id: number;
@@ -9,25 +9,19 @@ interface CivilizationData {
   handleChange: Function;
 }
 
-const Civilization = ({
-  id,
-  name,
-  coat,
-  checked,
-  handleChange
-}: CivilizationData) => {
+const Civilization = ({ id, name, coat, checked, handleChange }: CivilizationData) => {
   return (
-    <div className="civilization col-2">
+    <div className='civilization'>
       <input
-        className="checkbox"
-        type="checkbox"
+        className='checkbox'
+        type='checkbox'
         checked={checked}
         id={name}
         onChange={() => handleChange(id)}
       />
-      <span className="checkmark"></span>
+      <span className='checkmark'></span>
       <label htmlFor={name}>
-        <img className="" src={coat} alt={`${name} logo`} />
+        <img className='' src={coat} alt={`${name} logo`} />
         {name}
       </label>
     </div>
