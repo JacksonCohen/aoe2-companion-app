@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Gatsby Default Starter`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-typescript`,
     `svgo`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-postcss`,
@@ -11,9 +12,9 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: `${__dirname}/src/data/`,
-      },
+        path: `${__dirname}/src/data/`
+      }
     },
     `gatsby-transformer-json`
-  ],
-}
+  ]
+};
