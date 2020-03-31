@@ -3,6 +3,7 @@
 # Gatsby
 .cache/
 public/
+reduxcache*
 
 ### Node ###
 
