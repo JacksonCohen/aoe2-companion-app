@@ -35,7 +35,7 @@ const CivilizationsList = () => {
 
     validCivs.length
       ? setSelectedRandomCiv(
-          civilizations![validCivs![Math.floor(Math.random() * validCivs!.length)].id]
+          civilizations![validCivs![Math.floor(Math.random() * validCivs!.length)].id] // select one of the checked civilizations randomly
         )
       : undefined;
   };
@@ -72,6 +72,7 @@ const CivilizationsList = () => {
         <button onClick={selectCiv}>Randomize!</button>
       </div>
 
+      {/* if the randomizer has been used, open the modal */}
       {!!Object.keys(selectedRandomCiv).length ? (
         <RandomizerModal civilization={selectedRandomCiv} closeModal={closeModal} />
       ) : null}

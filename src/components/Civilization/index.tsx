@@ -21,7 +21,7 @@ const Civilization = ({ id, name, coat, checked, handleChange }: Props) => {
       />
       <span className='checkmark'></span>
       <label htmlFor={name}>
-        <img className='' src={coat} alt={`${name} logo`} />
+        <img className='' src={coat} alt={name} />
         {name}
       </label>
     </div>

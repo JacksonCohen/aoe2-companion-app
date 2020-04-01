@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import CivilizationsList from '../CivilizationsList';
 
 const Randomizer = () => {
   return (
-    <div className='container'>
+    <Fragment>
       <CivilizationsList />
-    </div>
+    </Fragment>
   );
 };
 

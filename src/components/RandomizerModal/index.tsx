@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import './_RandomizerModal.scss';
 
-const RandomizerResults = ({ civilization, closeModal }: any) => {
+const RandomizerModal = ({ civilization, closeModal }: any) => {
   const [learnMore, setLearnMore] = useState(false);
   const {
     name,
@@ -15,6 +15,28 @@ const RandomizerResults = ({ civilization, closeModal }: any) => {
     civilizationBonuses,
     teamBonus
   } = civilization;
+
+  const formatList = (list: string[], longList: boolean | undefined = false) => {
+    let output = '';
+
+    if (list.length === 1) return list[0];
+
+    if (!longList) {
+      if (list.length === 2) {
+        return `${list[0]} and ${list[1]}`;
+      } else {
+        list.forEach(item => (output += `${item}, `));
+      }
+    } else {
+      return (
+        <ol>
+          {list.map(item => (
+            <li>{item}</li>
+          ))}
+        </ol>
+      );
+    }
+  };
 
   return (
     <div className='results-modal'>
@@ -38,14 +60,15 @@ const RandomizerResults = ({ civilization, closeModal }: any) => {
           <div className='speciality'>Speciality: {speciality}</div>
           <div className='uniqueUnit'>
             {uniqueUnit.length > 1 ? 'Unique units: ' : 'Unique unit: '}
-            {uniqueUnit}
+            {formatList(uniqueUnit)}
           </div>
           <div className='uniqueTechnologies'>
-            {uniqueTechnologies.length > 1 ? 'Unique technologies: ' : 'Unique technology: '}
-            {uniqueTechnologies}
+            Unique technologies: {formatList(uniqueTechnologies)}
           </div>
           <div className='wonder'>Wonder: {wonder}</div>
-          <div className='civilizationBonuses'>Civilization bonuses: {civilizationBonuses}</div>
+          <div className='civilizationBonuses'>
+            Civilization bonuses: {formatList(civilizationBonuses, true)}
+          </div>
           <div className='teamBonus'>Team bonus: {teamBonus}</div>
 
           {/* <div className="guide">View guides for the {name}</div> */}
@@ -55,4 +78,4 @@ const RandomizerResults = ({ civilization, closeModal }: any) => {
   );
 };
 
-export default RandomizerResults;
+export default RandomizerModal;
