@@ -8,5 +8,7 @@ export default interface Civilization {
   wonder: string;
   civilizationBonuses: string[];
   teamBonus: string;
+  geographicRegion: string[];
+  expansion: string;
   checked?: boolean;
 }
