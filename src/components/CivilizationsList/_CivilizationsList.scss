@@ -1,16 +1,17 @@
-.civ-list {
+.section__civ-list > div {
   display: flex;
   flex-flow: row wrap;
   margin: 20px;
 }
 
-.randomizer {
+.button__randomizer {
   display: flex;
   justify-content: center;
   margin: 20px 0;
+  font-family: Trattello;
 }
 
-.select-options {
+.button__select-options {
   display: flex;
   justify-content: flex-end;
 }

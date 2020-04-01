@@ -30,8 +30,8 @@ const RandomizerModal = ({ civilization, closeModal }: any) => {
     } else {
       return (
         <ol>
-          {list.map(item => (
-            <li>{item}</li>
+          {list.map((item, index) => (
+            <li key={index}>{item}</li>
           ))}
         </ol>
       );
@@ -39,37 +39,37 @@ const RandomizerModal = ({ civilization, closeModal }: any) => {
   };
 
   return (
-    <div className='results-modal'>
-      <span id='exit' onClick={(): void => closeModal()}>
+    <div className='modal'>
+      <span id='modal__exit' onClick={(): void => closeModal()}>
         &times;
       </span>
-      <div className='results'>
-        <div className='name'>You've received the {name}!</div>
-        <div className='coatOfArms'>
+      <div className='modal__results'>
+        <div id='civ__name'>You've received the {name}!</div>
+        <div id='civ__coatOfArms'>
           <img src={coatOfArms} alt={name} />
         </div>
       </div>
 
       {!learnMore ? (
-        <div className='learn-more'>
+        <div className='modal__learn-more'>
           <a onClick={(): void => setLearnMore(true)}>Learn more?</a>
         </div>
       ) : null}
       {learnMore ? (
-        <div className='civ-info'>
-          <div className='speciality'>Speciality: {speciality}</div>
-          <div className='uniqueUnit'>
+        <div className='civ__civ-info'>
+          <div id='civ__speciality'>Speciality: {speciality}</div>
+          <div id='civ__uniqueUnit'>
             {uniqueUnit.length > 1 ? 'Unique units: ' : 'Unique unit: '}
             {formatList(uniqueUnit)}
           </div>
-          <div className='uniqueTechnologies'>
+          <div id='civ__uniqueTechnologies'>
             Unique technologies: {formatList(uniqueTechnologies)}
           </div>
-          <div className='wonder'>Wonder: {wonder}</div>
-          <div className='civilizationBonuses'>
+          <div id='civ__wonder'>Wonder: {wonder}</div>
+          <div id='civ__civilizationBonuses'>
             Civilization bonuses: {formatList(civilizationBonuses, true)}
           </div>
-          <div className='teamBonus'>Team bonus: {teamBonus}</div>
+          <div id='civ__teamBonus'>Team bonus: {teamBonus}</div>
 
           {/* <div className="guide">View guides for the {name}</div> */}
         </div>

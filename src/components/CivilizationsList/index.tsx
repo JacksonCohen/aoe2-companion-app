@@ -47,30 +47,32 @@ const CivilizationsList = () => {
 
   return (
     <Fragment>
-      <div className='select-options'>
+      <div className='button__select-options'>
         <button onClick={() => selectOrClearAll(true)}>Select all</button>
         <button onClick={() => selectOrClearAll(false)}>Clear all</button>
       </div>
 
-      <div className='civ-list'>
-        {civilizations &&
-          civilizations.map((civ: CivilizationInterface) => {
-            return (
-              <Civilization
-                key={civ.id}
-                id={civ.id}
-                name={civ.name}
-                coat={civ.coatOfArms}
-                checked={civ.checked || false}
-                handleChange={handleChange}
-              />
-            );
-          })}
-      </div>
+      <section className='section__civ-list'>
+        <div>
+          {civilizations &&
+            civilizations.map((civ: CivilizationInterface) => {
+              return (
+                <Civilization
+                  key={civ.id}
+                  id={civ.id}
+                  name={civ.name}
+                  coat={civ.coatOfArms}
+                  checked={civ.checked || false}
+                  handleChange={handleChange}
+                />
+              );
+            })}
+        </div>
+      </section>
 
-      <div className='randomizer'>
-        <button onClick={selectCiv}>Randomize!</button>
-      </div>
+      <button className='button__randomizer' onClick={selectCiv}>
+        Randomize!
+      </button>
 
       {/* if the randomizer has been used, open the modal */}
       {!!Object.keys(selectedRandomCiv).length ? (

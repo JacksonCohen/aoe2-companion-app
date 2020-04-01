@@ -1,4 +1,4 @@
-.results-modal {
+.modal {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -11,16 +11,19 @@
   animation-name: animatetop;
   animation-duration: 0.4s;
   z-index: 2;
-  .name,
-  .coatOfArms {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 10px;
-  }
-  .results {
+
+  .modal__results {
     padding-top: 20px;
+
+    #civ__name,
+    #civ__coatOfArms {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 10px;
+    }
   }
-  .learn-more {
+
+  .modal__learn-more {
     display: flex;
     justify-content: center;
     cursor: pointer;
@@ -30,13 +33,16 @@
       text-decoration: underline;
     }
   }
+
   ol {
     margin: 10px 0;
   }
-  .civ-info {
+
+  .civ__civ-info {
     padding: 5px 20px 20px 20px;
   }
-  #exit {
+
+  #modal__exit {
     position: absolute;
     right: 5px;
     font-size: 28px;
@@ -48,6 +54,7 @@
       cursor: pointer;
     }
   }
+
   @keyframes animatetop {
     from {
       top: -300px;
@@ -58,23 +65,4 @@
       opacity: 1;
     }
   }
-}
-
-#dimmer {
-  display: none;
-  background: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.confirmation {
-  display: none;
-  z-index: 50;
-  border-radius: 5px;
-  left: 0;
-  top: 0;
 }
