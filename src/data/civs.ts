@@ -6,7 +6,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Britons',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/a/ae/CivIcon-Britons.png/revision/latest?cb=20191107173130',
-    speciality: 'Foot archers',
+    specialty: 'Foot archers',
     uniqueUnit: ['Longbowman'],
     uniqueTechnologies: ['Yeomen', 'Warwolf'],
     wonder:
@@ -23,7 +23,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Byzantines',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/2/27/CivIcon-Byzantines.png/revision/latest?cb=20191107173131',
-    speciality: 'Defense',
+    specialty: 'Defense',
     uniqueUnit: ['Cataphract'],
     uniqueTechnologies: ['Greek Fire', 'Logistica'],
     wonder: 'Hagia Sophia',
@@ -41,7 +41,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Celts',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/5/59/CivIcon-Celts.png/revision/latest?cb=20191107173132',
-    speciality: 'Infantry and siege weapons',
+    specialty: 'Infantry and siege weapons',
     uniqueUnit: ['Woad Raider'],
     uniqueTechnologies: ['Stronghold', 'Furor Celtica'],
     wonder: 'Rock of Cashel',
@@ -58,7 +58,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Chinese',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/c/cc/CivIcon-Chinese.png/revision/latest?cb=20191107173132',
-    speciality: 'Archers',
+    specialty: 'Archers',
     uniqueUnit: ['Chu Ko Nu'],
     uniqueTechnologies: ['Great Wall', 'Rocketry'],
     wonder: 'Temple of Heaven',
@@ -75,7 +75,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Franks',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/1/1b/CivIcon-Franks.png/revision/latest?cb=20191107173237',
-    speciality: 'Cavalry',
+    specialty: 'Cavalry',
     uniqueUnit: ['Throwing Axeman'],
     uniqueTechnologies: ['Chivalry', 'Bearded Axe'],
     wonder: 'St. Vitus Cathedral',
@@ -92,7 +92,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Goths',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/2/24/CivIcon-Goths.png/revision/latest?cb=20191107173238',
-    speciality: 'Infantry',
+    specialty: 'Infantry',
     uniqueUnit: ['Huskarl'],
     uniqueTechnologies: ['Anarchy', 'Perfusion'],
     wonder: 'Mausoleum of Theoderic I',
@@ -109,7 +109,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Japanese',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/9/9a/CivIcon-Japanese.png/revision/latest?cb=20191107173240',
-    speciality: 'Infantry',
+    specialty: 'Infantry',
     uniqueUnit: ['Samurai'],
     uniqueTechnologies: ['Yasama', 'Kataparuto'],
     wonder: 'Tōdai-ji',
@@ -125,7 +125,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Mongols',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/1/10/CivIcon-Mongols.png/revision/latest?cb=20191107173335',
-    speciality: 'Cavalry archers',
+    specialty: 'Cavalry archers',
     uniqueUnit: ['Mangudai'],
     uniqueTechnologies: ['Nomads', 'Drill'],
     wonder: 'Great Tent of Genghis Khan',
@@ -141,7 +141,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Persians',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/a/ad/CivIcon-Persians.png/revision/latest?cb=20191107173335',
-    speciality: 'Cavalry',
+    specialty: 'Cavalry',
     uniqueUnit: ['War Elephant'],
     uniqueTechnologies: ['Kamandaran', 'Mahouts'],
     wonder: 'Taq Kasra',
@@ -156,7 +156,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Saracens',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/5/59/CivIcon-Saracens.png/revision/latest?cb=20191107173336',
-    speciality: 'Cavalry and navy',
+    specialty: 'Cavalry and navy',
     uniqueUnit: ['Mameluke'],
     uniqueTechnologies: ['Madrasah', 'Zealotry'],
     wonder: 'Great Mosque of Samarra',
@@ -174,7 +174,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Teutons',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/3/3f/CivIcon-Teutons.png/revision/latest?cb=20191107173408',
-    speciality: 'Infantry',
+    specialty: 'Infantry',
     uniqueUnit: ['Teutonic Knight'],
     uniqueTechnologies: ['Ironclad', 'Crenellations'],
     wonder: 'Maria Laach Abbey',
@@ -192,7 +192,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Turks',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/1/1c/CivIcon-Turks.png/revision/latest?cb=20191107173409',
-    speciality: 'Gunpowder units',
+    specialty: 'Gunpowder units',
     uniqueUnit: ['Janissary'],
     uniqueTechnologies: ['Sipahi', 'Artillery'],
     wonder: 'Selimiye Mosque',
@@ -210,7 +210,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Vikings',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/c/c9/CivIcon-Vikings.png/revision/latest?cb=20191107173410',
-    speciality: 'Infantry and navy',
+    specialty: 'Infantry and navy',
     uniqueUnit: ['Berserk', 'Longboat'],
     uniqueTechnologies: ['Chieftains', 'Berserkergang'],
     wonder: 'Borgund Stave Church',
@@ -226,7 +226,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Aztecs',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/0/0c/CivIcon-Aztecs.png/revision/latest?cb=20191107173129',
-    speciality: 'Monks and infantry',
+    specialty: 'Monks and infantry',
     uniqueUnit: ['Jaguar Warrior'],
     uniqueTechnologies: ['Atlatl', 'Garland Wars'],
     wonder: 'Great Pyramid of Tenochtitlan',
@@ -244,7 +244,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Huns',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/1/17/CivIcon-Huns.png/revision/latest?cb=20191107173238',
-    speciality: 'Cavalry',
+    specialty: 'Cavalry',
     uniqueUnit: ['Tarkan'],
     uniqueTechnologies: ['Marauders', 'Atheism'],
     wonder: 'Arch of Constantine (ruined)',
@@ -260,7 +260,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Koreans',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/7/73/CivIcon-Koreans.png/revision/latest?cb=20191107173241',
-    speciality: 'Towers and navy',
+    specialty: 'Towers and navy',
     uniqueUnit: ['War Wagon', 'Turtle Ship'],
     uniqueTechnologies: ['Panokseon', 'Shinkichon'],
     wonder: 'Hwangnyong Temple',
@@ -278,7 +278,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Mayans',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/0/05/CivIcon-Mayans.png/revision/latest?cb=20191107173335',
-    speciality: 'Archers',
+    specialty: 'Archers',
     uniqueUnit: ['Plumed Archer'],
     uniqueTechnologies: ['Obsidian Arrows', 'El Dorado'],
     wonder: 'Tikal Temple I',
@@ -295,7 +295,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Spanish',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/0/0a/CivIcon-Spanish.png/revision/latest?cb=20191107173337',
-    speciality: 'Monks and gunpowder units',
+    specialty: 'Monks and gunpowder units',
     uniqueUnit: ['Conquistador', 'Missionary'],
     uniqueTechnologies: ['Inquisition', 'Supremacy'],
     wonder: 'Torre del Oro',
@@ -312,7 +312,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Incas',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/5/5e/CivIcon-Incas.png/revision/latest?cb=20191107173239',
-    speciality: 'Infantry',
+    specialty: 'Infantry',
     uniqueUnit: ['Kamayuk', 'Slinger'],
     uniqueTechnologies: ['Andean Sling', 'Couriers'],
     wonder: 'Temple of the Sun at Macchu Picchu',
@@ -330,7 +330,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Indians',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/8/8b/CivIcon-Indians.png/revision/latest?cb=20191107173239',
-    speciality: 'Camel Riders and gunpowder units',
+    specialty: 'Camel Riders and gunpowder units',
     uniqueUnit: ['Elephant Archer', 'Imperial Camel Rider'],
     uniqueTechnologies: ['Sultans', 'Shatagni'],
     wonder:
@@ -347,7 +347,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Italians',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/e/e1/CivIcon-Italians.png/revision/latest?cb=20191116050557',
-    speciality: 'Navy and archers',
+    specialty: 'Navy and archers',
     uniqueUnit: ['Genoese Crossbowman', 'Condottiero'],
     uniqueTechnologies: ['Pavise', 'Silk Road'],
     wonder: 'Genoa Cathedral, Cathedral of St. Lawrence',
@@ -364,7 +364,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Magyars',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/6/68/CivIcon-Magyars.png/revision/latest?cb=20191107173242',
-    speciality: 'Cavalry',
+    specialty: 'Cavalry',
     uniqueUnit: ['Magyar Huszar'],
     uniqueTechnologies: ['Corvinian Army', 'Recurve Bow'],
     wonder: 'Hunyad Castle',
@@ -380,7 +380,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Slavs',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/1/12/CivIcon-Slavs.png/revision/latest?cb=20191107173337',
-    speciality: 'Infantry and siege weapons',
+    specialty: 'Infantry and siege weapons',
     uniqueUnit: ['Boyar'],
     uniqueTechnologies: ['Orthodoxy', 'Druzhina'],
     wonder: 'Kizhi Pogost',
@@ -396,7 +396,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Berbers',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/7/71/CivIcon-Berbers.png/revision/latest?cb=20191107173130',
-    speciality: 'Navy and cavalry',
+    specialty: 'Navy and cavalry',
     uniqueUnit: ['Camel Archer', 'Genitour'],
     uniqueTechnologies: ['Kasbah', 'Maghrabi Camels'],
     wonder: 'Hassan Tower',
@@ -412,7 +412,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Ethiopians',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/c/cb/CivIcon-Ethiopians.png/revision/latest?cb=20191107173133',
-    speciality: 'Archers and siege weapons',
+    specialty: 'Archers and siege weapons',
     uniqueUnit: ['Shotel Warrior'],
     uniqueTechnologies: ['Royal Heirs', 'Torsion Engines'],
     wonder: 'Biete Amanuel',
@@ -428,7 +428,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Malians',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/8/80/CivIcon-Malians.png/revision/latest?cb=20191107173334',
-    speciality: 'Infantry',
+    specialty: 'Infantry',
     uniqueUnit: ['Gbeto'],
     uniqueTechnologies: ['Tigui', 'Farimba'],
     wonder: 'Great Mosque of Djenné',
@@ -444,7 +444,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Portuguese',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/6/60/CivIcon-Portuguese.png/revision/latest?cb=20191107173336',
-    speciality: 'Navy and gunpowder units',
+    specialty: 'Navy and gunpowder units',
     uniqueUnit: ['Organ Gun', 'Caravel'],
     uniqueTechnologies: ['Carrack', 'Arquebus'],
     wonder: 'Belém Tower',
@@ -460,7 +460,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Burmese',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/7/79/CivIcon-Burmese.png/revision/latest?cb=20191107173131',
-    speciality: 'Monks and elephants',
+    specialty: 'Monks and elephants',
     uniqueUnit: ['Arambai'],
     uniqueTechnologies: ['Howdah', 'Manipur Cavalry'],
     wonder: 'Shwezigon Pagoda',
@@ -476,7 +476,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Khmer',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/e/ec/CivIcon-Khmer.png/revision/latest?cb=20191107173240',
-    speciality: 'Siege weapons and elephants',
+    specialty: 'Siege weapons and elephants',
     uniqueUnit: ['Ballista Elephant'],
     uniqueTechnologies: ['Tusk Swords', 'Double Crossbow'],
     wonder: 'Angkor Wat',
@@ -493,7 +493,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Malay',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/c/c3/CivIcon-Malay.png/revision/latest?cb=20191107173334',
-    speciality: 'Navy',
+    specialty: 'Navy',
     uniqueUnit: ['Karambit Warrior'],
     uniqueTechnologies: ['Thalassocracy', 'Forced Levy'],
     wonder: 'Kalasan Temple',
@@ -510,7 +510,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Vietnamese',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/0/07/CivIcon-Vietnamese.png/revision/latest?cb=20191107173409',
-    speciality: 'Archers',
+    specialty: 'Archers',
     uniqueUnit: ['Rattan Archer', 'Imperial Skirmisher'],
     uniqueTechnologies: ['Chatras', 'Paper Money'],
     wonder: 'Bút Tháp',
@@ -526,7 +526,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Bulgarians',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/c/ce/CivIcon-Bulgarians.png/revision/latest?cb=20191107173130',
-    speciality: 'Infantry and Cavalry',
+    specialty: 'Infantry and Cavalry',
     uniqueUnit: ['Konnik'],
     uniqueTechnologies: ['Stirrups', 'Bagains'],
     wonder: 'Preslav Round Church',
@@ -542,7 +542,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Cumans',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/c/cc/CivIcon-Cumans.png/revision/latest?cb=20191107173133',
-    speciality: 'Cavalry',
+    specialty: 'Cavalry',
     uniqueUnit: ['Kipchak'],
     uniqueTechnologies: ['Steppe Husbandry', 'Cuman Mercenaries'],
     wonder: 'Sarkel Fortress (ruined)',
@@ -558,7 +558,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Lithuanians',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/0/0d/CivIcon-Lithuanians.png/revision/latest?cb=20191107173241',
-    speciality: 'Cavalry and Monks',
+    specialty: 'Cavalry and Monks',
     uniqueUnit: ['Leitis'],
     uniqueTechnologies: ['Hill Forts', 'Tower Shields'],
     wonder: 'Trakai Island Castle',
@@ -574,7 +574,7 @@ export const civilizationData: CivilizationInterface[] = [
     name: 'Tatars',
     coatOfArms:
       'https://vignette.wikia.nocookie.net/ageofempires/images/f/f2/CivIcon-Tatars.png/revision/latest?cb=20191107173338',
-    speciality: 'Cavalry archers',
+    specialty: 'Cavalry archers',
     uniqueUnit: ['Keshik'],
     uniqueTechnologies: ['Silk Armor', 'Timurid Siegecraft'],
     wonder: 'Ulugh Beg Observatory',

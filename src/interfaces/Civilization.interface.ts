@@ -2,7 +2,7 @@ export default interface Civilization {
   id: number;
   name: string;
   coatOfArms: string;
-  speciality: string;
+  specialty: string;
   uniqueUnit: string[];
   uniqueTechnologies: string[];
   wonder: string;

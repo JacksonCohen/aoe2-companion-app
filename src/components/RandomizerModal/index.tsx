@@ -8,7 +8,7 @@ const RandomizerModal = ({ civilization, closeModal }: any) => {
   const {
     name,
     coatOfArms,
-    speciality,
+    specialty,
     uniqueUnit,
     uniqueTechnologies,
     wonder,
@@ -57,7 +57,7 @@ const RandomizerModal = ({ civilization, closeModal }: any) => {
       ) : null}
       {learnMore ? (
         <div className='civ__civ-info'>
-          <div id='civ__speciality'>Speciality: {speciality}</div>
+          <div id='civ__speciality'>Specialty: {specialty}</div>
           <div id='civ__uniqueUnit'>
             {uniqueUnit.length > 1 ? 'Unique units: ' : 'Unique unit: '}
             {formatList(uniqueUnit)}

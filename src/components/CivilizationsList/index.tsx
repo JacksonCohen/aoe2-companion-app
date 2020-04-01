@@ -70,9 +70,9 @@ const CivilizationsList = () => {
         </div>
       </section>
 
-      <button className='button__randomizer' onClick={selectCiv}>
-        Randomize!
-      </button>
+      <div className='button__randomizer'>
+        <button onClick={selectCiv}>Randomize!</button>
+      </div>
 
       {/* if the randomizer has been used, open the modal */}
       {!!Object.keys(selectedRandomCiv).length ? (
