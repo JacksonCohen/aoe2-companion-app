@@ -1,7 +1,7 @@
 import React from 'react';
 import './_Civilization.scss';
 
-interface CivilizationData {
+interface Props {
   id: number;
   name: string;
   coat: string;
@@ -9,7 +9,7 @@ interface CivilizationData {
   handleChange: Function;
 }
 
-const Civilization = ({ id, name, coat, checked, handleChange }: CivilizationData) => {
+const Civilization = ({ id, name, coat, checked, handleChange }: Props) => {
   return (
     <div className='civilization'>
       <input
@@ -17,7 +17,7 @@ const Civilization = ({ id, name, coat, checked, handleChange }: CivilizationDat
         type='checkbox'
         checked={checked}
         id={name}
-        onChange={() => handleChange(id)}
+        onChange={(): void => handleChange(id)}
       />
       <span className='checkmark'></span>
       <label htmlFor={name}>

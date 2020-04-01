@@ -1,10 +1,14 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import CivilizationInterface from '../../interfaces/Civilization.interface';
 import Civilization from '../Civilization';
+import RandomizerModal from '../RandomizerModal';
 import { civilizationData } from '../../data/civs';
+
+import './_CivilizationsList.scss';
 
 const CivilizationsList = () => {
   const [civilizations, setCivilizations] = useState<CivilizationInterface[] | undefined>([]);
+  const [selectedRandomCiv, setSelectedRandomCiv] = useState({});
 
   useEffect(() => {
     civilizationData.forEach(civ => {
@@ -26,10 +30,14 @@ const CivilizationsList = () => {
     setCivilizations(civs);
   };
 
-  const selectCiv = () => {
+  const selectCiv = (): void => {
     const validCivs: CivilizationInterface[] = civilizations!.filter(civ => civ.checked);
 
-    return civilizations![validCivs![Math.floor(Math.random() * validCivs!.length)].id];
+    validCivs.length
+      ? setSelectedRandomCiv(
+          civilizations![validCivs![Math.floor(Math.random() * validCivs!.length)].id]
+        )
+      : undefined;
   };
 
   return (
@@ -51,11 +59,15 @@ const CivilizationsList = () => {
               />
             );
           })}
-
-        <div>
-          <button onClick={selectCiv}>Randomize!</button>
-        </div>
       </div>
+
+      <div className='randomizer'>
+        <button onClick={selectCiv}>Randomize!</button>
+      </div>
+
+      {!!Object.keys(selectedRandomCiv).length ? (
+        <RandomizerModal civilization={selectedRandomCiv} />
+      ) : null}
     </Fragment>
   );
 };
