@@ -1,0 +1,79 @@
+.results-modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  border: 1px solid #888;
+  width: 30%;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  z-index: 2;
+  .name,
+  .coatOfArms {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    // padding: 40px 0px;
+  }
+  .results {
+    padding-top: 20px;
+  }
+  .learn-more {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    color: blue;
+    margin: 20px 0;
+    :hover {
+      text-decoration: underline;
+    }
+  }
+
+  @keyframes animatetop {
+    from {
+      top: -300px;
+      opacity: 0;
+    }
+    to {
+      top: 50%; /* equal to top% in .confirmation-content */
+      opacity: 1;
+    }
+  }
+}
+
+#dimmer {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.confirmation {
+  display: none;
+  z-index: 50;
+  border-radius: 5px;
+  left: 0;
+  top: 0;
+}
+
+/* The Close Button */
+#exit {
+  position: absolute;
+  right: 5px;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+#exit:hover,
+#exit:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

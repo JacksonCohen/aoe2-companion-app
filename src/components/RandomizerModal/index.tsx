@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import CivilizationInterface from '../../interfaces/Civilization.interface';
 
 import './_RandomizerModal.scss';
 
-const RandomizerResults = ({ civilization }: any) => {
+const RandomizerResults = ({ civilization, closeModal }: any) => {
+  const [learnMore, setLearnMore] = useState(false);
   const {
     name,
     coatOfArms,
@@ -14,17 +15,42 @@ const RandomizerResults = ({ civilization }: any) => {
     civilizationBonuses,
     teamBonus
   } = civilization;
-  console.log(civilization, 'modal');
+
   return (
     <div className='results-modal'>
-      <div className='name'>{name}</div>
-      <div className='coatOfArms'>{coatOfArms}</div>
-      <div className='speciality'>{speciality}</div>
-      <div className='uniqueUnit'>{uniqueUnit}</div>
-      <div className='uniqueTechnologies'>{uniqueTechnologies}</div>
-      <div className='wonder'>{wonder}</div>
-      <div className='civilizationBonuses'>{civilizationBonuses}</div>
-      <div className='teamBonus'>{teamBonus}</div>
+      <span id='exit' onClick={(): void => closeModal()}>
+        &times;
+      </span>
+      <div className='results'>
+        <div className='name'>You've received the {name}!</div>
+        <div className='coatOfArms'>
+          <img src={coatOfArms} alt={name} />
+        </div>
+      </div>
+
+      {!learnMore ? (
+        <div className='learn-more'>
+          <a onClick={(): void => setLearnMore(true)}>Learn more?</a>
+        </div>
+      ) : null}
+      {learnMore ? (
+        <div className='civ-info'>
+          <div className='speciality'>Speciality: {speciality}</div>
+          <div className='uniqueUnit'>
+            {uniqueUnit.length > 1 ? 'Unique units: ' : 'Unique unit: '}
+            {uniqueUnit}
+          </div>
+          <div className='uniqueTechnologies'>
+            {uniqueTechnologies.length > 1 ? 'Unique technologies: ' : 'Unique technology: '}
+            {uniqueTechnologies}
+          </div>
+          <div className='wonder'>Wonder: {wonder}</div>
+          <div className='civilizationBonuses'>Civilization bonuses: {civilizationBonuses}</div>
+          <div className='teamBonus'>Team bonus: {teamBonus}</div>
+
+          {/* <div className="guide">View guides for the {name}</div> */}
+        </div>
+      ) : null}
     </div>
   );
 };

@@ -1,10 +1,15 @@
 .civilization {
   cursor: pointer;
-}
 
-.civilization label {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  padding: 10px 10px;
+  img {
+    cursor: pointer;
+  }
+
+  label {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 0px 10px 10px 10px;
+    cursor: pointer;
+  }
 }

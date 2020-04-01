@@ -40,10 +40,17 @@ const CivilizationsList = () => {
       : undefined;
   };
 
+  const closeModal = (): void => {
+    selectOrClearAll(false);
+    setSelectedRandomCiv({});
+  };
+
   return (
     <Fragment>
-      <button onClick={() => selectOrClearAll(true)}>Select all</button>
-      <button onClick={() => selectOrClearAll(false)}>Clear all</button>
+      <div className='select-options'>
+        <button onClick={() => selectOrClearAll(true)}>Select all</button>
+        <button onClick={() => selectOrClearAll(false)}>Clear all</button>
+      </div>
 
       <div className='civ-list'>
         {civilizations &&
@@ -66,7 +73,7 @@ const CivilizationsList = () => {
       </div>
 
       {!!Object.keys(selectedRandomCiv).length ? (
-        <RandomizerModal civilization={selectedRandomCiv} />
+        <RandomizerModal civilization={selectedRandomCiv} closeModal={closeModal} />
       ) : null}
     </Fragment>
   );
