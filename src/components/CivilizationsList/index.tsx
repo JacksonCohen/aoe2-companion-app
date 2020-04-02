@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import CivilizationInterface from '../../interfaces/Civilization.interface';
 import Civilization from '../Civilization';
+import Dropdown from '../Dropdown';
 import RandomizerModal from '../RandomizerModal';
 import { civilizationData } from '../../data/civs';
 
@@ -37,7 +38,7 @@ const CivilizationsList = () => {
       ? setSelectedRandomCiv(
           civilizations![validCivs![Math.floor(Math.random() * validCivs!.length)].id] // select one of the checked civilizations randomly
         )
-      : undefined;
+      : alert('Select one or more random civilizations to receive a random selection.'); // alert if
   };
 
   const closeModal = (): void => {
@@ -45,11 +46,11 @@ const CivilizationsList = () => {
     setSelectedRandomCiv({});
   };
 
-  const sortBy = (criteria: string, specifier: string) => {
+  const selectChosenCriteria = (criteria: string, option: string): void => {
     const civs: CivilizationInterface[] = [...civilizations!];
 
     civs.forEach(civ => {
-      if (civ[criteria].includes(specifier) || civ[criteria] === specifier) {
+      if (civ[criteria].includes(option) || civ[criteria] === option) {
         civ.checked = !civ.checked;
       }
     });
@@ -62,99 +63,27 @@ const CivilizationsList = () => {
       <div className='button__select-options'>
         <ul id='dropdown' className='dropdown'>
           <li>
-            Sort by
+            Criteria
             <ul>
-              <li>
-                Region
-                <ul>
-                  <li>
-                    <a onClick={() => sortBy('geographicRegion', 'Africa')} href='#'>
-                      Africa
-                    </a>
-                  </li>
-                  <li>
-                    <a onClick={() => sortBy('geographicRegion', 'Asia')} href='#'>
-                      Asia
-                    </a>
-                  </li>
-                  <li>
-                    <a onClick={() => sortBy('geographicRegion', 'Europe')} href='#'>
-                      Europe
-                    </a>
-                  </li>
-                  <li>
-                    <a onClick={() => sortBy('geographicRegion', 'The Americas')} href='#'>
-                      The Americas
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Expansion
-                <ul>
-                  <li>
-                    <a onClick={() => sortBy('expansion', 'The Age of Kings')} href='#'>
-                      The Age of Kings
-                    </a>
-                  </li>
-                  <li>
-                    <a onClick={() => sortBy('expansion', 'The Conquerors')} href='#'>
-                      The Conquerors
-                    </a>
-                  </li>
-                  <li>
-                    <a onClick={() => sortBy('expansion', 'The Forgotten')} href='#'>
-                      The Forgotten
-                    </a>
-                  </li>
-                  <li>
-                    <a onClick={() => sortBy('expansion', 'The African Kingdoms')} href='#'>
-                      The African Kingdoms
-                    </a>
-                  </li>
-                  <li>
-                    <a onClick={() => sortBy('expansion', 'Rise of the Rajas')} href='#'>
-                      Rise of the Rajas
-                    </a>
-                  </li>
-                  <li>
-                    <a onClick={() => sortBy('expansion', 'The Last Khans')} href='#'>
-                      The Last Khans
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Tier
-                <ul>
-                  <li>
-                    <a href='#'>Tier S</a>
-                  </li>
-                  <li>
-                    <a href='#'>Tier A</a>
-                  </li>
-                  <li>
-                    <a href='#'>Tier B</a>
-                  </li>
-                  <li>
-                    <a href='#'>Tier C</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Playstyle
-                <ul>
-                  <li>
-                    <a href='#'>Rush</a>
-                  </li>
-                  <li>
-                    <a href='#'>Boom</a>
-                  </li>
-                  <li>
-                    <a href='#'>Etc</a>
-                  </li>
-                </ul>
-              </li>
+              <Dropdown
+                criteria='geographicRegion'
+                label='Region'
+                options={['Africa', 'Asia', 'Europe', 'The Americas']}
+                selectChosenCriteria={selectChosenCriteria}
+              />
+              <Dropdown
+                criteria='expansion'
+                label='Expansion'
+                options={[
+                  'The Age of Kings',
+                  'The Conquerors',
+                  'The Forgotten',
+                  'The African Kingdoms',
+                  'Fall of the Rajas',
+                  'The Last Khans'
+                ]}
+                selectChosenCriteria={selectChosenCriteria}
+              />
             </ul>
           </li>
         </ul>

@@ -2,6 +2,44 @@ import CivilizationInterface from '../interfaces/Civilization.interface';
 
 export const civilizationData: CivilizationInterface[] = [
   {
+    id: 13,
+    name: 'Aztecs',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/0/0c/CivIcon-Aztecs.png/revision/latest?cb=20191107173129',
+    specialty: 'Monks and infantry',
+    uniqueUnit: ['Jaguar Warrior'],
+    uniqueTechnologies: ['Atlatl', 'Garland Wars'],
+    wonder: 'Great Pyramid of Tenochtitlan',
+    civilizationBonuses: [
+      'Start the game with an Eagle Scout.',
+      'Villagers carry +5 extra resources.',
+      'All military units are created 15% faster.',
+      'Monks gain 5 HP for every researched Monastery technology.',
+      'Start with +50 gold.'
+    ],
+    teamBonus: 'Relics generate +33% gold.',
+    geographicRegion: ['The Americas'],
+    expansion: 'The Conquerors'
+  },
+  {
+    id: 23,
+    name: 'Berbers',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/7/71/CivIcon-Berbers.png/revision/latest?cb=20191107173130',
+    specialty: 'Navy and cavalry',
+    uniqueUnit: ['Camel Archer', 'Genitour'],
+    uniqueTechnologies: ['Kasbah', 'Maghrabi Camels'],
+    wonder: 'Hassan Tower',
+    civilizationBonuses: [
+      'Villagers move +10% faster.',
+      'Stable units are 15%/20% cheaper in the Castle/Imperial Age.',
+      'Ships move +10% faster.'
+    ],
+    teamBonus: 'Genitour are available at the Archery Range.',
+    geographicRegion: ['Africa'],
+    expansion: 'The African Kingdoms'
+  },
+  {
     id: 0,
     name: 'Britons',
     coatOfArms:
@@ -19,6 +57,42 @@ export const civilizationData: CivilizationInterface[] = [
     teamBonus: 'Archery Ranges work 20% faster.',
     geographicRegion: ['Europe'],
     expansion: 'The Age of Kings'
+  },
+  {
+    id: 31,
+    name: 'Bulgarians',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/c/ce/CivIcon-Bulgarians.png/revision/latest?cb=20191107173130',
+    specialty: 'Infantry and Cavalry',
+    uniqueUnit: ['Konnik'],
+    uniqueTechnologies: ['Stirrups', 'Bagains'],
+    wonder: 'Preslav Round Church',
+    civilizationBonuses: [
+      'Militia-line upgrades free.',
+      'Town Centers cost -50% stone.',
+      'Can build Krepost.'
+    ],
+    teamBonus: 'Blacksmiths work 50% faster.',
+    geographicRegion: ['Europe'],
+    expansion: 'The Last Khans'
+  },
+  {
+    id: 27,
+    name: 'Burmese',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/7/79/CivIcon-Burmese.png/revision/latest?cb=20191107173131',
+    specialty: 'Monks and elephants',
+    uniqueUnit: ['Arambai'],
+    uniqueTechnologies: ['Howdah', 'Manipur Cavalry'],
+    wonder: 'Shwezigon Pagoda',
+    civilizationBonuses: [
+      'Lumber Camp technologies are free.',
+      'Infantry has +1/+2/+3 attack in the Feudal/Castle/Imperial Age.',
+      'Monastery technologies are 50% cheaper.'
+    ],
+    teamBonus: 'Relics are visible on the map from the game start.',
+    geographicRegion: ['Asia'],
+    expansion: 'Rise of the Rajas'
   },
   {
     id: 1,
@@ -79,6 +153,42 @@ export const civilizationData: CivilizationInterface[] = [
     expansion: 'The Age of Kings'
   },
   {
+    id: 32,
+    name: 'Cumans',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/c/cc/CivIcon-Cumans.png/revision/latest?cb=20191107173133',
+    specialty: 'Cavalry',
+    uniqueUnit: ['Kipchak'],
+    uniqueTechnologies: ['Steppe Husbandry', 'Cuman Mercenaries'],
+    wonder: 'Sarkel Fortress (ruined)',
+    civilizationBonuses: [
+      'Additional Town Center can be built in the Feudal Age.',
+      'Siege Workshops and Battering Ram available in the Feudal Age.',
+      'Cavalry move 5% faster in the Feudal Age, 10% faster in Castle Age, and 15% faster in Imperial Age.'
+    ],
+    teamBonus: 'Palisade Walls have +50% hit points.',
+    geographicRegion: ['Asia', 'Europe'],
+    expansion: 'The Last Khans'
+  },
+  {
+    id: 24,
+    name: 'Ethiopians',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/c/cb/CivIcon-Ethiopians.png/revision/latest?cb=20191107173133',
+    specialty: 'Archers and siege weapons',
+    uniqueUnit: ['Shotel Warrior'],
+    uniqueTechnologies: ['Royal Heirs', 'Torsion Engines'],
+    wonder: 'Biete Amanuel',
+    civilizationBonuses: [
+      'Archers fire +15% faster.',
+      'Receive +100 food and +100 gold whenever a new Age is reached.',
+      'The Pikeman upgrade is free.'
+    ],
+    teamBonus: 'Towers and Outposts have +3 Line of Sight.',
+    geographicRegion: ['Africa'],
+    expansion: 'The African Kingdoms'
+  },
+  {
     id: 4,
     name: 'Franks',
     coatOfArms:
@@ -117,157 +227,6 @@ export const civilizationData: CivilizationInterface[] = [
     expansion: 'The Age of Kings'
   },
   {
-    id: 6,
-    name: 'Japanese',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/9/9a/CivIcon-Japanese.png/revision/latest?cb=20191107173240',
-    specialty: 'Infantry',
-    uniqueUnit: ['Samurai'],
-    uniqueTechnologies: ['Yasama', 'Kataparuto'],
-    wonder: 'Tōdai-ji',
-    civilizationBonuses: [
-      'Fishing Ships have double HP, +2 pierce armor, and work 5%/10%/15%/20% faster in the Dark/Feudal/Castle/Imperial Age.',
-      'Mills, Lumber Camps and Mining Camps are 50% cheaper.',
-      'Infantry attack 25% faster starting in the Feudal Age.'
-    ],
-    teamBonus: 'Galleys have a +50% longer Line of Sight.',
-    geographicRegion: ['Asia'],
-    expansion: 'The Age of Kings'
-  },
-  {
-    id: 7,
-    name: 'Mongols',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/1/10/CivIcon-Mongols.png/revision/latest?cb=20191107173335',
-    specialty: 'Cavalry archers',
-    uniqueUnit: ['Mangudai'],
-    uniqueTechnologies: ['Nomads', 'Drill'],
-    wonder: 'Great Tent of Genghis Khan',
-    civilizationBonuses: [
-      'Cavalry archers fire 25% faster.',
-      'Light Cavalry and Hussars have +30% HP.',
-      'Hunters work +50% faster.'
-    ],
-    teamBonus: 'The Scout Cavalry line has +2 Line of Sight.',
-    geographicRegion: ['Asia'],
-    expansion: 'The Age of Kings'
-  },
-  {
-    id: 8,
-    name: 'Persians',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/a/ad/CivIcon-Persians.png/revision/latest?cb=20191107173335',
-    specialty: 'Cavalry',
-    uniqueUnit: ['War Elephant'],
-    uniqueTechnologies: ['Kamandaran', 'Mahouts'],
-    wonder: 'Taq Kasra',
-    civilizationBonuses: [
-      'Start game with +50 food and +50 wood.',
-      'Town Centers and Docks have double HP and work 10%/15%/20% faster in the Feudal/Castle/Imperial Age.'
-    ],
-    teamBonus: 'Knights have +2 attack against archers.',
-    geographicRegion: ['Asia'],
-    expansion: 'The Age of Kings'
-  },
-  {
-    id: 9,
-    name: 'Saracens',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/5/59/CivIcon-Saracens.png/revision/latest?cb=20191107173336',
-    specialty: 'Cavalry and navy',
-    uniqueUnit: ['Mameluke'],
-    uniqueTechnologies: ['Madrasah', 'Zealotry'],
-    wonder: 'Great Mosque of Samarra',
-    civilizationBonuses: [
-      'The commodity trading fee is 5%.',
-      'Markets cost -75 wood.',
-      'Transport Ships have double HP and +5 carry capacity.',
-      'Galleys attack 20% faster.',
-      'Cavalry Archers have +4 attack against standard buildings.'
-    ],
-    teamBonus: 'teamBonus: : Foot archers have +2 attack against standard buildings.',
-    geographicRegion: ['Asia', 'Africa'],
-    expansion: 'The Age of Kings'
-  },
-  {
-    id: 10,
-    name: 'Teutons',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/3/3f/CivIcon-Teutons.png/revision/latest?cb=20191107173408',
-    specialty: 'Infantry',
-    uniqueUnit: ['Teutonic Knight'],
-    uniqueTechnologies: ['Ironclad', 'Crenellations'],
-    wonder: 'Maria Laach Abbey',
-    civilizationBonuses: [
-      'Monks have double healing range.',
-      'Towers garrison twice as many units.',
-      'Murder Holes are free.',
-      'Farms are 33% cheaper.',
-      'Town Centers can garrison +10 units.'
-    ],
-    teamBonus: 'Units resist conversion.',
-    geographicRegion: ['Europe'],
-    expansion: 'The Age of Kings'
-  },
-  {
-    id: 11,
-    name: 'Turks',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/1/1c/CivIcon-Turks.png/revision/latest?cb=20191107173409',
-    specialty: 'Gunpowder units',
-    uniqueUnit: ['Janissary'],
-    uniqueTechnologies: ['Sipahi', 'Artillery'],
-    wonder: 'Selimiye Mosque',
-    civilizationBonuses: [
-      'Gunpowder units have +25% HP.',
-      'Gunpowder technologies are 50% cheaper.',
-      'Chemistry is free.',
-      'Gold Miners work 20% faster.',
-      'Light Cavalry and Hussar upgrades are free.'
-    ],
-    teamBonus: 'Gunpowder units are created 20% faster.',
-    geographicRegion: ['Asia', 'Europe'],
-    expansion: 'The Age of Kings'
-  },
-  {
-    id: 12,
-    name: 'Vikings',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/c/c9/CivIcon-Vikings.png/revision/latest?cb=20191107173410',
-    specialty: 'Infantry and navy',
-    uniqueUnit: ['Berserk', 'Longboat'],
-    uniqueTechnologies: ['Chieftains', 'Berserkergang'],
-    wonder: 'Borgund Stave Church',
-    civilizationBonuses: [
-      'Warships are 15%/15%/20% cheaper in the Feudal/Castle/Imperial Age.',
-      'Infantry have +10%/+15%/+20% HP in the Feudal/Castle/Imperial Age.',
-      'Wheelbarrow and Hand Cart are free.'
-    ],
-    teamBonus: 'Docks are 15% cheaper.',
-    geographicRegion: ['Europe'],
-    expansion: 'The Age of Kings'
-  },
-  {
-    id: 13,
-    name: 'Aztecs',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/0/0c/CivIcon-Aztecs.png/revision/latest?cb=20191107173129',
-    specialty: 'Monks and infantry',
-    uniqueUnit: ['Jaguar Warrior'],
-    uniqueTechnologies: ['Atlatl', 'Garland Wars'],
-    wonder: 'Great Pyramid of Tenochtitlan',
-    civilizationBonuses: [
-      'Start the game with an Eagle Scout.',
-      'Villagers carry +5 extra resources.',
-      'All military units are created 15% faster.',
-      'Monks gain 5 HP for every researched Monastery technology.',
-      'Start with +50 gold.'
-    ],
-    teamBonus: 'Relics generate +33% gold.',
-    geographicRegion: ['The Americas'],
-    expansion: 'The Conquerors'
-  },
-  {
     id: 14,
     name: 'Huns',
     coatOfArms:
@@ -283,64 +242,6 @@ export const civilizationData: CivilizationInterface[] = [
     ],
     teamBonus: 'Stables work 20% faster.',
     geographicRegion: ['Europe', 'Asia'],
-    expansion: 'The Conquerors'
-  },
-  {
-    id: 15,
-    name: 'Koreans',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/7/73/CivIcon-Koreans.png/revision/latest?cb=20191107173241',
-    specialty: 'Towers and navy',
-    uniqueUnit: ['War Wagon', 'Turtle Ship'],
-    uniqueTechnologies: ['Panokseon', 'Shinkichon'],
-    wonder: 'Hwangnyong Temple',
-    civilizationBonuses: [
-      'Villagers have +3 Line of Sight.',
-      'Stone Miners work 20% faster.',
-      'Tower upgrades are free (Bombard Tower requires Chemistry).',
-      'Towers (except Bombard Towers) have +1/+2 range in the Castle/Imperial Age.',
-      'Fortifications are built 33% faster.'
-    ],
-    teamBonus: 'Mangonel line minimum range reduced.',
-    geographicRegion: ['Asia'],
-    expansion: 'The Conquerors'
-  },
-  {
-    id: 16,
-    name: 'Mayans',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/0/05/CivIcon-Mayans.png/revision/latest?cb=20191107173335',
-    specialty: 'Archers',
-    uniqueUnit: ['Plumed Archer'],
-    uniqueTechnologies: ['Obsidian Arrows', 'El Dorado'],
-    wonder: 'Tikal Temple I',
-    civilizationBonuses: [
-      'Start the game with an Eagle Scout.',
-      'Start the game with +1 Villager, but with -50 food.',
-      'Resources last 15% longer.',
-      'Foot archers are 10%/20%/30% cheaper in the Feudal/Castle/Imperial Age.'
-    ],
-    teamBonus: 'Walls are 50% cheaper.',
-    geographicRegion: ['The Americas'],
-    expansion: 'The Conquerors'
-  },
-  {
-    id: 17,
-    name: 'Spanish',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/0/0a/CivIcon-Spanish.png/revision/latest?cb=20191107173337',
-    specialty: 'Monks and gunpowder units',
-    uniqueUnit: ['Conquistador', 'Missionary'],
-    uniqueTechnologies: ['Inquisition', 'Supremacy'],
-    wonder: 'Torre del Oro',
-    civilizationBonuses: [
-      'Builders work 30% faster.',
-      'Blacksmith upgrades cost no gold.',
-      'Cannon Galleons have better accuracy and faster cannonballs.',
-      'Hand Cannoneers and Bombard Cannons fire 15% faster.'
-    ],
-    teamBonus: 'Trade units generate +25% gold.',
-    geographicRegion: ['Europe'],
     expansion: 'The Conquerors'
   },
   {
@@ -402,130 +303,22 @@ export const civilizationData: CivilizationInterface[] = [
     expansion: 'The Forgotten'
   },
   {
-    id: 21,
-    name: 'Magyars',
+    id: 6,
+    name: 'Japanese',
     coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/6/68/CivIcon-Magyars.png/revision/latest?cb=20191107173242',
-    specialty: 'Cavalry',
-    uniqueUnit: ['Magyar Huszar'],
-    uniqueTechnologies: ['Corvinian Army', 'Recurve Bow'],
-    wonder: 'Hunyad Castle',
-    civilizationBonuses: [
-      'Forging, Iron Casting, and Blast Furnace are free.',
-      'Scout Cavalry line is 15% cheaper.',
-      'Villagers kill wild animals in one strike.'
-    ],
-    teamBonus: 'Foot archers have +2 Line of Sight.',
-    geographicRegion: ['Europe'],
-    expansion: 'The Forgotten'
-  },
-  {
-    id: 22,
-    name: 'Slavs',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/1/12/CivIcon-Slavs.png/revision/latest?cb=20191107173337',
-    specialty: 'Infantry and siege weapons',
-    uniqueUnit: ['Boyar'],
-    uniqueTechnologies: ['Orthodoxy', 'Druzhina'],
-    wonder: 'Kizhi Pogost',
-    civilizationBonuses: [
-      'Farmers work 15% faster.',
-      'Tracking is free.',
-      'Siege Workshop units are 15% cheaper.'
-    ],
-    teamBonus: 'Military buildings (excluding Castles and Docks) provide +5 population.',
-    geographicRegion: ['Europe'],
-    expansion: 'The Forgotten'
-  },
-  {
-    id: 23,
-    name: 'Berbers',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/7/71/CivIcon-Berbers.png/revision/latest?cb=20191107173130',
-    specialty: 'Navy and cavalry',
-    uniqueUnit: ['Camel Archer', 'Genitour'],
-    uniqueTechnologies: ['Kasbah', 'Maghrabi Camels'],
-    wonder: 'Hassan Tower',
-    civilizationBonuses: [
-      'Villagers move +10% faster.',
-      'Stable units are 15%/20% cheaper in the Castle/Imperial Age.',
-      'Ships move +10% faster.'
-    ],
-    teamBonus: 'Genitour are available at the Archery Range.',
-    geographicRegion: ['Africa'],
-    expansion: 'The African Kingdoms'
-  },
-  {
-    id: 24,
-    name: 'Ethiopians',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/c/cb/CivIcon-Ethiopians.png/revision/latest?cb=20191107173133',
-    specialty: 'Archers and siege weapons',
-    uniqueUnit: ['Shotel Warrior'],
-    uniqueTechnologies: ['Royal Heirs', 'Torsion Engines'],
-    wonder: 'Biete Amanuel',
-    civilizationBonuses: [
-      'Archers fire +15% faster.',
-      'Receive +100 food and +100 gold whenever a new Age is reached.',
-      'The Pikeman upgrade is free.'
-    ],
-    teamBonus: 'Towers and Outposts have +3 Line of Sight.',
-    geographicRegion: ['Africa'],
-    expansion: 'The African Kingdoms'
-  },
-  {
-    id: 25,
-    name: 'Malians',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/8/80/CivIcon-Malians.png/revision/latest?cb=20191107173334',
+      'https://vignette.wikia.nocookie.net/ageofempires/images/9/9a/CivIcon-Japanese.png/revision/latest?cb=20191107173240',
     specialty: 'Infantry',
-    uniqueUnit: ['Gbeto'],
-    uniqueTechnologies: ['Tigui', 'Farimba'],
-    wonder: 'Great Mosque of Djenné',
+    uniqueUnit: ['Samurai'],
+    uniqueTechnologies: ['Yasama', 'Kataparuto'],
+    wonder: 'Tōdai-ji',
     civilizationBonuses: [
-      'Buildings cost -15% wood (except Farms).',
-      'Barracks units have +1/+2/+3 pierce armor in the Feudal/Castle/Imperial Age.',
-      'Gold Mining is free.'
+      'Fishing Ships have double HP, +2 pierce armor, and work 5%/10%/15%/20% faster in the Dark/Feudal/Castle/Imperial Age.',
+      'Mills, Lumber Camps and Mining Camps are 50% cheaper.',
+      'Infantry attack 25% faster starting in the Feudal Age.'
     ],
-    teamBonus: 'Universities research +80% faster.',
-    geographicRegion: ['Africa'],
-    expansion: 'The African Kingdoms'
-  },
-  {
-    id: 26,
-    name: 'Portuguese',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/6/60/CivIcon-Portuguese.png/revision/latest?cb=20191107173336',
-    specialty: 'Navy and gunpowder units',
-    uniqueUnit: ['Organ Gun', 'Caravel'],
-    uniqueTechnologies: ['Carrack', 'Arquebus'],
-    wonder: 'Belém Tower',
-    civilizationBonuses: [
-      'All units cost -15% gold.',
-      'All ships have +10% HP.',
-      'The Feitoria becomes available for building in the Imperial Age.'
-    ],
-    teamBonus: 'Free Cartography from the beginning of the game.',
-    geographicRegion: ['Europe'],
-    expansion: 'The African Kingdoms'
-  },
-  {
-    id: 27,
-    name: 'Burmese',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/7/79/CivIcon-Burmese.png/revision/latest?cb=20191107173131',
-    specialty: 'Monks and elephants',
-    uniqueUnit: ['Arambai'],
-    uniqueTechnologies: ['Howdah', 'Manipur Cavalry'],
-    wonder: 'Shwezigon Pagoda',
-    civilizationBonuses: [
-      'Lumber Camp technologies are free.',
-      'Infantry has +1/+2/+3 attack in the Feudal/Castle/Imperial Age.',
-      'Monastery technologies are 50% cheaper.'
-    ],
-    teamBonus: 'Relics are visible on the map from the game start.',
+    teamBonus: 'Galleys have a +50% longer Line of Sight.',
     geographicRegion: ['Asia'],
-    expansion: 'Rise of the Rajas'
+    expansion: 'The Age of Kings'
   },
   {
     id: 28,
@@ -547,77 +340,24 @@ export const civilizationData: CivilizationInterface[] = [
     expansion: 'Rise of the Rajas'
   },
   {
-    id: 29,
-    name: 'Malay',
+    id: 15,
+    name: 'Koreans',
     coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/c/c3/CivIcon-Malay.png/revision/latest?cb=20191107173334',
-    specialty: 'Navy',
-    uniqueUnit: ['Karambit Warrior'],
-    uniqueTechnologies: ['Thalassocracy', 'Forced Levy'],
-    wonder: 'Kalasan Temple',
+      'https://vignette.wikia.nocookie.net/ageofempires/images/7/73/CivIcon-Koreans.png/revision/latest?cb=20191107173241',
+    specialty: 'Towers and navy',
+    uniqueUnit: ['War Wagon', 'Turtle Ship'],
+    uniqueTechnologies: ['Panokseon', 'Shinkichon'],
+    wonder: 'Hwangnyong Temple',
     civilizationBonuses: [
-      'Advancing in Age is +80% faster.',
-      'Fish Traps are 33% cheaper.',
-      'Fish Traps provide unlimited food.',
-      'Battle Elephants are 30% cheaper.'
+      'Villagers have +3 Line of Sight.',
+      'Stone Miners work 20% faster.',
+      'Tower upgrades are free (Bombard Tower requires Chemistry).',
+      'Towers (except Bombard Towers) have +1/+2 range in the Castle/Imperial Age.',
+      'Fortifications are built 33% faster.'
     ],
-    teamBonus: 'Docks have double Line of Sight.',
+    teamBonus: 'Mangonel line minimum range reduced.',
     geographicRegion: ['Asia'],
-    expansion: 'Rise of the Rajas'
-  },
-  {
-    id: 30,
-    name: 'Vietnamese',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/0/07/CivIcon-Vietnamese.png/revision/latest?cb=20191107173409',
-    specialty: 'Archers',
-    uniqueUnit: ['Rattan Archer', 'Imperial Skirmisher'],
-    uniqueTechnologies: ['Chatras', 'Paper Money'],
-    wonder: 'Bút Tháp',
-    civilizationBonuses: [
-      'Reveal enemy positions at game start.',
-      'Archery Range units have +20% HP.',
-      'Conscription is free.'
-    ],
-    teamBonus: 'Imperial Skirmishers are available at the Archery Range.',
-    geographicRegion: ['Asia'],
-    expansion: 'Rise of the Rajas'
-  },
-  {
-    id: 31,
-    name: 'Bulgarians',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/c/ce/CivIcon-Bulgarians.png/revision/latest?cb=20191107173130',
-    specialty: 'Infantry and Cavalry',
-    uniqueUnit: ['Konnik'],
-    uniqueTechnologies: ['Stirrups', 'Bagains'],
-    wonder: 'Preslav Round Church',
-    civilizationBonuses: [
-      'Militia-line upgrades free.',
-      'Town Centers cost -50% stone.',
-      'Can build Krepost.'
-    ],
-    teamBonus: 'Blacksmiths work 50% faster.',
-    geographicRegion: ['Europe'],
-    expansion: 'The Last Khans'
-  },
-  {
-    id: 32,
-    name: 'Cumans',
-    coatOfArms:
-      'https://vignette.wikia.nocookie.net/ageofempires/images/c/cc/CivIcon-Cumans.png/revision/latest?cb=20191107173133',
-    specialty: 'Cavalry',
-    uniqueUnit: ['Kipchak'],
-    uniqueTechnologies: ['Steppe Husbandry', 'Cuman Mercenaries'],
-    wonder: 'Sarkel Fortress (ruined)',
-    civilizationBonuses: [
-      'Additional Town Center can be built in the Feudal Age.',
-      'Siege Workshops and Battering Ram available in the Feudal Age.',
-      'Cavalry move 5% faster in the Feudal Age, 10% faster in Castle Age, and 15% faster in Imperial Age.'
-    ],
-    teamBonus: 'Palisade Walls have +50% hit points.',
-    geographicRegion: ['Asia', 'Europe'],
-    expansion: 'The Last Khans'
+    expansion: 'The Conquerors'
   },
   {
     id: 33,
@@ -638,6 +378,190 @@ export const civilizationData: CivilizationInterface[] = [
     expansion: 'The Last Khans'
   },
   {
+    id: 21,
+    name: 'Magyars',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/6/68/CivIcon-Magyars.png/revision/latest?cb=20191107173242',
+    specialty: 'Cavalry',
+    uniqueUnit: ['Magyar Huszar'],
+    uniqueTechnologies: ['Corvinian Army', 'Recurve Bow'],
+    wonder: 'Hunyad Castle',
+    civilizationBonuses: [
+      'Forging, Iron Casting, and Blast Furnace are free.',
+      'Scout Cavalry line is 15% cheaper.',
+      'Villagers kill wild animals in one strike.'
+    ],
+    teamBonus: 'Foot archers have +2 Line of Sight.',
+    geographicRegion: ['Europe'],
+    expansion: 'The Forgotten'
+  },
+  {
+    id: 29,
+    name: 'Malay',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/c/c3/CivIcon-Malay.png/revision/latest?cb=20191107173334',
+    specialty: 'Navy',
+    uniqueUnit: ['Karambit Warrior'],
+    uniqueTechnologies: ['Thalassocracy', 'Forced Levy'],
+    wonder: 'Kalasan Temple',
+    civilizationBonuses: [
+      'Advancing in Age is +80% faster.',
+      'Fish Traps are 33% cheaper.',
+      'Fish Traps provide unlimited food.',
+      'Battle Elephants are 30% cheaper.'
+    ],
+    teamBonus: 'Docks have double Line of Sight.',
+    geographicRegion: ['Asia'],
+    expansion: 'Rise of the Rajas'
+  },
+  {
+    id: 25,
+    name: 'Malians',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/8/80/CivIcon-Malians.png/revision/latest?cb=20191107173334',
+    specialty: 'Infantry',
+    uniqueUnit: ['Gbeto'],
+    uniqueTechnologies: ['Tigui', 'Farimba'],
+    wonder: 'Great Mosque of Djenné',
+    civilizationBonuses: [
+      'Buildings cost -15% wood (except Farms).',
+      'Barracks units have +1/+2/+3 pierce armor in the Feudal/Castle/Imperial Age.',
+      'Gold Mining is free.'
+    ],
+    teamBonus: 'Universities research +80% faster.',
+    geographicRegion: ['Africa'],
+    expansion: 'The African Kingdoms'
+  },
+  {
+    id: 16,
+    name: 'Mayans',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/0/05/CivIcon-Mayans.png/revision/latest?cb=20191107173335',
+    specialty: 'Archers',
+    uniqueUnit: ['Plumed Archer'],
+    uniqueTechnologies: ['Obsidian Arrows', 'El Dorado'],
+    wonder: 'Tikal Temple I',
+    civilizationBonuses: [
+      'Start the game with an Eagle Scout.',
+      'Start the game with +1 Villager, but with -50 food.',
+      'Resources last 15% longer.',
+      'Foot archers are 10%/20%/30% cheaper in the Feudal/Castle/Imperial Age.'
+    ],
+    teamBonus: 'Walls are 50% cheaper.',
+    geographicRegion: ['The Americas'],
+    expansion: 'The Conquerors'
+  },
+  {
+    id: 7,
+    name: 'Mongols',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/1/10/CivIcon-Mongols.png/revision/latest?cb=20191107173335',
+    specialty: 'Cavalry archers',
+    uniqueUnit: ['Mangudai'],
+    uniqueTechnologies: ['Nomads', 'Drill'],
+    wonder: 'Great Tent of Genghis Khan',
+    civilizationBonuses: [
+      'Cavalry archers fire 25% faster.',
+      'Light Cavalry and Hussars have +30% HP.',
+      'Hunters work +50% faster.'
+    ],
+    teamBonus: 'The Scout Cavalry line has +2 Line of Sight.',
+    geographicRegion: ['Asia'],
+    expansion: 'The Age of Kings'
+  },
+  {
+    id: 8,
+    name: 'Persians',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/a/ad/CivIcon-Persians.png/revision/latest?cb=20191107173335',
+    specialty: 'Cavalry',
+    uniqueUnit: ['War Elephant'],
+    uniqueTechnologies: ['Kamandaran', 'Mahouts'],
+    wonder: 'Taq Kasra',
+    civilizationBonuses: [
+      'Start game with +50 food and +50 wood.',
+      'Town Centers and Docks have double HP and work 10%/15%/20% faster in the Feudal/Castle/Imperial Age.'
+    ],
+    teamBonus: 'Knights have +2 attack against archers.',
+    geographicRegion: ['Asia'],
+    expansion: 'The Age of Kings'
+  },
+  {
+    id: 26,
+    name: 'Portuguese',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/6/60/CivIcon-Portuguese.png/revision/latest?cb=20191107173336',
+    specialty: 'Navy and gunpowder units',
+    uniqueUnit: ['Organ Gun', 'Caravel'],
+    uniqueTechnologies: ['Carrack', 'Arquebus'],
+    wonder: 'Belém Tower',
+    civilizationBonuses: [
+      'All units cost -15% gold.',
+      'All ships have +10% HP.',
+      'The Feitoria becomes available for building in the Imperial Age.'
+    ],
+    teamBonus: 'Free Cartography from the beginning of the game.',
+    geographicRegion: ['Europe'],
+    expansion: 'The African Kingdoms'
+  },
+  {
+    id: 9,
+    name: 'Saracens',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/5/59/CivIcon-Saracens.png/revision/latest?cb=20191107173336',
+    specialty: 'Cavalry and navy',
+    uniqueUnit: ['Mameluke'],
+    uniqueTechnologies: ['Madrasah', 'Zealotry'],
+    wonder: 'Great Mosque of Samarra',
+    civilizationBonuses: [
+      'The commodity trading fee is 5%.',
+      'Markets cost -75 wood.',
+      'Transport Ships have double HP and +5 carry capacity.',
+      'Galleys attack 20% faster.',
+      'Cavalry Archers have +4 attack against standard buildings.'
+    ],
+    teamBonus: 'teamBonus: : Foot archers have +2 attack against standard buildings.',
+    geographicRegion: ['Asia', 'Africa'],
+    expansion: 'The Age of Kings'
+  },
+  {
+    id: 22,
+    name: 'Slavs',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/1/12/CivIcon-Slavs.png/revision/latest?cb=20191107173337',
+    specialty: 'Infantry and siege weapons',
+    uniqueUnit: ['Boyar'],
+    uniqueTechnologies: ['Orthodoxy', 'Druzhina'],
+    wonder: 'Kizhi Pogost',
+    civilizationBonuses: [
+      'Farmers work 15% faster.',
+      'Tracking is free.',
+      'Siege Workshop units are 15% cheaper.'
+    ],
+    teamBonus: 'Military buildings (excluding Castles and Docks) provide +5 population.',
+    geographicRegion: ['Europe'],
+    expansion: 'The Forgotten'
+  },
+  {
+    id: 17,
+    name: 'Spanish',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/0/0a/CivIcon-Spanish.png/revision/latest?cb=20191107173337',
+    specialty: 'Monks and gunpowder units',
+    uniqueUnit: ['Conquistador', 'Missionary'],
+    uniqueTechnologies: ['Inquisition', 'Supremacy'],
+    wonder: 'Torre del Oro',
+    civilizationBonuses: [
+      'Builders work 30% faster.',
+      'Blacksmith upgrades cost no gold.',
+      'Cannon Galleons have better accuracy and faster cannonballs.',
+      'Hand Cannoneers and Bombard Cannons fire 15% faster.'
+    ],
+    teamBonus: 'Trade units generate +25% gold.',
+    geographicRegion: ['Europe'],
+    expansion: 'The Conquerors'
+  },
+  {
     id: 34,
     name: 'Tatars',
     coatOfArms:
@@ -654,5 +578,81 @@ export const civilizationData: CivilizationInterface[] = [
     teamBonus: 'Cavalry Archers +2 LOS.',
     geographicRegion: ['Asia'],
     expansion: 'The Last Khans'
+  },
+  {
+    id: 10,
+    name: 'Teutons',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/3/3f/CivIcon-Teutons.png/revision/latest?cb=20191107173408',
+    specialty: 'Infantry',
+    uniqueUnit: ['Teutonic Knight'],
+    uniqueTechnologies: ['Ironclad', 'Crenellations'],
+    wonder: 'Maria Laach Abbey',
+    civilizationBonuses: [
+      'Monks have double healing range.',
+      'Towers garrison twice as many units.',
+      'Murder Holes are free.',
+      'Farms are 33% cheaper.',
+      'Town Centers can garrison +10 units.'
+    ],
+    teamBonus: 'Units resist conversion.',
+    geographicRegion: ['Europe'],
+    expansion: 'The Age of Kings'
+  },
+  {
+    id: 11,
+    name: 'Turks',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/1/1c/CivIcon-Turks.png/revision/latest?cb=20191107173409',
+    specialty: 'Gunpowder units',
+    uniqueUnit: ['Janissary'],
+    uniqueTechnologies: ['Sipahi', 'Artillery'],
+    wonder: 'Selimiye Mosque',
+    civilizationBonuses: [
+      'Gunpowder units have +25% HP.',
+      'Gunpowder technologies are 50% cheaper.',
+      'Chemistry is free.',
+      'Gold Miners work 20% faster.',
+      'Light Cavalry and Hussar upgrades are free.'
+    ],
+    teamBonus: 'Gunpowder units are created 20% faster.',
+    geographicRegion: ['Asia', 'Europe'],
+    expansion: 'The Age of Kings'
+  },
+  {
+    id: 30,
+    name: 'Vietnamese',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/0/07/CivIcon-Vietnamese.png/revision/latest?cb=20191107173409',
+    specialty: 'Archers',
+    uniqueUnit: ['Rattan Archer', 'Imperial Skirmisher'],
+    uniqueTechnologies: ['Chatras', 'Paper Money'],
+    wonder: 'Bút Tháp',
+    civilizationBonuses: [
+      'Reveal enemy positions at game start.',
+      'Archery Range units have +20% HP.',
+      'Conscription is free.'
+    ],
+    teamBonus: 'Imperial Skirmishers are available at the Archery Range.',
+    geographicRegion: ['Asia'],
+    expansion: 'Rise of the Rajas'
+  },
+  {
+    id: 12,
+    name: 'Vikings',
+    coatOfArms:
+      'https://vignette.wikia.nocookie.net/ageofempires/images/c/c9/CivIcon-Vikings.png/revision/latest?cb=20191107173410',
+    specialty: 'Infantry and navy',
+    uniqueUnit: ['Berserk', 'Longboat'],
+    uniqueTechnologies: ['Chieftains', 'Berserkergang'],
+    wonder: 'Borgund Stave Church',
+    civilizationBonuses: [
+      'Warships are 15%/15%/20% cheaper in the Feudal/Castle/Imperial Age.',
+      'Infantry have +10%/+15%/+20% HP in the Feudal/Castle/Imperial Age.',
+      'Wheelbarrow and Hand Cart are free.'
+    ],
+    teamBonus: 'Docks are 15% cheaper.',
+    geographicRegion: ['Europe'],
+    expansion: 'The Age of Kings'
   }
 ];
