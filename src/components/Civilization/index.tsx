@@ -10,8 +10,10 @@ interface Props {
 }
 
 const Civilization = ({ id, name, coat, checked, handleChange }: Props) => {
+  const isChecked: string = checked ? ' checked' : '';
+
   return (
-    <div className='civ__single'>
+    <div className={`civ__single${isChecked}`}>
       <input
         className='checkbox'
         type='checkbox'
@@ -21,8 +23,8 @@ const Civilization = ({ id, name, coat, checked, handleChange }: Props) => {
       />
       <span className='civ__checkmark'></span>
       <label htmlFor={name}>
-        <img src={coat} alt={name} />
         {name}
+        <img src={coat} alt={name} />
       </label>
     </div>
   );

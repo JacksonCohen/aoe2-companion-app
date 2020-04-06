@@ -15,7 +15,7 @@ const Dropdown = ({ criteria, label, options, selectChosenCriteria }: Props) => 
         {options.map((option: string) => {
           return (
             <li key={option}>
-              <a onClick={() => selectChosenCriteria(criteria, option)} href='#'>
+              <a onClick={(): void => selectChosenCriteria(criteria, option)} href='#'>
                 {option}
               </a>
             </li>

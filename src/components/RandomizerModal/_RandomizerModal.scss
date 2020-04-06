@@ -5,6 +5,7 @@
   transform: translate(-50%, -50%);
   background-color: #fefefe;
   border: 1px solid #888;
+  border-radius: 1%;
   width: 30%;
   height: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -40,6 +41,10 @@
 
   .civ__civ-info {
     padding: 5px 20px 20px 20px;
+
+    div {
+      padding: 2px 0;
+    }
   }
 
   #modal__exit {

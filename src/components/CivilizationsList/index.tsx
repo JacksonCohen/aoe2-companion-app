@@ -11,33 +11,58 @@ const CivilizationsList = () => {
   const [civilizations, setCivilizations] = useState<CivilizationInterface[] | undefined>([]);
   const [selectedRandomCiv, setSelectedRandomCiv] = useState({});
 
-  useEffect(() => {
-    civilizationData.forEach(civ => {
+  useEffect((): void => {
+    civilizationData.forEach((civ: CivilizationInterface) => {
       civ.checked = false;
     });
     setCivilizations(civilizationData);
   }, []);
 
+  const sortCivilizations = (method: string): void => {
+    const civs: CivilizationInterface[] = [...civilizations!];
+    if (method === 'alphabetical') {
+      civs.sort((a: CivilizationInterface, b: CivilizationInterface) => (a.name < b.name ? -1 : 1));
+      setCivilizations(civs);
+    } else if (method === 'expansion') {
+      const order: string[] = [
+        'The Age of Kings',
+        'The Conquerors',
+        'The Forgotten',
+        'The African Kingdoms',
+        'Rise of the Rajas',
+        'The Last Khans',
+      ];
+      civs!.sort(
+        (a: CivilizationInterface, b: CivilizationInterface) =>
+          order.indexOf(a.expansion) - order.indexOf(b.expansion)
+      );
+      setCivilizations(civs);
+    }
+  };
+
   const handleChange = (id: number): void => {
     // the ! represents non null assertion operator telling the compiler that the expression cannot be null or undefined
     const civs: CivilizationInterface[] = [...civilizations!];
-    civs[id].checked = !civs[id].checked;
+
+    for (let i = 0; i < civs.length; i++) {
+      if (civs[i].id === id) {
+        civs[i].checked = !civs[i].checked;
+      }
+    }
     setCivilizations(civs);
   };
 
   const selectOrClearAll = (checkedValue: boolean): void => {
     const civs: CivilizationInterface[] = [...civilizations!];
-    civs.forEach(civ => (civ.checked = checkedValue));
+    civs.forEach((civ: CivilizationInterface) => (civ.checked = checkedValue));
     setCivilizations(civs);
   };
 
   const selectCiv = (): void => {
-    const validCivs: CivilizationInterface[] = civilizations!.filter(civ => civ.checked);
+    const validCivs: CivilizationInterface[] = civilizations!.filter((civ) => civ.checked);
 
     validCivs.length
-      ? setSelectedRandomCiv(
-          civilizations![validCivs![Math.floor(Math.random() * validCivs!.length)].id] // select one of the checked civilizations randomly
-        )
+      ? setSelectedRandomCiv(validCivs[Math.floor(Math.random() * validCivs!.length)])
       : alert('Select one or more random civilizations to receive a random selection.'); // alert if
   };
 
@@ -48,19 +73,26 @@ const CivilizationsList = () => {
 
   const selectChosenCriteria = (criteria: string, option: string): void => {
     const civs: CivilizationInterface[] = [...civilizations!];
-
-    civs.forEach(civ => {
+    civs.forEach((civ) => {
       if (civ[criteria].includes(option) || civ[criteria] === option) {
         civ.checked = !civ.checked;
       }
     });
-
     setCivilizations(civs);
   };
 
   return (
     <Fragment>
       <div className='button__select-options'>
+        <ul className='dropdown'>
+          <li>
+            Sort options
+            <ul>
+              <li onClick={(): void => sortCivilizations('alphabetical')}>Alphabetical</li>
+              <li onClick={(): void => sortCivilizations('expansion')}>Expansion</li>
+            </ul>
+          </li>
+        </ul>
         <ul id='dropdown' className='dropdown'>
           <li>
             Criteria
@@ -79,8 +111,8 @@ const CivilizationsList = () => {
                   'The Conquerors',
                   'The Forgotten',
                   'The African Kingdoms',
-                  'Fall of the Rajas',
-                  'The Last Khans'
+                  'Rise of the Rajas',
+                  'The Last Khans',
                 ]}
                 selectChosenCriteria={selectChosenCriteria}
               />
@@ -88,8 +120,8 @@ const CivilizationsList = () => {
           </li>
         </ul>
 
-        <button onClick={() => selectOrClearAll(true)}>Select all</button>
-        <button onClick={() => selectOrClearAll(false)}>Clear all</button>
+        <button onClick={(): void => selectOrClearAll(true)}>Select all</button>
+        <button onClick={(): void => selectOrClearAll(false)}>Clear all</button>
       </div>
 
       <section className='section__civ-list'>
