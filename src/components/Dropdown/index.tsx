@@ -1,28 +1,38 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 interface Props {
-  criteria: string;
   label: string;
-  options: string[];
-  selectChosenCriteria: Function;
+  options?: string[];
+  criteria: string;
+  callback: Function;
 }
 
-const Dropdown = ({ criteria, label, options, selectChosenCriteria }: Props) => {
+const Dropdown = ({ label, options, criteria, callback }: Props) => {
   return (
-    <li>
-      {label}
-      <ul>
-        {options.map((option: string) => {
-          return (
-            <li key={option}>
-              <a onClick={(): void => selectChosenCriteria(criteria, option)} href='#'>
-                {option}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-    </li>
+    <Fragment>
+      {options ? (
+        <li>
+          {label} ▶
+          <ul>
+            {options.map((option: string) => {
+              return (
+                <li key={option}>
+                  <a onClick={(): void => callback(criteria, option)} href='#'>
+                    {option}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </li>
+      ) : (
+        <li>
+          <button onClick={(): void => callback(criteria)}>
+            <li>{label}</li>
+          </button>
+        </li>
+      )}
+    </Fragment>
   );
 };
 

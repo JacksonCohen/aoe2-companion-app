@@ -1,24 +1,57 @@
 .section__civ-list > div {
   display: flex;
   flex-flow: row wrap;
-  margin: 20px;
+  margin: 10px;
+}
+
+button {
+  outline: none;
+  color: #e1d7b3;
+  background: transparent;
+  border: 2px solid #e1d7b3;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition-duration: 0.2s;
+}
+
+button:hover {
+  background-color: #e1d7b3;
+  color: white;
 }
 
 .button__randomizer {
   display: flex;
   justify-content: center;
   margin: 20px 0;
+  button {
+    padding: 16px 24px;
+  }
 }
 
-.button__select-options {
+header {
   display: flex;
-  justify-content: flex-end;
+  .button__select-options {
+    margin-right: 25px;
+    margin-left: auto;
+  }
+  .button__sort-options {
+    margin-left: 25px;
+    .sort button {
+      margin: 0;
+      padding: 5px 10px;
+    }
+  }
 }
 
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: inline;
 }
 .dropdown li {
   position: relative;
@@ -66,11 +99,16 @@ ul {
 .dropdown li:hover > a {
   background: #ccc;
 }
-#dropdown ul li {
-  border-top: none;
+
+// Non-desktop devices
+@media (max-width: 1223.98px) {
+  header {
+    .button__select-options {
+      flex-flow: column;
+    }
+    button {
+      margin: 0;
+      padding: 5px 10px;
+    }
+  }
 }
-// @media only screen and (min-width: 1224px) {
-//   .section__civ-list {
-//     width: 75%;
-//   }
-// }

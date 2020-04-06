@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import CivilizationInterface from '../../interfaces/Civilization.interface';
 import Civilization from '../Civilization';
-import Dropdown from '../Dropdown';
+import RandomizerHeader from '../RandomizerHeader';
 import RandomizerModal from '../RandomizerModal';
 import { civilizationData } from '../../data/civs';
 
@@ -83,46 +83,11 @@ const CivilizationsList = () => {
 
   return (
     <Fragment>
-      <div className='button__select-options'>
-        <ul className='dropdown'>
-          <li>
-            Sort options
-            <ul>
-              <li onClick={(): void => sortCivilizations('alphabetical')}>Alphabetical</li>
-              <li onClick={(): void => sortCivilizations('expansion')}>Expansion</li>
-            </ul>
-          </li>
-        </ul>
-        <ul id='dropdown' className='dropdown'>
-          <li>
-            Criteria
-            <ul>
-              <Dropdown
-                criteria='geographicRegion'
-                label='Region'
-                options={['Africa', 'Asia', 'Europe', 'The Americas']}
-                selectChosenCriteria={selectChosenCriteria}
-              />
-              <Dropdown
-                criteria='expansion'
-                label='Expansion'
-                options={[
-                  'The Age of Kings',
-                  'The Conquerors',
-                  'The Forgotten',
-                  'The African Kingdoms',
-                  'Rise of the Rajas',
-                  'The Last Khans',
-                ]}
-                selectChosenCriteria={selectChosenCriteria}
-              />
-            </ul>
-          </li>
-        </ul>
-
-        <button onClick={(): void => selectOrClearAll(true)}>Select all</button>
-        <button onClick={(): void => selectOrClearAll(false)}>Clear all</button>
-      </div>
+      <RandomizerHeader
+        sortCivilizations={sortCivilizations}
+        selectChosenCriteria={selectChosenCriteria}
+        selectOrClearAll={selectOrClearAll}
+      />
 
       <section className='section__civ-list'>
         <div>
