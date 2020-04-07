@@ -6,7 +6,7 @@ import './Navbar.scss';
 const Navbar = () => {
   return (
     <div className='nav'>
-      <div>
+      <div className='nav__main'>
         <Link href='/'>
           <a>
             Age of Empires 2<br />
@@ -14,9 +14,11 @@ const Navbar = () => {
           </a>
         </Link>
       </div>
+
       <form action='/search'>
         <input type='text' placeholder='Enter a username' />
       </form>
+
       <ul>
         <li>
           <Link href='/stats'>
