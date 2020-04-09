@@ -1,5 +1,10 @@
 body {
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Plantagenet Cherokee', 'Helvetica', 'Arial', sans-serif;
   font-size: 20px;
   color: $color_text;
+}
+
+@font-face {
+  font-family: 'Plantagenet Cherokee';
+  src: url('/static/fonts/PlantaganetCherokee.ttf');
 }
