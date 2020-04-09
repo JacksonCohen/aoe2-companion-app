@@ -1,7 +1,13 @@
 body {
-  font-family: 'Plantagenet Cherokee', 'Helvetica', 'Arial', sans-serif;
   font-size: 20px;
   color: $color_text;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: 'Plantagenet Cherokee', 'Helvetica', 'Arial', sans-serif;
 }
 
 @font-face {

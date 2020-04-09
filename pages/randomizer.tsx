@@ -1,7 +1,7 @@
 import App from '../src/components/App';
 
 export default () => (
-  <div className='app'>
+  <div className='randomizer'>
     <App />
   </div>
 );
