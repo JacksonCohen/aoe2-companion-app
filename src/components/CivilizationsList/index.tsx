@@ -73,7 +73,7 @@ const CivilizationsList = () => {
 
   const selectChosenCriteria = (criteria: string, option: string): void => {
     const civs: CivilizationInterface[] = [...civilizations!];
-    civs.forEach((civ) => {
+    civs.forEach((civ: CivilizationInterface) => {
       if (civ[criteria].includes(option) || civ[criteria] === option) {
         civ.checked = !civ.checked;
       }
@@ -90,7 +90,7 @@ const CivilizationsList = () => {
       />
 
       <section className='section__civ-list'>
-        <div>
+        <div className='civ__container'>
           {civilizations &&
             civilizations.map((civ: CivilizationInterface) => {
               return (
