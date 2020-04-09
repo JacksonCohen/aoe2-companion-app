@@ -9,11 +9,11 @@ interface Props {
 
 const RandomizerHeader = ({ sortCivilizations, selectChosenCriteria, selectOrClearAll }: Props) => {
   return (
-    <header>
+    <div className='header'>
       <div className='button__sort-options'>
         <ul className='dropdown'>
           <li>
-            <button>Sort ▼</button>
+            <button>Sort &nbsp;▶</button>
             <ul className='sort'>
               <Dropdown label='Alphabetical' criteria='alphabetical' callback={sortCivilizations} />
               <Dropdown label='Expansion' criteria='expansion' callback={sortCivilizations} />
@@ -22,7 +22,7 @@ const RandomizerHeader = ({ sortCivilizations, selectChosenCriteria, selectOrCle
         </ul>
       </div>
       <div className='button__select-options'>
-        <ul className='dropdown'>
+        {/* <ul className='dropdown'>
           <li>
             <button>Criteria ▼</button>
             <ul>
@@ -47,12 +47,12 @@ const RandomizerHeader = ({ sortCivilizations, selectChosenCriteria, selectOrCle
               />
             </ul>
           </li>
-        </ul>
+        </ul> */}
 
         <button onClick={(): void => selectOrClearAll(true)}>Select all</button>
         <button onClick={(): void => selectOrClearAll(false)}>Clear all</button>
       </div>
-    </header>
+    </div>
   );
 };
 
