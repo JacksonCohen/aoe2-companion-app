@@ -1,6 +1,4 @@
-import React, { Fragment, useState } from 'react';
-// import CivilizationInterface from '../../interfaces/Civilization.interface';
-
+import React, { Fragment, useState, useEffect, SyntheticEvent, EffectCallback } from 'react';
 import './_RandomizerModal.scss';
 
 const RandomizerModal = ({ civilization, closeModal }: any) => {
@@ -15,6 +13,18 @@ const RandomizerModal = ({ civilization, closeModal }: any) => {
     civilizationBonuses,
     teamBonus,
   } = civilization;
+
+  useEffect(() => {
+    document.addEventListener('keydown', escapeModal);
+
+    return (): void => document.removeEventListener('keydown', escapeModal);
+  });
+
+  const escapeModal = (event: KeyboardEvent) => {
+    if (event.keyCode === 27) {
+      closeModal();
+    }
+  };
 
   const formatList = (list: string[], longList: boolean | undefined = false) => {
     let output: string = '';
@@ -40,6 +50,7 @@ const RandomizerModal = ({ civilization, closeModal }: any) => {
 
   return (
     <div className='modal'>
+      <img id='scroll' src='/static/scroll-once.gif' />
       <span id='modal__exit' onClick={(): void => closeModal()}>
         &times;
       </span>
