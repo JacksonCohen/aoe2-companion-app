@@ -3,7 +3,7 @@ import CivilizationsList from '../CivilizationsList';
 
 const Randomizer = () => {
   return (
-    <div className='section__randomizer'>
+    <div className='service__randomizer'>
       <CivilizationsList />
     </div>
   );

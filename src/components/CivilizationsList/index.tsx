@@ -10,6 +10,8 @@ import './_CivilizationsList.scss';
 const CivilizationsList = () => {
   const [civilizations, setCivilizations] = useState<CivilizationInterface[] | undefined>([]);
   const [selectedRandomCiv, setSelectedRandomCiv] = useState({});
+  const [loadedGif, setLoadedGif] = useState('/static/images/scroll-open.gif');
+  const [tempGif, setTempGif] = useState('/static/images/scroll-open.gif');
 
   useEffect((): void => {
     civilizationData.forEach((civ: CivilizationInterface) => {
@@ -61,14 +63,25 @@ const CivilizationsList = () => {
   const selectCiv = (): void => {
     const validCivs: CivilizationInterface[] = civilizations!.filter((civ) => civ.checked);
 
-    validCivs.length
-      ? setSelectedRandomCiv(validCivs[Math.floor(Math.random() * validCivs!.length)])
-      : alert('Select one or more random civilizations to receive a random selection.'); // alert if
+    if (validCivs.length > 0) {
+      // pick a random civ from the checked civs and update state
+      setSelectedRandomCiv(validCivs[Math.floor(Math.random() * validCivs!.length)]);
+    } else {
+      // alert if there are no civs selected
+      alert('Select one or more random civilizations to receive a random selection.');
+    }
   };
 
   const closeModal = (): void => {
     selectOrClearAll(false);
     setSelectedRandomCiv({});
+  };
+
+  const reloadGif = (gif: string, stateUpdate: Function): void => {
+    stateUpdate('');
+    setTimeout(() => {
+      stateUpdate(gif);
+    }, 0);
   };
 
   const selectChosenCriteria = (criteria: string, option: string): void => {
@@ -89,7 +102,7 @@ const CivilizationsList = () => {
         selectOrClearAll={selectOrClearAll}
       />
 
-      <section className='section__civ-list'>
+      <section className='section__randomizer'>
         <div className='civ__container'>
           {civilizations &&
             civilizations.map((civ: CivilizationInterface) => {
@@ -105,15 +118,22 @@ const CivilizationsList = () => {
               );
             })}
         </div>
+
+        <div className='button__randomizer'>
+          <button
+            onClick={() => {
+              selectCiv();
+              reloadGif(tempGif, setLoadedGif);
+            }}
+          >
+            Randomize!
+          </button>
+        </div>
       </section>
 
-      <div className='button__randomizer'>
-        <button onClick={selectCiv}>Randomize!</button>
-      </div>
-
-      {/* if the randomizer has been used, open the modal */}
+      {/* if the randomizer has been used with 1+ civs selected, open the modal */}
       {!!Object.keys(selectedRandomCiv).length ? (
-        <RandomizerModal civilization={selectedRandomCiv} closeModal={closeModal} />
+        <RandomizerModal civilization={selectedRandomCiv} closeModal={closeModal} gif={loadedGif} />
       ) : null}
     </Fragment>
   );

@@ -1,7 +1,7 @@
-import React, { Fragment, useState, useEffect, SyntheticEvent, EffectCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import './_RandomizerModal.scss';
 
-const RandomizerModal = ({ civilization, closeModal }: any) => {
+const RandomizerModal = ({ civilization, closeModal, gif }: any) => {
   const [learnMore, setLearnMore] = useState(false);
   const {
     name,
@@ -19,6 +19,12 @@ const RandomizerModal = ({ civilization, closeModal }: any) => {
 
     return (): void => document.removeEventListener('keydown', escapeModal);
   });
+
+  useEffect(() => {
+    setTimeout(() => {
+      document.getElementsByClassName('modal__body')[0].classList.remove('hide');
+    }, 250);
+  }, []);
 
   const escapeModal = (event: KeyboardEvent) => {
     if (event.keyCode === 27) {
@@ -49,49 +55,52 @@ const RandomizerModal = ({ civilization, closeModal }: any) => {
   };
 
   return (
-    <div className='modal'>
-      <img id='scroll' src='/static/scroll-once.gif' />
+    <div className='modal__container'>
       <span id='modal__exit' onClick={(): void => closeModal()}>
         &times;
       </span>
-      <div className='modal__results'>
-        <div id='civ__name'>
-          <strong>You've received the {name}!</strong>
+      <img id='scroll' src={gif} />
+      <div className={`modal__body hide`}>
+        <div className='modal__results'>
+          <div id='civ__name'>
+            <strong>You've received the {name}!</strong>
+          </div>
+          <div id='civ__coatOfArms'>
+            <img src={coatOfArms} alt={name} />
+          </div>
         </div>
-        <div id='civ__coatOfArms'>
-          <img src={coatOfArms} alt={name} />
-        </div>
+
+        {!learnMore ? (
+          <div className='modal__learn-more'>
+            <a onClick={(): void => setLearnMore(true)}>Learn more?</a>
+          </div>
+        ) : null}
+        {learnMore ? (
+          <div className='civ__civ-info'>
+            <div>
+              <strong>Specialty</strong>: {specialty}
+            </div>
+            <div>
+              <strong>Unique unit{uniqueUnit.length > 1 ? 's' : ''}</strong>:{' '}
+              {formatList(uniqueUnit)}
+            </div>
+            <div>
+              <strong>Unique technologies</strong>: {formatList(uniqueTechnologies)}
+            </div>
+            <div>
+              <strong>Wonder</strong>: {wonder}
+            </div>
+            <div>
+              <strong>Civilization bonuses</strong>: {formatList(civilizationBonuses, true)}
+            </div>
+            <div>
+              <strong>Team bonus</strong>: {teamBonus}
+            </div>
+
+            {/* <div className="guide">View guides for the {name}</div> */}
+          </div>
+        ) : null}
       </div>
-
-      {!learnMore ? (
-        <div className='modal__learn-more'>
-          <a onClick={(): void => setLearnMore(true)}>Learn more?</a>
-        </div>
-      ) : null}
-      {learnMore ? (
-        <div className='civ__civ-info'>
-          <div>
-            <strong>Specialty</strong>: {specialty}
-          </div>
-          <div>
-            <strong>Unique unit{uniqueUnit.length > 1 ? 's' : ''}</strong>: {formatList(uniqueUnit)}
-          </div>
-          <div>
-            <strong>Unique technologies</strong>: {formatList(uniqueTechnologies)}
-          </div>
-          <div>
-            <strong>Wonder</strong>: {wonder}
-          </div>
-          <div>
-            <strong>Civilization bonuses</strong>: {formatList(civilizationBonuses, true)}
-          </div>
-          <div>
-            <strong>Team bonus</strong>: {teamBonus}
-          </div>
-
-          {/* <div className="guide">View guides for the {name}</div> */}
-        </div>
-      ) : null}
     </div>
   );
 };

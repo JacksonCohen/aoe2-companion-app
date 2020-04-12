@@ -1,4 +1,4 @@
-.section__civ-list > div {
+.section__randomizer > div {
   display: flex;
   flex-flow: row wrap;
   margin: 10px 0;
@@ -49,59 +49,6 @@ button:hover {
   }
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: inline;
-}
-.dropdown li {
-  position: relative;
-  float: left;
-}
-.dropdown li > ul {
-  position: absolute;
-  left: -999em;
-  width: 100%;
-  top: 0;
-  transition: top 0.5s ease;
-}
-.dropdown ul ul {
-  transition: transform 0.5s ease, opacity 0.3s ease;
-  transform: translateX(0);
-  opacity: 0;
-}
-.dropdown a {
-  display: block;
-  background: #f3f3f3;
-  padding: 5px 10px 5px 10px;
-  text-decoration: none;
-  white-space: nowrap;
-  color: #666666;
-  border: 1px solid #fff;
-  line-height: 1.2em;
-  min-width: fit-content;
-}
-.dropdown a:hover {
-  background: #ccc;
-}
-.dropdown li:hover > ul {
-  left: 100%;
-  // top: 100%;
-}
-.dropdown li li:hover > ul {
-  left: 0;
-  transform: translateX(100%);
-  top: 0;
-  opacity: 1;
-}
-.dropdown ul li {
-  float: none;
-}
-.dropdown li:hover > a {
-  background: #ccc;
-}
-
 // Non-desktop devices
 @media (max-width: 1223.98px) {
   header {
@@ -117,7 +64,7 @@ ul {
 
 // Desktop devices
 @media (min-width: 1224px) {
-  .section__randomizer {
+  .service__randomizer {
     margin: 50px 100px;
   }
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import Dropdown from '../Dropdown';
 
+import './_RandomizerHeader.scss';
+
 interface Props {
   sortCivilizations: Function;
   selectChosenCriteria: Function;
