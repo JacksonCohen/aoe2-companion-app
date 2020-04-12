@@ -1,10 +1,10 @@
 import React from 'react';
 import Navbar from '../Navbar';
 
-const Header = () => {
+const Header = ({ active }: { active?: string }) => {
   return (
     <div>
-      <Navbar />
+      <Navbar active={active!} />
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import './Navbar.scss';
 
-const Navbar = () => {
+const Navbar = ({ active }: { active: string }) => {
   return (
     <div className='nav'>
       <div className='nav__main'>
@@ -19,27 +19,27 @@ const Navbar = () => {
       </form> */}
 
       <ul>
-        <li>
+        <li className={active === 'randomizer' ? 'active' : ''}>
           <Link href='/randomizer'>
             <a>Randomizer</a>
           </Link>
         </li>
-        <li>
-          <Link href='/stats'>
+        <li className={active === 'statistics' ? 'active' : ''}>
+          <Link href='/statistics'>
             <a>Statistics</a>
           </Link>
         </li>
-        <li>
+        <li className={active === 'strategy' ? 'active' : ''}>
           <Link href='/strategy'>
             <a>Strategy</a>
           </Link>
         </li>
-        <li>
+        <li className={active === 'about' ? 'active' : ''}>
           <Link href='/about'>
             <a>About</a>
           </Link>
         </li>
-        <li>
+        <li className={active === 'contact' ? 'active' : ''}>
           <Link href='/contact'>
             <a>Contact</a>
           </Link>
