@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import './Navbar.scss';
 
-const Navbar = ({ active }: { active: string }) => {
+const Navbar = ({ active }: { active?: string }) => {
   return (
     <div className='nav'>
       <div className='nav__main'>

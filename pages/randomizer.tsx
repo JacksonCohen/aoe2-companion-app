@@ -1,9 +1,9 @@
-import Header from '../src/components/Header';
+import Navbar from '../src/components/Navbar';
 import Randomizer from '../src/components/Randomizer';
 
 export default () => (
   <div className='randomizer'>
-    <Header active='randomizer' />
+    <Navbar active='randomizer' />
     <Randomizer />
   </div>
 );
