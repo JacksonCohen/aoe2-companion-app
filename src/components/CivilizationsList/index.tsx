@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import CivilizationInterface from '../../interfaces/Civilization.interface';
 import Civilization from '../Civilization';
 import RandomizerHeader from '../RandomizerHeader';
@@ -10,8 +10,8 @@ import './_CivilizationsList.scss';
 const CivilizationsList = () => {
   const [civilizations, setCivilizations] = useState<CivilizationInterface[] | undefined>([]);
   const [selectedRandomCiv, setSelectedRandomCiv] = useState({});
-  const [loadedGif, setLoadedGif] = useState('/static/images/scroll-open.gif');
-  const [tempGif, setTempGif] = useState('/static/images/scroll-open.gif');
+  const [loadedGif, setLoadedGif] = useState('/static/images/scroll-modal.gif');
+  const [tempGif, setTempGif] = useState('/static/images/scroll-modal.gif');
 
   useEffect((): void => {
     civilizationData.forEach((civ: CivilizationInterface) => {
@@ -95,7 +95,7 @@ const CivilizationsList = () => {
   };
 
   return (
-    <Fragment>
+    <>
       <RandomizerHeader
         sortCivilizations={sortCivilizations}
         selectChosenCriteria={selectChosenCriteria}
@@ -135,7 +135,7 @@ const CivilizationsList = () => {
       {!!Object.keys(selectedRandomCiv).length ? (
         <RandomizerModal civilization={selectedRandomCiv} closeModal={closeModal} gif={loadedGif} />
       ) : null}
-    </Fragment>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 interface Props {
   label: string;
@@ -9,7 +9,7 @@ interface Props {
 
 const Dropdown = ({ label, options, criteria, callback }: Props) => {
   return (
-    <Fragment>
+    <>
       {options ? (
         <li>
           {label} ▶
@@ -32,7 +32,7 @@ const Dropdown = ({ label, options, criteria, callback }: Props) => {
           </button>
         </li>
       )}
-    </Fragment>
+    </>
   );
 };
 
