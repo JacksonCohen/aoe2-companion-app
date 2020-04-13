@@ -19,29 +19,29 @@ const Navbar = ({ active }: { active?: string }) => {
       </form> */}
 
       <ul>
-        <li className={active === 'randomizer' ? 'active' : ''}>
+        <li>
           <Link href='/randomizer'>
-            <a>Randomizer</a>
+            <a className={active === 'randomizer' ? 'active' : ''}>Randomizer</a>
           </Link>
         </li>
-        <li className={active === 'statistics' ? 'active' : ''}>
+        <li>
           <Link href='/statistics'>
-            <a>Statistics</a>
+            <a className={active === 'statistics' ? 'active' : ''}>Statistics</a>
           </Link>
         </li>
-        <li className={active === 'strategy' ? 'active' : ''}>
+        <li>
           <Link href='/strategy'>
-            <a>Strategy</a>
+            <a className={active === 'strategy' ? 'active' : ''}>Strategy</a>
           </Link>
         </li>
-        <li className={active === 'about' ? 'active' : ''}>
+        <li>
           <Link href='/about'>
-            <a>About</a>
+            <a className={active === 'about' ? 'active' : ''}> About</a>
           </Link>
         </li>
-        <li className={active === 'contact' ? 'active' : ''}>
+        <li>
           <Link href='/contact'>
-            <a>Contact</a>
+            <a className={active === 'contact' ? 'active' : ''}>Contact</a>
           </Link>
         </li>
       </ul>
