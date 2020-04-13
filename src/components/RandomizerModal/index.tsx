@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+
 import './_RandomizerModal.scss';
 
-const RandomizerModal = ({ civilization, closeModal, gif }: any) => {
+const RandomizerModal = ({ civilization, updateModalGif, closeModal, gif }: any) => {
   const [learnMore, setLearnMore] = useState(false);
   const {
     name,
@@ -27,6 +28,7 @@ const RandomizerModal = ({ civilization, closeModal, gif }: any) => {
   }, []);
 
   const escapeModal = (event: KeyboardEvent) => {
+    // close modal using 'esc' key
     if (event.keyCode === 27) {
       closeModal();
     }
@@ -72,11 +74,20 @@ const RandomizerModal = ({ civilization, closeModal, gif }: any) => {
 
         {!learnMore ? (
           <div className='modal__learn-more'>
-            <a onClick={(): void => setLearnMore(true)}>Learn more?</a>
+            <a
+              onClick={(): void => {
+                setTimeout(() => {
+                  setLearnMore(true);
+                }, 500);
+                updateModalGif();
+              }}
+            >
+              Learn more?
+            </a>
           </div>
         ) : null}
         {learnMore ? (
-          <div className='civ__civ-info'>
+          <div className='modal__civ-info'>
             <div>
               <strong>Specialty</strong>: {specialty}
             </div>

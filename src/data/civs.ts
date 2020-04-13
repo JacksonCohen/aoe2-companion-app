@@ -15,11 +15,11 @@ export const civilizationData: CivilizationInterface[] = [
       'Villagers carry +5 extra resources.',
       'All military units are created 15% faster.',
       'Monks gain 5 HP for every researched Monastery technology.',
-      'Start with +50 gold.'
+      'Start with +50 gold.',
     ],
     teamBonus: 'Relics generate +33% gold.',
     geographicRegion: ['The Americas'],
-    expansion: 'The Conquerors'
+    expansion: 'The Conquerors',
   },
   {
     id: 23,
@@ -33,11 +33,11 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'Villagers move +10% faster.',
       'Stable units are 15%/20% cheaper in the Castle/Imperial Age.',
-      'Ships move +10% faster.'
+      'Ships move +10% faster.',
     ],
     teamBonus: 'Genitour are available at the Archery Range.',
     geographicRegion: ['Africa'],
-    expansion: 'The African Kingdoms'
+    expansion: 'The African Kingdoms',
   },
   {
     id: 0,
@@ -52,11 +52,11 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'Town Centers cost -50% wood starting in the Castle Age.',
       'Foot archers (except Skirmishers) have +1/+2 range in the Castle/Imperial Age.',
-      'Shepherds work 25% faster.'
+      'Shepherds work 25% faster.',
     ],
     teamBonus: 'Archery Ranges work 20% faster.',
     geographicRegion: ['Europe'],
-    expansion: 'The Age of Kings'
+    expansion: 'The Age of Kings',
   },
   {
     id: 31,
@@ -70,11 +70,11 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'Militia-line upgrades free.',
       'Town Centers cost -50% stone.',
-      'Can build Krepost.'
+      'Can build Krepost.',
     ],
     teamBonus: 'Blacksmiths work 50% faster.',
     geographicRegion: ['Europe'],
-    expansion: 'The Last Khans'
+    expansion: 'The Last Khans',
   },
   {
     id: 27,
@@ -88,11 +88,11 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'Lumber Camp technologies are free.',
       'Infantry has +1/+2/+3 attack in the Feudal/Castle/Imperial Age.',
-      'Monastery technologies are 50% cheaper.'
+      'Monastery technologies are 50% cheaper.',
     ],
     teamBonus: 'Relics are visible on the map from the game start.',
     geographicRegion: ['Asia'],
-    expansion: 'Rise of the Rajas'
+    expansion: 'Rise of the Rajas',
   },
   {
     id: 1,
@@ -108,11 +108,11 @@ export const civilizationData: CivilizationInterface[] = [
       'Camel Riders, Skirmishers, and the Spearman lines are 25% cheaper.',
       'Fire Ships attack 20% faster.',
       'Advancing to the Imperial Age is 33% cheaper.',
-      'Town Watch is free.'
+      'Town Watch is free.',
     ],
     teamBonus: 'Monks heal 50% faster.',
     geographicRegion: ['Europe', 'Asia'],
-    expansion: 'The Age of Kings'
+    expansion: 'The Age of Kings',
   },
   {
     id: 2,
@@ -127,11 +127,11 @@ export const civilizationData: CivilizationInterface[] = [
       'Infantry units move 15% faster.',
       'Lumberjacks work 15% faster.',
       'Siege weapons fire +20% faster.',
-      'Enemy herdables can be converted regardless of enemy units next to them.'
+      'Enemy herdables can be converted regardless of enemy units next to them.',
     ],
     teamBonus: 'Siege Workshops work 20% faster.',
     geographicRegion: ['Europe'],
-    expansion: 'The Age of Kings'
+    expansion: 'The Age of Kings',
   },
   {
     id: 3,
@@ -146,11 +146,11 @@ export const civilizationData: CivilizationInterface[] = [
       'Start game with three extra Villagers, but with -200 food and -50 wood.',
       'Town Center supports ten population (instead of five).',
       'Technologies are 10%/15%/20% cheaper in the Feudal/Castle/Imperial Age.',
-      'Demolition Ships have +50% HP.'
+      'Demolition Ships have +50% HP.',
     ],
     teamBonus: 'Farms start with +45 food.',
     geographicRegion: ['Asia'],
-    expansion: 'The Age of Kings'
+    expansion: 'The Age of Kings',
   },
   {
     id: 32,
@@ -164,11 +164,11 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'Additional Town Center can be built in the Feudal Age.',
       'Siege Workshops and Battering Ram available in the Feudal Age.',
-      'Cavalry move 5% faster in the Feudal Age, 10% faster in Castle Age, and 15% faster in Imperial Age.'
+      'Cavalry move 5% faster in the Feudal Age, 10% faster in Castle Age, and 15% faster in Imperial Age.',
     ],
     teamBonus: 'Palisade Walls have +50% hit points.',
     geographicRegion: ['Asia', 'Europe'],
-    expansion: 'The Last Khans'
+    expansion: 'The Last Khans',
   },
   {
     id: 24,
@@ -182,11 +182,11 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'Archers fire +15% faster.',
       'Receive +100 food and +100 gold whenever a new Age is reached.',
-      'The Pikeman upgrade is free.'
+      'The Pikeman upgrade is free.',
     ],
     teamBonus: 'Towers and Outposts have +3 Line of Sight.',
     geographicRegion: ['Africa'],
-    expansion: 'The African Kingdoms'
+    expansion: 'The African Kingdoms',
   },
   {
     id: 4,
@@ -201,11 +201,11 @@ export const civilizationData: CivilizationInterface[] = [
       'Farm upgrades are free.',
       'Castles are 25% cheaper.',
       'Cavalry have +20% HP.',
-      'Foragers work 25% faster.'
+      'Foragers work 25% faster.',
     ],
     teamBonus: 'Knights have +2 Line of Sight.',
     geographicRegion: ['Europe'],
-    expansion: 'The Age of Kings'
+    expansion: 'The Age of Kings',
   },
   {
     id: 5,
@@ -220,11 +220,11 @@ export const civilizationData: CivilizationInterface[] = [
       'Infantry are 35% cheaper starting in the Feudal Age.',
       'Infantry have +1 attack bonus against standard buildings.',
       'Villagers have +5 attack against Wild Boars and carry +15 food from hunting.',
-      '+10 population cap in the Imperial Age.'
+      '+10 population cap in the Imperial Age.',
     ],
     teamBonus: 'Barracks work 20% faster.',
     geographicRegion: ['Europe'],
-    expansion: 'The Age of Kings'
+    expansion: 'The Age of Kings',
   },
   {
     id: 14,
@@ -238,11 +238,11 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'Start the game with -100 wood, but with the population cap at the maximum.',
       'Cavalry Archers are 10%/20% cheaper in the Castle/Imperial Age.',
-      'Trebuchets have +35% accuracy against units.'
+      'Trebuchets have +35% accuracy against units.',
     ],
     teamBonus: 'Stables work 20% faster.',
     geographicRegion: ['Europe', 'Asia'],
-    expansion: 'The Conquerors'
+    expansion: 'The Conquerors',
   },
   {
     id: 18,
@@ -258,11 +258,11 @@ export const civilizationData: CivilizationInterface[] = [
       'Start with a free Llama.',
       'Villagers benefit from Blacksmith infantry upgrades.',
       'Houses support 10 population.',
-      'Buildings cost -15% stone.'
+      'Buildings cost -15% stone.',
     ],
     teamBonus: 'Farms are built 50% faster.',
     geographicRegion: ['The Americas'],
-    expansion: 'The Forgotten'
+    expansion: 'The Forgotten',
   },
   {
     id: 19,
@@ -277,11 +277,11 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'Fishermen work 15% faster and carry +15 food.',
       'Villagers are 10%/15%/20%/25% cheaper in the Dark/Feudal/Castle/Imperial Age.',
-      'Camel Riders have +1 pierce armor.'
+      'Camel Riders have +1 pierce armor.',
     ],
     teamBonus: 'Camels have +6 attack against buildings.',
     geographicRegion: ['Asia'],
-    expansion: 'The Forgotten'
+    expansion: 'The Forgotten',
   },
   {
     id: 20,
@@ -296,11 +296,11 @@ export const civilizationData: CivilizationInterface[] = [
       'Advancing to the next Age is 15% cheaper.',
       'Dock technologies are 50% cheaper.',
       'Fishing Ships are 20% cheaper.',
-      'Gunpowder units are 20% cheaper.'
+      'Gunpowder units are 20% cheaper.',
     ],
     teamBonus: 'Condottieri are available at the Barracks.',
     geographicRegion: ['Europe'],
-    expansion: 'The Forgotten'
+    expansion: 'The Forgotten',
   },
   {
     id: 6,
@@ -314,11 +314,11 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'Fishing Ships have double HP, +2 pierce armor, and work 5%/10%/15%/20% faster in the Dark/Feudal/Castle/Imperial Age.',
       'Mills, Lumber Camps and Mining Camps are 50% cheaper.',
-      'Infantry attack 25% faster starting in the Feudal Age.'
+      'Infantry attack 25% faster starting in the Feudal Age.',
     ],
     teamBonus: 'Galleys have a +50% longer Line of Sight.',
     geographicRegion: ['Asia'],
-    expansion: 'The Age of Kings'
+    expansion: 'The Age of Kings',
   },
   {
     id: 28,
@@ -333,11 +333,11 @@ export const civilizationData: CivilizationInterface[] = [
       'No buildings are required to construct certain buildings or advance in Age.',
       'Battle Elephants move +15% faster.',
       'Khmer Villagers drop off food from farms (1 unit at a time) without needing a drop site.',
-      'Villagers can garrison in Houses.'
+      'Villagers can garrison in Houses.',
     ],
     teamBonus: 'Scorpions have +1 range.',
     geographicRegion: ['Asia'],
-    expansion: 'Rise of the Rajas'
+    expansion: 'Rise of the Rajas',
   },
   {
     id: 15,
@@ -353,11 +353,11 @@ export const civilizationData: CivilizationInterface[] = [
       'Stone Miners work 20% faster.',
       'Tower upgrades are free (Bombard Tower requires Chemistry).',
       'Towers (except Bombard Towers) have +1/+2 range in the Castle/Imperial Age.',
-      'Fortifications are built 33% faster.'
+      'Fortifications are built 33% faster.',
     ],
     teamBonus: 'Mangonel line minimum range reduced.',
     geographicRegion: ['Asia'],
-    expansion: 'The Conquerors'
+    expansion: 'The Conquerors',
   },
   {
     id: 33,
@@ -371,11 +371,11 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'Start with +150 food.',
       'Spearman-line and Skirmishers move 10% faster.',
-      'Each garrisoned Relic gives +1 attack to Knights and Leitis (maximum +4).'
+      'Each garrisoned Relic gives +1 attack to Knights and Leitis (maximum +4).',
     ],
     teamBonus: 'Monastery works 20% faster.',
     geographicRegion: ['Europe'],
-    expansion: 'The Last Khans'
+    expansion: 'The Last Khans',
   },
   {
     id: 21,
@@ -389,11 +389,11 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'Forging, Iron Casting, and Blast Furnace are free.',
       'Scout Cavalry line is 15% cheaper.',
-      'Villagers kill wild animals in one strike.'
+      'Villagers kill wild animals in one strike.',
     ],
     teamBonus: 'Foot archers have +2 Line of Sight.',
     geographicRegion: ['Europe'],
-    expansion: 'The Forgotten'
+    expansion: 'The Forgotten',
   },
   {
     id: 29,
@@ -408,11 +408,11 @@ export const civilizationData: CivilizationInterface[] = [
       'Advancing in Age is +80% faster.',
       'Fish Traps are 33% cheaper.',
       'Fish Traps provide unlimited food.',
-      'Battle Elephants are 30% cheaper.'
+      'Battle Elephants are 30% cheaper.',
     ],
     teamBonus: 'Docks have double Line of Sight.',
     geographicRegion: ['Asia'],
-    expansion: 'Rise of the Rajas'
+    expansion: 'Rise of the Rajas',
   },
   {
     id: 25,
@@ -426,11 +426,11 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'Buildings cost -15% wood (except Farms).',
       'Barracks units have +1/+2/+3 pierce armor in the Feudal/Castle/Imperial Age.',
-      'Gold Mining is free.'
+      'Gold Mining is free.',
     ],
     teamBonus: 'Universities research +80% faster.',
     geographicRegion: ['Africa'],
-    expansion: 'The African Kingdoms'
+    expansion: 'The African Kingdoms',
   },
   {
     id: 16,
@@ -445,11 +445,11 @@ export const civilizationData: CivilizationInterface[] = [
       'Start the game with an Eagle Scout.',
       'Start the game with +1 Villager, but with -50 food.',
       'Resources last 15% longer.',
-      'Foot archers are 10%/20%/30% cheaper in the Feudal/Castle/Imperial Age.'
+      'Foot archers are 10%/20%/30% cheaper in the Feudal/Castle/Imperial Age.',
     ],
     teamBonus: 'Walls are 50% cheaper.',
     geographicRegion: ['The Americas'],
-    expansion: 'The Conquerors'
+    expansion: 'The Conquerors',
   },
   {
     id: 7,
@@ -463,11 +463,11 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'Cavalry archers fire 25% faster.',
       'Light Cavalry and Hussars have +30% HP.',
-      'Hunters work +50% faster.'
+      'Hunters work +50% faster.',
     ],
     teamBonus: 'The Scout Cavalry line has +2 Line of Sight.',
     geographicRegion: ['Asia'],
-    expansion: 'The Age of Kings'
+    expansion: 'The Age of Kings',
   },
   {
     id: 8,
@@ -480,11 +480,11 @@ export const civilizationData: CivilizationInterface[] = [
     wonder: 'Taq Kasra',
     civilizationBonuses: [
       'Start game with +50 food and +50 wood.',
-      'Town Centers and Docks have double HP and work 10%/15%/20% faster in the Feudal/Castle/Imperial Age.'
+      'Town Centers and Docks have double HP and work 10%/15%/20% faster in the Feudal/Castle/Imperial Age.',
     ],
     teamBonus: 'Knights have +2 attack against archers.',
     geographicRegion: ['Asia'],
-    expansion: 'The Age of Kings'
+    expansion: 'The Age of Kings',
   },
   {
     id: 26,
@@ -498,11 +498,11 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'All units cost -15% gold.',
       'All ships have +10% HP.',
-      'The Feitoria becomes available for building in the Imperial Age.'
+      'The Feitoria becomes available for building in the Imperial Age.',
     ],
     teamBonus: 'Free Cartography from the beginning of the game.',
     geographicRegion: ['Europe'],
-    expansion: 'The African Kingdoms'
+    expansion: 'The African Kingdoms',
   },
   {
     id: 9,
@@ -518,11 +518,11 @@ export const civilizationData: CivilizationInterface[] = [
       'Markets cost -75 wood.',
       'Transport Ships have double HP and +5 carry capacity.',
       'Galleys attack 20% faster.',
-      'Cavalry Archers have +4 attack against standard buildings.'
+      'Cavalry Archers have +4 attack against standard buildings.',
     ],
-    teamBonus: 'teamBonus: : Foot archers have +2 attack against standard buildings.',
+    teamBonus: 'Foot archers have +2 attack against standard buildings.',
     geographicRegion: ['Asia', 'Africa'],
-    expansion: 'The Age of Kings'
+    expansion: 'The Age of Kings',
   },
   {
     id: 22,
@@ -536,11 +536,11 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'Farmers work 15% faster.',
       'Tracking is free.',
-      'Siege Workshop units are 15% cheaper.'
+      'Siege Workshop units are 15% cheaper.',
     ],
     teamBonus: 'Military buildings (excluding Castles and Docks) provide +5 population.',
     geographicRegion: ['Europe'],
-    expansion: 'The Forgotten'
+    expansion: 'The Forgotten',
   },
   {
     id: 17,
@@ -555,11 +555,11 @@ export const civilizationData: CivilizationInterface[] = [
       'Builders work 30% faster.',
       'Blacksmith upgrades cost no gold.',
       'Cannon Galleons have better accuracy and faster cannonballs.',
-      'Hand Cannoneers and Bombard Cannons fire 15% faster.'
+      'Hand Cannoneers and Bombard Cannons fire 15% faster.',
     ],
     teamBonus: 'Trade units generate +25% gold.',
     geographicRegion: ['Europe'],
-    expansion: 'The Conquerors'
+    expansion: 'The Conquerors',
   },
   {
     id: 34,
@@ -573,11 +573,11 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'Herdables contain +50% food.',
       'Units deal +25% damage when attacking from hills (stacks with the regular hill attack bonus).',
-      'Parthian Tactics are free.'
+      'Parthian Tactics are free.',
     ],
     teamBonus: 'Cavalry Archers +2 LOS.',
     geographicRegion: ['Asia'],
-    expansion: 'The Last Khans'
+    expansion: 'The Last Khans',
   },
   {
     id: 10,
@@ -593,11 +593,11 @@ export const civilizationData: CivilizationInterface[] = [
       'Towers garrison twice as many units.',
       'Murder Holes are free.',
       'Farms are 33% cheaper.',
-      'Town Centers can garrison +10 units.'
+      'Town Centers can garrison +10 units.',
     ],
     teamBonus: 'Units resist conversion.',
     geographicRegion: ['Europe'],
-    expansion: 'The Age of Kings'
+    expansion: 'The Age of Kings',
   },
   {
     id: 11,
@@ -613,11 +613,11 @@ export const civilizationData: CivilizationInterface[] = [
       'Gunpowder technologies are 50% cheaper.',
       'Chemistry is free.',
       'Gold Miners work 20% faster.',
-      'Light Cavalry and Hussar upgrades are free.'
+      'Light Cavalry and Hussar upgrades are free.',
     ],
     teamBonus: 'Gunpowder units are created 20% faster.',
     geographicRegion: ['Asia', 'Europe'],
-    expansion: 'The Age of Kings'
+    expansion: 'The Age of Kings',
   },
   {
     id: 30,
@@ -631,11 +631,11 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'Reveal enemy positions at game start.',
       'Archery Range units have +20% HP.',
-      'Conscription is free.'
+      'Conscription is free.',
     ],
     teamBonus: 'Imperial Skirmishers are available at the Archery Range.',
     geographicRegion: ['Asia'],
-    expansion: 'Rise of the Rajas'
+    expansion: 'Rise of the Rajas',
   },
   {
     id: 12,
@@ -649,10 +649,10 @@ export const civilizationData: CivilizationInterface[] = [
     civilizationBonuses: [
       'Warships are 15%/15%/20% cheaper in the Feudal/Castle/Imperial Age.',
       'Infantry have +10%/+15%/+20% HP in the Feudal/Castle/Imperial Age.',
-      'Wheelbarrow and Hand Cart are free.'
+      'Wheelbarrow and Hand Cart are free.',
     ],
     teamBonus: 'Docks are 15% cheaper.',
     geographicRegion: ['Europe'],
-    expansion: 'The Age of Kings'
-  }
+    expansion: 'The Age of Kings',
+  },
 ];

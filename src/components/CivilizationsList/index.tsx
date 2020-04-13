@@ -10,8 +10,8 @@ import './_CivilizationsList.scss';
 const CivilizationsList = () => {
   const [civilizations, setCivilizations] = useState<CivilizationInterface[] | undefined>([]);
   const [selectedRandomCiv, setSelectedRandomCiv] = useState({});
-  const [loadedGif, setLoadedGif] = useState('/static/images/scroll-modal.gif');
-  const [tempGif, setTempGif] = useState('/static/images/scroll-modal.gif');
+  const [loadedGif, setLoadedGif] = useState('/static/images/scroll-modal-before.gif');
+  const [tempGif, setTempGif] = useState('/static/images/scroll-modal-before.gif');
 
   useEffect((): void => {
     civilizationData.forEach((civ: CivilizationInterface) => {
@@ -75,6 +75,8 @@ const CivilizationsList = () => {
   const closeModal = (): void => {
     selectOrClearAll(false);
     setSelectedRandomCiv({});
+    setLoadedGif('/static/images/scroll-modal-before.gif');
+    setTempGif('/static/images/scroll-modal-before.gif');
   };
 
   const reloadGif = (gif: string, stateUpdate: Function): void => {
@@ -82,6 +84,14 @@ const CivilizationsList = () => {
     setTimeout(() => {
       stateUpdate(gif);
     }, 0);
+  };
+
+  const updateModalGif = (): void => {
+    // setLoadedGif('/static/images/scroll-modal-after.gif');
+    // setTempGif('/static/images/scroll-modal-after.gif');
+    // console.log(loadedGif, 'gif');
+    const scroll: any = document.getElementById('scroll');
+    scroll!.src = '/static/images/scroll-modal-after.gif';
   };
 
   const selectChosenCriteria = (criteria: string, option: string): void => {
@@ -125,6 +135,7 @@ const CivilizationsList = () => {
               selectCiv();
               reloadGif(tempGif, setLoadedGif);
             }}
+            disabled={!!Object.keys(selectedRandomCiv).length ? true : false}
           >
             Randomize!
           </button>
@@ -133,7 +144,12 @@ const CivilizationsList = () => {
 
       {/* if the randomizer has been used with 1+ civs selected, open the modal */}
       {!!Object.keys(selectedRandomCiv).length ? (
-        <RandomizerModal civilization={selectedRandomCiv} closeModal={closeModal} gif={loadedGif} />
+        <RandomizerModal
+          civilization={selectedRandomCiv}
+          updateModalGif={updateModalGif}
+          closeModal={closeModal}
+          gif={loadedGif}
+        />
       ) : null}
     </>
   );
