@@ -7,17 +7,18 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 .nav {
   display: flex;
-  border-bottom: 2px #5c3700 solid;
+  border-bottom: 2px $brown solid;
+  padding: 15px 100px;
 
   .nav__main {
     margin-left: 20px;
   }
-  ul {
+  .nav__items {
     display: flex;
     margin-left: auto;
     align-items: center;
 
-    li {
+    a {
       display: inline-block;
       margin: 0 20px;
     }
@@ -89,9 +90,15 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   width: 20%;
 }
 
-// Desktop devices
-@media (min-width: 1224px) {
+// Mobile devices
+@media only screen and (max-width: 767.98px) {
   .nav {
-    padding: 15px 100px;
+    overflow: hidden;
+    position: relative;
+    background-color: #333;
+
+    .nav__items {
+      display: none;
+    }
   }
 }

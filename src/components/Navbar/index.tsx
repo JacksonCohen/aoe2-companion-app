@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import Burger from '../Burger';
 
-import './Navbar.scss';
+import './_Navbar.scss';
 
 const Navbar = ({ active }: { active?: string }) => {
+  const [open, setOpen] = useState(false);
+
+  const toggleMobileMenu = (): void => {
+    setOpen(!open);
+  };
+
   return (
-    <div className='nav'>
+    <nav className='nav'>
+      <Burger handleClick={toggleMobileMenu} />
       <div className='nav__main'>
         <Link href='/'>
           <a className='logo'>
@@ -18,34 +26,28 @@ const Navbar = ({ active }: { active?: string }) => {
         <input type='text' placeholder='Enter a username' />
       </form> */}
 
-      <ul>
-        <li>
-          <Link href='/randomizer'>
-            <a className={active === 'randomizer' ? 'active' : ''}>Randomizer</a>
-          </Link>
-        </li>
-        <li>
-          <Link href='/statistics'>
-            <a className={active === 'statistics' ? 'active' : ''}>Statistics</a>
-          </Link>
-        </li>
-        <li>
-          <Link href='/strategy'>
-            <a className={active === 'strategy' ? 'active' : ''}>Strategy</a>
-          </Link>
-        </li>
-        <li>
-          <Link href='/about'>
-            <a className={active === 'about' ? 'active' : ''}> About</a>
-          </Link>
-        </li>
-        <li>
-          <Link href='/contact'>
-            <a className={active === 'contact' ? 'active' : ''}>Contact</a>
-          </Link>
-        </li>
-      </ul>
-    </div>
+      <div className='nav__items'>
+        <Link href='/randomizer'>
+          <a className={active === 'randomizer' ? 'active' : ''}>Randomizer</a>
+        </Link>
+
+        <Link href='/statistics'>
+          <a className={active === 'statistics' ? 'active' : ''}>Statistics</a>
+        </Link>
+
+        <Link href='/strategy'>
+          <a className={active === 'strategy' ? 'active' : ''}>Strategy</a>
+        </Link>
+
+        <Link href='/about'>
+          <a className={active === 'about' ? 'active' : ''}> About</a>
+        </Link>
+
+        <Link href='/contact'>
+          <a className={active === 'contact' ? 'active' : ''}>Contact</a>
+        </Link>
+      </div>
+    </nav>
   );
 };
 
