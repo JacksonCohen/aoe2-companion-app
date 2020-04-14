@@ -93,9 +93,21 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 // Mobile devices
 @media only screen and (max-width: 767.98px) {
   .nav {
+    display: flex;
     overflow: hidden;
     position: relative;
-    background-color: #333;
+    padding: 0;
+    background-color: #01010178;
+
+    .nav__main {
+      margin-left: 0;
+
+      img {
+        display: flex;
+        width: 30%;
+        margin: 10px;
+      }
+    }
 
     .nav__items {
       display: none;

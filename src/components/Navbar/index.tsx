@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Burger from '../Burger';
+import Hamburger from '../Hamburger';
 
 import './_Navbar.scss';
 
 const Navbar = ({ active }: { active?: string }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
-  const toggleMobileMenu = (): void => {
+  const toggleHamburger = (): void => {
     setOpen(!open);
   };
 
   return (
     <nav className='nav'>
-      <Burger handleClick={toggleMobileMenu} />
+      <Hamburger isActive={open} handleClick={toggleHamburger} />
       <div className='nav__main'>
         <Link href='/'>
           <a className='logo'>
@@ -26,27 +26,29 @@ const Navbar = ({ active }: { active?: string }) => {
         <input type='text' placeholder='Enter a username' />
       </form> */}
 
-      <div className='nav__items'>
-        <Link href='/randomizer'>
-          <a className={active === 'randomizer' ? 'active' : ''}>Randomizer</a>
-        </Link>
+      {open ? (
+        <div className='nav__items'>
+          <Link href='/randomizer'>
+            <a className={active === 'randomizer' ? 'active' : ''}>Randomizer</a>
+          </Link>
 
-        <Link href='/statistics'>
-          <a className={active === 'statistics' ? 'active' : ''}>Statistics</a>
-        </Link>
+          <Link href='/statistics'>
+            <a className={active === 'statistics' ? 'active' : ''}>Statistics</a>
+          </Link>
 
-        <Link href='/strategy'>
-          <a className={active === 'strategy' ? 'active' : ''}>Strategy</a>
-        </Link>
+          <Link href='/strategy'>
+            <a className={active === 'strategy' ? 'active' : ''}>Strategy</a>
+          </Link>
 
-        <Link href='/about'>
-          <a className={active === 'about' ? 'active' : ''}> About</a>
-        </Link>
+          <Link href='/about'>
+            <a className={active === 'about' ? 'active' : ''}> About</a>
+          </Link>
 
-        <Link href='/contact'>
-          <a className={active === 'contact' ? 'active' : ''}>Contact</a>
-        </Link>
-      </div>
+          <Link href='/contact'>
+            <a className={active === 'contact' ? 'active' : ''}>Contact</a>
+          </Link>
+        </div>
+      ) : null}
     </nav>
   );
 };
