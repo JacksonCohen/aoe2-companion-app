@@ -106,13 +106,13 @@ const CivilizationsList = () => {
 
   return (
     <>
-      <RandomizerHeader
-        sortCivilizations={sortCivilizations}
-        selectChosenCriteria={selectChosenCriteria}
-        selectOrClearAll={selectOrClearAll}
-      />
-
       <section className='section__randomizer'>
+        <RandomizerHeader
+          sortCivilizations={sortCivilizations}
+          selectChosenCriteria={selectChosenCriteria}
+          selectOrClearAll={selectOrClearAll}
+        />
+
         <div className='civ__container'>
           {civilizations &&
             civilizations.map((civ: CivilizationInterface) => {
