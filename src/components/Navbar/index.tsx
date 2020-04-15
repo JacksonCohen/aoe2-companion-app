@@ -15,9 +15,7 @@ const Navbar = ({ active }: { active?: string }) => {
     <nav className='nav'>
       <div className='nav__main'>
         <Link href='/'>
-          <a className='nav__logo'>
-            <img src='../../../static/images/logo.png' alt='Age of Empires 2 Companion App' />
-          </a>
+          <img src='../../../static/images/logo.png' alt='Age of Empires 2 Companion App' />
         </Link>
 
         <div className='nav__hamburger'>

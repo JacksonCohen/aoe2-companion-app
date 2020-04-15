@@ -5,7 +5,7 @@ import './_Hamburger.scss';
 const Hamburger = ({ isActive, handleClick }: any) => {
   return (
     <button
-      className={`hamburger hamburger--elastic${isActive ? ' is-active' : ''}`}
+      className={`hamburger hamburger--spring${isActive ? ' is-active' : ''}`}
       type='button'
       aria-label='Menu'
       aria-controls='navigation'
