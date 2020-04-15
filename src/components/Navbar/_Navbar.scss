@@ -86,7 +86,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 //   }
 // }
 
-.logo img {
+.nav__logo img {
   width: 20%;
 }
 
@@ -95,11 +95,11 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   .nav {
     display: flex;
     overflow: hidden;
-    position: relative;
     padding: 0;
-    background-color: #01010178;
+    background-color: #ffffff99;
 
     .nav__main {
+      display: flex;
       margin-left: 0;
 
       img {
@@ -108,8 +108,40 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
         margin: 10px;
       }
     }
-
+    .nav__hamburger {
+      display: flex;
+    }
     .nav__items {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 10%;
+      right: 0;
+      left: 0;
+      margin-top: 0px;
+      z-index: 1;
+      max-height: 60vh;
+      -webkit-transition: ease all 300ms;
+      transition: ease all 300ms;
+
+      a {
+        display: flex;
+      }
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 100vw;
+        height: 100%;
+        background: #252a2c;
+        z-index: -1;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+    }
+    .hidden {
       display: none;
     }
   }
