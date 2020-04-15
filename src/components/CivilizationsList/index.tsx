@@ -3,7 +3,7 @@ import CivilizationInterface from '../../interfaces/Civilization.interface';
 import Civilization from '../Civilization';
 import RandomizerHeader from '../RandomizerHeader';
 import RandomizerModal from '../RandomizerModal';
-import { civilizationData } from '../../data/civs';
+import { civilizationData } from '../../../data/civs';
 
 import './_CivilizationsList.scss';
 

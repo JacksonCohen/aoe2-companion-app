@@ -1,5 +1,4 @@
 import React from 'react';
-import Card from '../Card';
 
 const Strategy = () => {
   // import from db? api? data file?
