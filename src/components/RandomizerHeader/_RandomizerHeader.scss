@@ -1,3 +1,19 @@
+.header {
+  display: flex;
+
+  .button__select-options {
+    margin-right: 25px;
+    margin-left: auto;
+  }
+  .button__sort-options {
+    margin-left: 25px;
+    .sort button {
+      margin: 0;
+      padding: 5px 10px;
+    }
+  }
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -51,5 +67,19 @@ ul {
   }
   ul li {
     float: none;
+  }
+}
+
+// Non-desktop devices
+@media (max-width: 767.98px) {
+  .header {
+    display: flex;
+
+    .button__select-options,
+    .button__sort-options {
+      display: flex;
+      flex-flow: row nowrap;
+      margin: 0;
+    }
   }
 }
