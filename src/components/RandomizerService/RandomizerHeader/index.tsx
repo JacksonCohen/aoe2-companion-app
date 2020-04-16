@@ -1,5 +1,5 @@
 import React from 'react';
-import Dropdown from '../Dropdown';
+import Dropdown from '../../Dropdown';
 
 import './_RandomizerHeader.scss';
 
@@ -22,6 +22,7 @@ const RandomizerHeader = ({ sortCivilizations, selectChosenCriteria, selectOrCle
   // 1 camels
   // 4 gunpowder
   // 2 cavalry archers
+
   return (
     <div className='header'>
       <div className='button__sort-options'>

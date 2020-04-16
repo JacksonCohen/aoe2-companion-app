@@ -1,5 +1,5 @@
 import Navbar from '../src/components/Navbar';
-import Randomizer from '../src/components/Randomizer';
+import Randomizer from '../src/components/RandomizerService/Randomizer';
 import PlayerCount from '../src/components/PlayerCount';
 
 export default () => (
