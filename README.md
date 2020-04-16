@@ -1,28 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+# 🏰 Age of Empires 2 Companion App 🏰
 
-## Getting Started
+This is a companion app for the game, Age of Empires 2: Definitive Edition, built with **TypeScript**, **React**, **Next.js**, and a Docker-deployed **MongoDB** database. It provides an authentication and account system, along with various tools and services.
 
-First, run the development server:
+## Technologies Used
 
-```bash
-npm run dev
-```
+- [TypeScript](https://www.typescriptlang.org/)
+- [React.js](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [Docker](https://www.docker.com/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+In the project directory:
 
-## Learn More
+## `npm install`
 
-To learn more about Next.js, take a look at the following resources:
+Installs necessary libraries for app functionality.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## `npm run dev`
 
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
+Runs the app in development mode, can be viewed at http://localhost:3000 in the browser. The page will automatically reload and update if changes to the code are made.
 
-## Deploy on ZEIT Now
+## `npm run build`
 
-The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Utilizes Webpack to build the app for production in the `build` folder. The bundle will be minified and optimized for best performance.
