@@ -1,6 +1,6 @@
 # 🏰 Age of Empires 2 Companion App 🏰
 
-This is a companion app for the game, Age of Empires 2: Definitive Edition, built with **TypeScript**, **React**, **Next.js**, and **MongoDB**. It provides an authentication and account system, along with various tools and services.
+This is a companion app for the game, Age of Empires 2: Definitive Edition, built with **TypeScript**, **React**, **Next.js**, and a Docker-deployed **MongoDB** database. It provides an authentication and account system, along with various tools and services.
 
 ## Technologies Used
 
@@ -8,6 +8,7 @@ This is a companion app for the game, Age of Empires 2: Definitive Edition, buil
 - [React.js](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
 - [MongoDB](https://www.mongodb.com/)
+- [Docker](https://www.docker.com/)
 
 ## Usage
 

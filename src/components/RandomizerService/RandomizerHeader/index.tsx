@@ -1,5 +1,5 @@
 import React from 'react';
-import Dropdown from '../Dropdown';
+import Dropdown from '../../Dropdown';
 
 import './_RandomizerHeader.scss';
 
@@ -10,6 +10,19 @@ interface Props {
 }
 
 const RandomizerHeader = ({ sortCivilizations, selectChosenCriteria, selectOrClearAll }: Props) => {
+  // Select by military type:
+  // 4 monks
+  // 10 infantry
+  // 7 navy
+  // 9 cavalry
+  // 6 archers
+  // 2 elephants
+  // 2 defense
+  // 4 siege
+  // 1 camels
+  // 4 gunpowder
+  // 2 cavalry archers
+
   return (
     <div className='header'>
       <div className='button__sort-options'>
