@@ -1,4 +1,4 @@
-import CivilizationInterface from '../interfaces/Civilization.interface';
+import CivilizationInterface from '../src/interfaces/Civilization.interface';
 
 export const civilizationData: CivilizationInterface[] = [
   {
