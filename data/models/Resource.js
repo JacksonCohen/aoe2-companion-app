@@ -9,6 +9,10 @@ const ResourceSchema = new Schema({
     type: String,
     required: true,
   },
+  type: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = ResourceSchema;
