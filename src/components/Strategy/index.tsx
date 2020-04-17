@@ -1,15 +1,12 @@
 import React from 'react';
 
-const Strategy = () => {
+const Strategy = (props: any) => {
+  console.log(props, 'props');
   // import from db? api? data file?
-  return <div className='servce_strategy'>{/* map over data and create Cards */}</div>;
+  return <div className='servce__strategy'>{/* map over data and create Cards */}</div>;
 };
 
-Strategy.getInitialProps = async () => {
-  const response = await fetch('http://localhost:3000/api/resources');
-  const resources = await response.json();
-
-  return { resources };
-};
+// Strategy.getServerSideProps = async () => {
+// };
 
 export default Strategy;
