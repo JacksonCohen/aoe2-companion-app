@@ -1,11 +1,7 @@
 import React from 'react';
+import GuideInterface from '../../interfaces/Guide.interface';
 
-interface Props {
-  source: string;
-  name: string;
-}
-
-const Card = ({ source, name }: Props) => {
+const Card = ({ name, source, type }: GuideInterface) => {
   return <div className='card__container'></div>;
 };
 

@@ -1,12 +1,16 @@
 import React from 'react';
+import Card from '../Card';
+import GuideInterface from '../../interfaces/Guide.interface';
 
-const Strategy = (props: any) => {
-  console.log(props, 'props');
-  // import from db? api? data file?
-  return <div className='servce__strategy'>{/* map over data and create Cards */}</div>;
+const Strategy = ({ guides }: { guides: GuideInterface[] }) => {
+  console.log(guides);
+  return (
+    <div className='servce__strategy'>
+      {/* {guides.map(({ name, source, type }) => {
+        <Card name={name} source={source} type={type} />; */}
+      {/* })} */}
+    </div>
+  );
 };
-
-// Strategy.getServerSideProps = async () => {
-// };
 
 export default Strategy;

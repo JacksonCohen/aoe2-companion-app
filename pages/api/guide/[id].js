@@ -9,23 +9,23 @@ export default mongoMiddleware(async (req, res, connection, models) => {
 
   apiHandler(res, method, {
     GET: (response) => {
-      models.Resource.findById(id, (error, resource) => {
+      models.Guide.findById(id, (error, guide) => {
         if (error) {
           connection.close();
           response.status(500).json({ error });
         } else {
-          response.status(200).json(resource);
+          response.status(200).json(guide);
           connection.close();
         }
       });
     },
     POST: (response) => {
-      models.Resource.findOneAndUpdate(id, { name }, {}).exec((error, resource) => {
+      models.Guide.findOneAndUpdate(id, { name }, {}).exec((error, guide) => {
         if (error) {
           connection.close();
           response.status(500).json({ error });
         } else {
-          response.status(200).json(resource);
+          response.status(200).json(guide);
           connection.close();
         }
       });

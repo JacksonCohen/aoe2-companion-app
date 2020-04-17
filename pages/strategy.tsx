@@ -2,11 +2,11 @@ import Head from 'next/head';
 import Navbar from '../src/components/Navbar';
 import Strategy from '../src/components/Strategy';
 import PlayerCount from '../src/components/PlayerCount';
+import Guide from '../src/interfaces/Guide.interface';
 import fetch from 'isomorphic-unfetch';
 import { GetServerSideProps } from 'next';
-import Resource from '../src/interfaces/Resource.interface';
 
-export default ({ resources }: { resources: Resource[] }) => (
+export default ({ guides }: { guides: Guide[] }) => (
   <>
     <Head>
       <title>Strategy | Age of Empires 2 Companion App</title>
@@ -15,17 +15,17 @@ export default ({ resources }: { resources: Resource[] }) => (
 
     <div className='strategy'>
       <Navbar active='strategy' />
-      <Strategy resources={resources} />
+      <Strategy guides={guides} />
       <PlayerCount />
     </div>
   </>
 );
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const response = await fetch('http://localhost:3000/api/resources');
-  const resources = await response.json();
+  const response = await fetch('http://localhost:3000/api/guides');
+  const guides: Guide[] = await response.json();
 
   return {
-    props: { resources }, // will be passed to the page component as props
+    props: { guides }, // will be passed to the page component as props
   };
 };
