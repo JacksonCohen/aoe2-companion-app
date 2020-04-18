@@ -9,9 +9,9 @@ export default () => (
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
     </Head>
 
-    <div className='about'>
+    <>
       <Navbar active='about' />
       <PlayerCount />
-    </div>
+    </>
   </>
 );

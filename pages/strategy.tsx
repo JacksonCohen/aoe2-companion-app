@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Navbar from '../src/components/Navbar';
-import Strategy from '../src/components/Strategy';
+import Strategy from '../src/components/StrategyService/Strategy';
 import PlayerCount from '../src/components/PlayerCount';
 import Guide from '../src/interfaces/Guide.interface';
 import fetch from 'isomorphic-unfetch';
@@ -13,11 +13,11 @@ export default ({ guides }: { guides: Guide[] }) => (
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
     </Head>
 
-    <div className='strategy'>
+    <>
       <Navbar active='strategy' />
       <Strategy guides={guides} />
       <PlayerCount />
-    </div>
+    </>
   </>
 );
 
