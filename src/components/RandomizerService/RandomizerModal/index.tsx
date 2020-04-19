@@ -58,7 +58,7 @@ const RandomizerModal = ({ civilization, updateModalGif, closeModal, gif }: any)
 
   return (
     <div className='modal__container'>
-      <span id='modal__exit' onClick={(): void => closeModal()}>
+      <span className='modal__exit' onClick={(): void => closeModal()}>
         &times;
       </span>
       <img id='scroll' src={gif} />
@@ -72,7 +72,7 @@ const RandomizerModal = ({ civilization, updateModalGif, closeModal, gif }: any)
           </div>
         </div>
 
-        {!learnMore ? (
+        {!learnMore && (
           <div className='modal__learn-more'>
             <a
               onClick={(): void => {
@@ -85,8 +85,8 @@ const RandomizerModal = ({ civilization, updateModalGif, closeModal, gif }: any)
               Learn more?
             </a>
           </div>
-        ) : null}
-        {learnMore ? (
+        )}
+        {learnMore && (
           <div className='modal__civ-info'>
             <div>
               <strong>Specialty</strong>: {specialty}
@@ -110,7 +110,7 @@ const RandomizerModal = ({ civilization, updateModalGif, closeModal, gif }: any)
 
             {/* <div className="guide">View guides for the {name}</div> */}
           </div>
-        ) : null}
+        )}
       </div>
     </div>
   );

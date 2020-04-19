@@ -143,14 +143,14 @@ const CivilizationsList = () => {
       </section>
 
       {/* if the randomizer has been used with 1+ civs selected, open the modal */}
-      {!!Object.keys(selectedRandomCiv).length ? (
+      {!!Object.keys(selectedRandomCiv).length && (
         <RandomizerModal
           civilization={selectedRandomCiv}
           updateModalGif={updateModalGif}
           closeModal={closeModal}
           gif={loadedGif}
         />
-      ) : null}
+      )}
     </>
   );
 };

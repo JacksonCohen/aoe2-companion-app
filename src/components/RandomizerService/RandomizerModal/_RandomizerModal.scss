@@ -11,10 +11,12 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 .hide {
   display: none;
 }
-#modal__exit {
+
+.modal__exit {
   position: absolute;
   right: 10px;
   font-size: 28px;
@@ -26,6 +28,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
   }
 }
+
 .modal__body {
   position: absolute;
   left: 50%;

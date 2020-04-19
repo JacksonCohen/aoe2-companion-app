@@ -1,6 +1,6 @@
 import { Schema } from 'mongoose';
 
-const ResourceSchema = new Schema({
+const GuideSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -15,4 +15,4 @@ const ResourceSchema = new Schema({
   },
 });
 
-module.exports = ResourceSchema;
+module.exports = GuideSchema;

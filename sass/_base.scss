@@ -3,7 +3,7 @@
 @media only screen and (max-width: 767.98px) {
   .hamburger {
     padding: $hamburger-padding-y $hamburger-padding-x;
-    display: inline-block;
+    display: flex;
     cursor: pointer;
     outline: none;
 
@@ -48,7 +48,7 @@
   .hamburger-box {
     width: $hamburger-layer-width;
     height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
-    display: inline-block;
+    display: flex;
     position: relative;
   }
 

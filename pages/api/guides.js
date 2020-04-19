@@ -6,12 +6,12 @@ export default mongoMiddleware(async (req, res, connection, models) => {
 
   apiHandler(res, method, {
     GET: (response) => {
-      models.Resource.find({}, (error, resource) => {
+      models.Guide.find({}, (error, guide) => {
         if (error) {
           connection.close();
           response.status(500).json({ error });
         } else {
-          response.status(200).json(resource);
+          response.status(200).json(guide);
           connection.close();
         }
       });
