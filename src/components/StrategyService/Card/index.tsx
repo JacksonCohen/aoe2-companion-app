@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, MutableRefObject } from 'react';
 import GuideModal from '../GuideModal';
-import GuideInterface from '../../../interfaces/Guide.interface';
 
 import './_Card.scss';
 
-const Card = ({ name, source }: GuideInterface) => {
+interface Props {
+  name: string;
+  source: string;
+  node: MutableRefObject<HTMLDivElement>;
+}
+
+const Card = ({ name, source, node }: Props) => {
   const [showModal, setShowModal] = useState(false);
 
   const handleClick = (): void => {
@@ -31,7 +36,7 @@ const Card = ({ name, source }: GuideInterface) => {
         </div>
       </div>
 
-      {showModal && <GuideModal source={source} closeModal={closeModal} />}
+      {showModal && <GuideModal source={source} closeModal={closeModal} node={node} />}
     </>
   );
 };
