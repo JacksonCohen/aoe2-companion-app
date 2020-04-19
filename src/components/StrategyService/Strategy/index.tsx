@@ -36,12 +36,12 @@ const Strategy = ({ guides }: { guides: GuideInterface[] }) => {
         {guideTypes.images.map(({ _id, name, source }) => {
           return <Card key={_id} name={name} source={source} />;
         })}
-        {guideTypes.images.length === 0 ? (
+        {guideTypes.images.length === 0 && (
           <div>
             Looks like there aren't any image guides yet. <a href='#submit'>Click here</a> to upload
             one!
           </div>
-        ) : null}
+        )}
       </div>
 
       <h2>Other</h2>
@@ -49,12 +49,12 @@ const Strategy = ({ guides }: { guides: GuideInterface[] }) => {
         {guideTypes.other.map(({ _id, name, source }) => {
           return <Card key={_id} name={name} source={source} />;
         })}
-        {guideTypes.other.length === 0 ? (
+        {guideTypes.other.length === 0 && (
           <div>
             Looks like there aren't any other guides yet. <a href='#submit'>Click here</a> to upload
             one!
           </div>
-        ) : null}
+        )}
       </div>
 
       <div className='dim hide'></div>

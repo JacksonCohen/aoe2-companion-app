@@ -31,7 +31,7 @@ const Card = ({ name, source }: GuideInterface) => {
         </div>
       </div>
 
-      {showModal ? <GuideModal source={source} closeModal={closeModal} /> : null}
+      {showModal && <GuideModal source={source} closeModal={closeModal} />}
     </>
   );
 };
