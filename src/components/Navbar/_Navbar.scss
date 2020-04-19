@@ -95,8 +95,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 @media only screen and (max-width: 767.98px) {
   .nav {
     display: flex;
-    overflow: hidden;
-    padding: 0;
+    padding: 10px;
     background-color: #ffffff99;
 
     .nav__main {
@@ -105,8 +104,8 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
       img {
         display: flex;
-        width: 140px;
-        margin: 10px;
+        width: 120px;
+        height: 100%;
       }
     }
     .nav__hamburger {

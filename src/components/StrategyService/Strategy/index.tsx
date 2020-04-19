@@ -30,6 +30,12 @@ const Strategy = ({ guides }: { guides: GuideInterface[] }) => {
         {guideTypes.videos.map(({ _id, name, source }) => {
           return <Card key={_id} name={name} source={source} node={node} />;
         })}
+        {guideTypes.videos.length === 0 && (
+          <div>
+            Looks like there aren't any video guides yet. <a href='#submit'>Click here</a> to upload
+            one!
+          </div>
+        )}
       </div>
 
       <h2>Images</h2>
