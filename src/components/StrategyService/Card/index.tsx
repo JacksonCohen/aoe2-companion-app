@@ -10,14 +10,15 @@ const Card = ({ name, source }: GuideInterface) => {
     setShowModal(true);
   };
 
-  const videoId = source.slice(-11);
-
   return (
     <>
       <div className='card' onClick={handleClick}>
-        <div className='card__player-wrapper'>
-          <img src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`} alt='' />
-        </div>
+        <img
+          className='card__video-preview'
+          src={`http://img.youtube.com/vi/${source.slice(-11)}/mqdefault.jpg`}
+          alt='Preview'
+        />
+
         <div className='card__guide-info'>
           <span className='card__guide-name'>{name}</span>
         </div>
@@ -25,14 +26,7 @@ const Card = ({ name, source }: GuideInterface) => {
 
       {showModal ? (
         <div className='card__guide-modal'>
-          <ReactPlayer
-            className='card__react-player'
-            z
-            url={source}
-            light={true}
-            width='100%'
-            height='100%'
-          />
+          <ReactPlayer url={source} playing />
         </div>
       ) : null}
     </>
