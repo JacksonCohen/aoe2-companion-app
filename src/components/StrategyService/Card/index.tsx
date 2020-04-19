@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
-import ReactPlayer from 'react-player';
+import GuideModal from '../GuideModal';
 import GuideInterface from '../../../interfaces/Guide.interface';
 
 import './_Card.scss';
 
 const Card = ({ name, source }: GuideInterface) => {
   const [showModal, setShowModal] = useState(false);
+
   const handleClick = (): void => {
     setShowModal(true);
+    document.getElementsByClassName('dim')[0].classList.remove('hide');
+  };
+
+  const closeModal = (): void => {
+    setShowModal(false);
+    document.getElementsByClassName('dim')[0].classList.add('hide');
   };
 
   return (
@@ -24,11 +31,7 @@ const Card = ({ name, source }: GuideInterface) => {
         </div>
       </div>
 
-      {showModal ? (
-        <div className='card__guide-modal'>
-          <ReactPlayer url={source} playing />
-        </div>
-      ) : null}
+      {showModal ? <GuideModal source={source} closeModal={closeModal} /> : null}
     </>
   );
 };

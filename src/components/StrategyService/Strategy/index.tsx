@@ -56,6 +56,8 @@ const Strategy = ({ guides }: { guides: GuideInterface[] }) => {
           </div>
         ) : null}
       </div>
+
+      <div className='dim hide'></div>
     </div>
   );
 };

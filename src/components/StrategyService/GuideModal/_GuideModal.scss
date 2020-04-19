@@ -1,0 +1,17 @@
+.service__strategy {
+  .modal__exit {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    font-size: 50px;
+    cursor: pointer;
+    color: black;
+    z-index: 1;
+
+    &:hover,
+    &:focus {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
