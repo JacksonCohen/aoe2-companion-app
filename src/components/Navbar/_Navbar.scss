@@ -27,6 +27,9 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
       display: inline-block;
       margin: 0 20px;
     }
+    :last-child {
+      margin-right: 0px;
+    }
   }
   a:not([class*='logo']) {
     font-size: 20px;
@@ -103,14 +106,11 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
       margin-left: 0;
 
       img {
-        display: flex;
         width: 120px;
-        height: 100%;
+        height: 50px;
       }
     }
-    .nav__hamburger {
-      display: flex;
-    }
+
     .nav__items {
       display: flex;
       flex-direction: column;
@@ -127,6 +127,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
       a {
         display: flex;
       }
+
       &:before {
         content: '';
         display: block;
@@ -141,7 +142,8 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
         transform: translateX(-50%);
       }
     }
-    .hidden {
+
+    .mobile-hidden {
       display: none;
     }
   }
