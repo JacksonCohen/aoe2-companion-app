@@ -27,7 +27,7 @@ const Navbar = ({ active }: { active?: string }) => {
         <input type='text' placeholder='Enter a username' />
       </form> */}
 
-      <div className={`nav__items${open ? '' : ' hidden'}`}>
+      <div className={`nav__items${open ? '' : ' mobile-hidden'}`}>
         <Link href='/randomizer'>
           <a className={active === 'randomizer' ? 'active' : ''}>Randomizer</a>
         </Link>

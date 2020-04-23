@@ -78,7 +78,7 @@ const RandomizerModal = ({ civilization, updateModalGif, closeModal, gif }: any)
               onClick={(): void => {
                 setTimeout(() => {
                   setLearnMore(true);
-                }, 500);
+                }, 750);
                 updateModalGif();
               }}
             >

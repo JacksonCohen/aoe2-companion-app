@@ -1,6 +1,7 @@
 const withSass = require('@zeit/next-sass');
 const withCSS = require('@zeit/next-css');
 const withFonts = require('nextjs-fonts');
+const dotenv = require('dotenv-webpack');
 
 module.exports = withCSS(
   withSass(
@@ -17,6 +18,7 @@ module.exports = withCSS(
             },
           },
         });
+        config.plugins.push(new dotenv({ silent: true }));
         return config;
       },
     })
