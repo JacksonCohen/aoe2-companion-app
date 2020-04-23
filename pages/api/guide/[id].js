@@ -11,22 +11,22 @@ export default mongoMiddleware(async (req, res, connection, models) => {
     GET: (response) => {
       models.Guide.findById(id, (error, guide) => {
         if (error) {
-          connection.close();
+          connection.disconnect();
           response.status(500).json({ error });
         } else {
           response.status(200).json(guide);
-          connection.close();
+          connection.disconnect();
         }
       });
     },
     POST: (response) => {
       models.Guide.findOneAndUpdate(id, { name }, {}).exec((error, guide) => {
         if (error) {
-          connection.close();
+          connection.disconnect();
           response.status(500).json({ error });
         } else {
           response.status(200).json(guide);
-          connection.close();
+          connection.disconnect();
         }
       });
     },

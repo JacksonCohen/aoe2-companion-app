@@ -10,11 +10,11 @@ export default mongoMiddleware(async (req, res, connection, models) => {
     POST: (response) => {
       models.Guide.create({ name, source, type }, (error, guide) => {
         if (error) {
-          connection.close();
+          connection.disconnect();
           response.status(500).json({ error });
         } else {
           response.status(200).json(guide);
-          connection.close();
+          connection.disconnect();
         }
       });
     },

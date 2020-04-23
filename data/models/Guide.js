@@ -1,4 +1,4 @@
-import { Schema } from 'mongoose';
+import mongoose, { Schema } from 'mongoose';
 
 const GuideSchema = new Schema({
   name: {
@@ -15,4 +15,4 @@ const GuideSchema = new Schema({
   },
 });
 
-module.exports = GuideSchema;
+module.exports = mongoose.models.Guides || mongoose.model('Guides', GuideSchema);
