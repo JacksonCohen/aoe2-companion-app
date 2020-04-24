@@ -19,7 +19,7 @@ const FormSubmit = () => {
 
   const [userInput, setUserInput] = useReducer(stateReducer, initialState);
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>): void => {
     const { name, value } = event.target;
 
     setUserInput({ [name]: value });
@@ -82,22 +82,41 @@ const FormSubmit = () => {
   return (
     <div className='strategy__form'>
       <h2>Submit a guide? </h2>
-      <form action='submit'>
-        <label htmlFor='Name'>Guide name: </label>
-        <input type='text' name='guideName' onChange={handleChange} />
-        <label htmlFor='URL'>URL: </label>
-        <input type='text' name='source' onChange={handleChange} />
-        <label htmlFor='Type'>Type: </label>
+      <form action='submit' id='submit'>
+        <label htmlFor='strategy__guide-name'>Guide name: </label>
+        <input
+          type='text'
+          name='guideName'
+          id='strategy__guide-name'
+          value={userInput.guideName}
+          onChange={handleChange}
+        />
+        <br />
+
+        <label htmlFor='strategy__guide-source'>URL: </label>
+        <input
+          type='text'
+          name='source'
+          id='strategy__guide-source'
+          value={userInput.source}
+          onChange={handleChange}
+        />
+        <br />
+
+        <label htmlFor='strategy__guide-type'>Type: </label>
         <select
           name='type'
           placeholder='Please enter the URL here'
-          className='strategy__guide-type'
+          id='strategy__guide-type'
+          value={userInput.type}
           onChange={handleChange}
         >
           <option value='Video'>Video</option>
           <option value='Image'>Image</option>
           <option value='Other'>Other</option>
         </select>
+        <br />
+
         <input
           type='button'
           name='submit'

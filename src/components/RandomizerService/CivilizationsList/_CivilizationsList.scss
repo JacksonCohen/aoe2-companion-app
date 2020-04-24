@@ -3,11 +3,14 @@
 }
 
 .section__randomizer {
-  > div {
+  .header,
+  .civ__container {
     display: flex;
     flex-flow: row wrap;
     margin: 15px 0;
+    justify-content: center;
   }
+
   button {
     outline: none;
     color: #e1d7b3;

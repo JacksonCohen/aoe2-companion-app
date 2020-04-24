@@ -1,6 +1,11 @@
 .service__strategy {
   .card__guide-modal {
     padding: 25px;
+
+    img {
+      max-width: 90vw;
+      max-height: 90vh;
+    }
   }
 
   .modal__exit {
