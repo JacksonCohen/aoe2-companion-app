@@ -23,7 +23,7 @@ export default ({ guides }: { guides: Guide[] }) => (
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const dev = process.env.NODE_ENV !== 'production';
-  const server = dev ? 'http://localhost:3000/api/guides' : 'https://production.server.com';
+  const server = dev ? 'http://localhost:3000/api/guides' : 'https://jacksoncohen.dev/api/guides';
 
   const response = await fetch(server);
   const guides: Guide[] = await response.json();
