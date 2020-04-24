@@ -27,7 +27,7 @@ const Card = ({ name, source, node }: Props) => {
       <div className='card' onClick={handleClick}>
         <img
           className='card__video-preview'
-          src={`http://img.youtube.com/vi/${source.slice(-11)}/mqdefault.jpg`}
+          src={`https://img.youtube.com/vi/${source.slice(-11)}/mqdefault.jpg`}
           alt='Preview'
         />
 
