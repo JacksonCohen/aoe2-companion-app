@@ -1,5 +1,5 @@
 .strategy__form {
-  .strategy__guide-type,
+  #strategy__guide-type,
   .strategy__submit {
     font-size: 14px;
     font-weight: 700;
@@ -36,5 +36,9 @@
     option {
       font-weight: normal;
     }
+  }
+
+  input[type='text'] {
+    width: 300px;
   }
 }

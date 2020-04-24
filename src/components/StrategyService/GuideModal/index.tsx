@@ -5,11 +5,12 @@ import './_GuideModal.scss';
 
 interface Props {
   source: string;
+  type: string | undefined;
   node: any;
   closeModal: Function;
 }
 
-const GuideModal = ({ source, node, closeModal }: Props) => {
+const GuideModal = ({ source, type, node, closeModal }: Props) => {
   useEffect(() => {
     document.addEventListener('keydown', handleModalEscape);
     document.addEventListener('mousedown', handleOutsideClick);
@@ -41,7 +42,11 @@ const GuideModal = ({ source, node, closeModal }: Props) => {
       </span>
 
       <div className='card__guide-modal'>
-        <ReactPlayer url={source} controls={true} playing />
+        {type === 'Video' ? (
+          <ReactPlayer url={source} controls={true} playing />
+        ) : (
+          <img src={source} />
+        )}
       </div>
     </div>
   );

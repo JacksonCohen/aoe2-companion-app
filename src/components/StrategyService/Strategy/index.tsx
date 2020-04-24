@@ -27,8 +27,8 @@ const Strategy = ({ guides }: { guides: GuideInterface[] }) => {
 
       <h2>Videos</h2>
       <div className='strategy__videos'>
-        {guideTypes.videos.map(({ _id, name, source }) => {
-          return <Card key={_id} name={name} source={source} node={node} />;
+        {guideTypes.videos.map(({ _id, name, source, type }) => {
+          return <Card key={_id} name={name} source={source} type={type} node={node} />;
         })}
         {guideTypes.videos.length === 0 && (
           <div>
@@ -40,8 +40,8 @@ const Strategy = ({ guides }: { guides: GuideInterface[] }) => {
 
       <h2>Images</h2>
       <div className='strategy__images'>
-        {guideTypes.images.map(({ _id, name, source }) => {
-          return <Card key={_id} name={name} source={source} node={node} />;
+        {guideTypes.images.map(({ _id, name, source, type }) => {
+          return <Card key={_id} name={name} type={type} source={source} node={node} />;
         })}
         {guideTypes.images.length === 0 && (
           <div>
@@ -53,7 +53,7 @@ const Strategy = ({ guides }: { guides: GuideInterface[] }) => {
 
       <h2>Other</h2>
       <div className='strategy__other'>
-        {guideTypes.other.map(({ _id, name, source }) => {
+        {guideTypes.other.map(({ _id, name, source, type }) => {
           return <Card key={_id} name={name} source={source} node={node} />;
         })}
         {guideTypes.other.length === 0 && (
