@@ -14,15 +14,16 @@ interface PlayerTotals {
 const PlayerCount = () => {
   const [playerCount, setPlayerCount] = useState<any>({});
 
-  // useEffect(() => {
-  //   fetch('https://cors-anywhere.herokuapp.com/https://aoe2.net/api/stats/players?game=aoe2de ')
-  //     .then((response) => response.json())
-  //     .then(({ player_stats: data }) => {
-  //       let players: PlayerTotals = data[data.length - 1].num_players;
-  //       setPlayerCount(players);
-  //     })
-  //     .catch((err) => console.error(err));
-  // }, []);
+  useEffect(() => {
+    fetch('https://cors-anywhere.herokuapp.com/https://aoe2.net/api/stats/players?game=aoe2de ')
+      .then((response) => response.json())
+      .then(({ player_stats: data }) => {
+        let players: PlayerTotals = data[data.length - 1].num_players;
+        setPlayerCount(players);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <div className='player-count'>
       {!!Object.keys(playerCount).length ? (
