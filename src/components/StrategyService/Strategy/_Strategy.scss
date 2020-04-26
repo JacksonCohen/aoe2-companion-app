@@ -1,16 +1,16 @@
 .service__strategy {
   margin: 20px 100px;
 
-  .strategy__videos,
-  .strategy__images,
-  .strategy__other {
+  .strategy__video-cards,
+  .strategy__image-cards,
+  .strategy__other-cards {
     display: flex;
     justify-content: center;
     flex-flow: wrap;
-  }
 
-  h2 {
-    margin-bottom: 0.5em;
+    h2 {
+      margin-bottom: 0.5em;
+    }
   }
 }
 

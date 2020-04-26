@@ -25,43 +25,49 @@ const Strategy = ({ guides }: { guides: GuideInterface[] }) => {
     <div className='service__strategy'>
       <FormSubmit />
 
-      <h2>Videos</h2>
       <div className='strategy__videos'>
-        {guideTypes.videos.map(({ _id, name, source, type }) => {
-          return <Card key={_id} name={name} source={source} type={type} node={node} />;
-        })}
-        {guideTypes.videos.length === 0 && (
-          <div>
-            Looks like there aren't any video guides yet. <a href='#submit'>Click here</a> to upload
-            one!
-          </div>
-        )}
+        <h2>Videos</h2>
+        <div className='strategy__video-cards'>
+          {guideTypes.videos.map(({ _id, name, source, type }) => {
+            return <Card key={_id} name={name} source={source} type={type} node={node} />;
+          })}
+          {guideTypes.videos.length === 0 && (
+            <div>
+              Looks like there aren't any video guides yet. <a href='#submit'>Click here</a> to
+              upload one!
+            </div>
+          )}
+        </div>
       </div>
 
-      <h2>Images</h2>
       <div className='strategy__images'>
-        {guideTypes.images.map(({ _id, name, source, type }) => {
-          return <Card key={_id} name={name} type={type} source={source} node={node} />;
-        })}
-        {guideTypes.images.length === 0 && (
-          <div>
-            Looks like there aren't any image guides yet. <a href='#submit'>Click here</a> to upload
-            one!
-          </div>
-        )}
+        <h2>Images</h2>
+        <div className='strategy__image-cards'>
+          {guideTypes.images.map(({ _id, name, source, type }) => {
+            return <Card key={_id} name={name} type={type} source={source} node={node} />;
+          })}
+          {guideTypes.images.length === 0 && (
+            <div>
+              Looks like there aren't any image guides yet. <a href='#submit'>Click here</a> to
+              upload one!
+            </div>
+          )}
+        </div>
       </div>
 
-      <h2>Other</h2>
       <div className='strategy__other'>
-        {guideTypes.other.map(({ _id, name, source, type }) => {
-          return <Card key={_id} name={name} source={source} node={node} />;
-        })}
-        {guideTypes.other.length === 0 && (
-          <div>
-            Looks like there aren't any other guides yet. <a href='#submit'>Click here</a> to upload
-            one!
-          </div>
-        )}
+        <h2>Other</h2>
+        <div className='strategy__other-cards'>
+          {guideTypes.other.map(({ _id, name, source, type }) => {
+            return <Card key={_id} name={name} source={source} node={node} />;
+          })}
+          {guideTypes.other.length === 0 && (
+            <div>
+              Looks like there aren't any other guides yet. <a href='#submit'>Click here</a> to
+              upload one!
+            </div>
+          )}
+        </div>
       </div>
 
       <div className='dim hide' ref={node}></div>
