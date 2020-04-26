@@ -3,6 +3,18 @@
   bottom: 15px;
   left: 15px;
 
+  &:hover .player-count__hover {
+    display: block;
+
+    span {
+      display: block;
+    }
+  }
+
+  .player-count__hover {
+    display: none;
+  }
+
   img {
     width: 25%;
   }

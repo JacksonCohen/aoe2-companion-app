@@ -13,7 +13,7 @@ interface Props {
 const Card = ({ name, source, type, node }: Props) => {
   const [showModal, setShowModal] = useState(false);
   const guideSource =
-    type === 'Video' ? `http://img.youtube.com/vi/${source.slice(-11)}/mqdefault.jpg` : source;
+    type === 'Video' ? `https://img.youtube.com/vi/${source.slice(-11)}/mqdefault.jpg` : source;
 
   const handleClick = (): void => {
     setShowModal(true);
