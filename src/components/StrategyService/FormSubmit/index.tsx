@@ -29,11 +29,26 @@ const FormSubmit = () => {
     // TODO: Require authentication to submit guides
     // TODO: Add rate limiting
     // const message = (
-    //   <div>
-    //     <h1>Guide details</h1> <div>Name: {userInput.guideName}</div>
-    //     <div>URL: {userInput.url}</div> <div>Type: {userInput.type}</div>
-    //     <button>Approve</button>
-    //   </div>
+    //   <>
+    //     <h1>Guide details</h1>
+    //     <form action='https://jacksoncohen.dev/api/guide' method='post'>
+    //       <div className='guide-info'>
+    //         <div>
+    //           <label>Name:</label>
+    //           <input name='guideName' id='guideName' value={userInput.guideName} />
+    //         </div>
+    //         <div>
+    //           <label>URL:</label>
+    //           <input name='url' id='url' value={userInput.url} />
+    //         </div>
+    //         <div>
+    //           <label>Type:</label>
+    //           <input name='type' id='type' value={userInput.type} />
+    //         </div>
+    //       </div>
+    //       <button>Approve Guide</button>
+    //     </form>
+    //   </>
     // );
     // const templateParams: any = {
     //   // fromName: user,
@@ -43,20 +58,14 @@ const FormSubmit = () => {
     // emailjs
     //   .send('aoe2', 'guideSubmission', templateParams, process.env.EMAILJS_USER_ID)
     //   .then((res: any) => {
-    // resetForm();
-    //      console.log(res, 'Success');
+    //     resetForm();
+    //     console.log(res, 'Success');
     //   })
     //   .catch((err: any) => console.error(err));
 
     /* --------------------------------------------------------------------- */
     const { guideName, source, type } = userInput;
-    console.log(
-      JSON.stringify({
-        guideName,
-        source,
-        type,
-      })
-    );
+
     fetch('/api/guide', {
       method: 'POST',
       body: JSON.stringify({

@@ -15,7 +15,7 @@ const PlayerCount = () => {
   const [playerCount, setPlayerCount] = useState<any>({});
 
   // useEffect(() => {
-  //   fetch('https://cors-anywhere.herokuapp.com/https://aoe2.net/api/stats/players?game=aoe2de ')
+  //   fetch('https://cors-anywhere.herokuapp.com/https://aoe2.net/api/stats/players?game=aoe2de')
   //     .then((response) => response.json())
   //     .then(({ player_stats: data }) => {
   //       let players: PlayerTotals = data[data.length - 1].num_players;
@@ -23,10 +23,20 @@ const PlayerCount = () => {
   //     })
   //     .catch((err) => console.error(err));
   // }, []);
+
   return (
     <div className='player-count'>
       {!!Object.keys(playerCount).length ? (
-        <span>{playerCount.steam}</span>
+        <>
+          <div>Multiplayer: {playerCount.multiplayer} players</div>
+          <div className='player-count__hover'>
+            <span>Multiplayer 1h: {playerCount.multiplayer_1h} players</span>
+            <span>Multiplayer 24h: {playerCount.multiplayer_24h} players</span>
+            <span>Steam: {playerCount.steam} players</span>
+            <span>In game: {playerCount.in_game} players</span>
+            <span>Looking for game: {playerCount.looking} players</span>
+          </div>
+        </>
       ) : (
         <span className='loading'>
           <img src='/static/images/loading-swords.gif' />

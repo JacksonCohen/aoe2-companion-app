@@ -28,7 +28,7 @@ const GuideModal = ({ source, type, node, closeModal }: Props) => {
     }
   };
 
-  const handleModalEscape = (event: KeyboardEvent) => {
+  const handleModalEscape = (event: KeyboardEvent): void => {
     // close modal using 'esc' key
     if (event.keyCode === 27) {
       closeModal();
@@ -42,11 +42,7 @@ const GuideModal = ({ source, type, node, closeModal }: Props) => {
       </span>
 
       <div className='card__guide-modal'>
-        {type === 'Video' ? (
-          <ReactPlayer url={source} controls={true} playing />
-        ) : (
-          <img src={source} />
-        )}
+        {type === 'Video' ? <ReactPlayer url={source} controls={true} /> : <img src={source} />}
       </div>
     </div>
   );
