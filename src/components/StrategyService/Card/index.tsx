@@ -19,7 +19,6 @@ const Card = ({ name, source, type, node }: Props) => {
       : type === 'Image' // if type is image
       ? source // set preview as image url
       : '/static/images/miscellaneous-icon.png'; // otherwise use default image for other type guides
-  console.log(guideSource, type, name);
 
   const handleClick = (): void => {
     if (type !== 'Other') {

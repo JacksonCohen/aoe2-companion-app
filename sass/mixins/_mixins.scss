@@ -4,7 +4,7 @@ $mq-extend-flag: true !global;
 //*****************************************
 @mixin cf() {
   &:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
