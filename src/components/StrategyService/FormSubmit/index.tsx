@@ -1,4 +1,4 @@
-import React, { useReducer, ChangeEvent } from 'react';
+import React, { useReducer, useState, ChangeEvent } from 'react';
 import emailjs from 'emailjs-com';
 
 import './_FormSubmit.scss';
@@ -13,11 +13,12 @@ const FormSubmit = () => {
   const initialState = {
     guideName: '',
     source: '',
-    type: 'Video',
+    type: '',
   };
   const stateReducer = (state: State, newState: any) => ({ ...state, ...newState });
 
   const [userInput, setUserInput] = useReducer(stateReducer, initialState);
+  const [error, setError] = useState(false);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>): void => {
     const { name, value } = event.target;
@@ -65,19 +66,31 @@ const FormSubmit = () => {
 
     /* --------------------------------------------------------------------- */
     const { guideName, source, type } = userInput;
+    if (guideName && source && type) {
+      setError(false);
 
-    fetch('/api/guide', {
-      method: 'POST',
-      body: JSON.stringify({
-        name: guideName,
-        source,
-        type,
-      }),
-    })
-      .then(() => {
-        resetForm();
+      fetch('/api/guide', {
+        method: 'POST',
+        body: JSON.stringify({
+          name: guideName,
+          source,
+          type,
+        }),
       })
-      .catch((err) => console.error(err));
+        .then(() => {
+          resetForm();
+        })
+        .catch((err) => console.error(err));
+    } else {
+      setError(true);
+    }
+  };
+
+  const displayError = (field: string): boolean => {
+    if (error && userInput[field] === '') {
+      return true;
+    }
+    return false;
   };
 
   const resetForm = (): void => {
@@ -90,49 +103,98 @@ const FormSubmit = () => {
 
   return (
     <div className='strategy__form'>
-      <h2 id='submit'>Submit a guide? </h2>
+      <h2 id='submit'>Submit a Guide? </h2>
       <form action='submit'>
-        <label htmlFor='strategy__guide-name'>Guide name: </label>
-        <input
-          type='text'
-          name='guideName'
-          id='strategy__guide-name'
-          value={userInput.guideName}
-          onChange={handleChange}
-        />
-        <br />
+        <fieldset>
+          <label>
+            Guide Name
+            <span className={error ? '' : 'hide'}>You must enter a guide name</span>
+            <input
+              type='text'
+              name='guideName'
+              className={`strategy__text-input${displayError('guideName') ? ' error' : ''}`}
+              value={userInput.guideName}
+              onChange={handleChange}
+            />
+          </label>
+        </fieldset>
 
-        <label htmlFor='strategy__guide-source'>URL: </label>
-        <input
-          type='text'
-          name='source'
-          id='strategy__guide-source'
-          value={userInput.source}
-          onChange={handleChange}
-        />
-        <br />
+        <fieldset>
+          <label>
+            Guide URL
+            <span className={error ? '' : 'hide'}>You must enter a guide URL</span>
+            <input
+              type='text'
+              name='source'
+              className={`strategy__text-input${displayError('source') ? ' error' : ''}`}
+              value={userInput.source}
+              onChange={handleChange}
+            />
+          </label>
+        </fieldset>
 
-        <label htmlFor='strategy__guide-type'>Type: </label>
-        <select
-          name='type'
-          placeholder='Please enter the URL here'
-          id='strategy__guide-type'
-          value={userInput.type}
-          onChange={handleChange}
-        >
-          <option value='Video'>Video</option>
-          <option value='Image'>Image</option>
-          <option value='Other'>Other</option>
-        </select>
-        <br />
+        <fieldset>
+          <div className='strategy__guide-type'>
+            Select a Type
+            <span className={error ? '' : 'hide'}>You must select a guide type</span>
+            <div className='strategy__type-options'>
+              <input
+                type='radio'
+                id='video'
+                name='type'
+                value='Video'
+                className='strategy__type-input'
+                onChange={handleChange}
+              />
+              <label
+                className={`strategy__video-label${displayError('type') ? ' error' : ''}`}
+                htmlFor='video'
+              >
+                Video
+              </label>
+              <input
+                type='radio'
+                id='image'
+                name='type'
+                value='Image'
+                className='strategy__type-input'
+                onChange={handleChange}
+              />
+              <label
+                className={`strategy__video-label${displayError('type') ? ' error' : ''}`}
+                htmlFor='image'
+              >
+                {' '}
+                Image
+              </label>
+              <input
+                type='radio'
+                id='other'
+                name='type'
+                value='Other'
+                className='strategy__type-input'
+                onChange={handleChange}
+              />
+              <label
+                className={`strategy__video-label${displayError('type') ? ' error' : ''}`}
+                htmlFor='other'
+              >
+                {' '}
+                Other
+              </label>
+            </div>
+          </div>
+        </fieldset>
 
-        <input
-          type='button'
-          name='submit'
-          value='Submit'
-          className='strategy__submit'
-          onClick={sendEmail}
-        />
+        <fieldset>
+          <input
+            type='button'
+            name='submit'
+            value='Submit Guide'
+            className='strategy__submit'
+            onClick={sendEmail}
+          />
+        </fieldset>
       </form>
     </div>
   );
