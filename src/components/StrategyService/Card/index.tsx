@@ -1,5 +1,6 @@
 import React, { useState, MutableRefObject } from 'react';
 import GuideModal from '../GuideModal';
+import ConditionalWrapper from '../../ConditionalWrapper';
 
 import './_Card.scss';
 
@@ -35,7 +36,14 @@ const Card = ({ name, source, type, node }: Props) => {
   return (
     <>
       <div className='card' onClick={handleClick}>
-        <a href={type === 'Other' ? source : ''} target='_blank'>
+        <ConditionalWrapper
+          condition={type === 'Other'}
+          wrapper={(children: HTMLCollection) => (
+            <a href={source} target='_blank'>
+              {children}
+            </a>
+          )}
+        >
           <div className='card__preview-container'>
             <img
               className={`card__preview ${type?.toLowerCase()}`}
@@ -43,7 +51,7 @@ const Card = ({ name, source, type, node }: Props) => {
               alt='Preview'
             />
           </div>
-        </a>
+        </ConditionalWrapper>
 
         <div className='card__guide-info'>
           <span className='card__guide-name'>{name}</span>

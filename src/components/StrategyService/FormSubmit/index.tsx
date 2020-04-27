@@ -25,7 +25,7 @@ const FormSubmit = () => {
     setUserInput({ [name]: value });
   };
 
-  const sendEmail = (): any => {
+  const sendEmail = (): void => {
     // TODO: Require authentication to submit guides
     // TODO: Add rate limiting
     // const message = (
@@ -61,7 +61,7 @@ const FormSubmit = () => {
     //     resetForm();
     //     console.log(res, 'Success');
     //   })
-    //   .catch((err: any) => console.error(err));
+    //   .catch(err => console.error(err));
 
     /* --------------------------------------------------------------------- */
     const { guideName, source, type } = userInput;
