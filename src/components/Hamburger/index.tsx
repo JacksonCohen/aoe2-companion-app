@@ -2,7 +2,12 @@ import React from 'react';
 
 import './_Hamburger.scss';
 
-const Hamburger = ({ isActive, handleClick }: any) => {
+interface Props {
+  isActive: boolean;
+  handleClick: any;
+}
+
+const Hamburger = ({ isActive, handleClick }: Props) => {
   return (
     <button
       className={`hamburger hamburger--spring${isActive ? ' is-active' : ''}`}

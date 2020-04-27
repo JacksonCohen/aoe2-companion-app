@@ -1,16 +1,24 @@
+$darkleather: #533810;
+
 .service__strategy {
   margin: 20px 100px;
 
+  // :not(.strategy__category:nth-last-child(2)
   .strategy__videos,
-  .strategy__images,
-  .strategy__other {
+  .strategy__images {
+    border-bottom: 1px solid $darkleather;
+  }
+
+  .strategy__video-cards,
+  .strategy__image-cards,
+  .strategy__other-cards {
     display: flex;
     justify-content: center;
     flex-flow: wrap;
-  }
 
-  h2 {
-    margin-bottom: 0.5em;
+    h2 {
+      margin-bottom: 0.5em;
+    }
   }
 }
 
