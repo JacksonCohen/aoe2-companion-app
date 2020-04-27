@@ -3,9 +3,9 @@ $darkleather: #533810;
 .service__strategy {
   margin: 20px 100px;
 
+  // :not(.strategy__category:nth-last-child(2)
   .strategy__videos,
   .strategy__images {
-    // :not(.strategy__category:nth-last-child(2)
     border-bottom: 1px solid $darkleather;
   }
 
