@@ -25,7 +25,7 @@ const Strategy = ({ guides }: { guides: GuideInterface[] }) => {
     <div className='service__strategy'>
       <FormSubmit />
 
-      <div className='strategy__videos'>
+      <div className='strategy__category strategy__videos'>
         <h2>Videos</h2>
         <div className='strategy__video-cards'>
           {guideTypes.videos.map(({ _id, name, source, type }) => {
@@ -40,11 +40,11 @@ const Strategy = ({ guides }: { guides: GuideInterface[] }) => {
         </div>
       </div>
 
-      <div className='strategy__images'>
+      <div className='strategy__category strategy__images'>
         <h2>Images</h2>
         <div className='strategy__image-cards'>
           {guideTypes.images.map(({ _id, name, source, type }) => {
-            return <Card key={_id} name={name} type={type} source={source} node={node} />;
+            return <Card key={_id} name={name} source={source} type={type} node={node} />;
           })}
           {guideTypes.images.length === 0 && (
             <div>
@@ -55,11 +55,11 @@ const Strategy = ({ guides }: { guides: GuideInterface[] }) => {
         </div>
       </div>
 
-      <div className='strategy__other'>
+      <div className='strategy__category strategy__other'>
         <h2>Other</h2>
         <div className='strategy__other-cards'>
           {guideTypes.other.map(({ _id, name, source, type }) => {
-            return <Card key={_id} name={name} source={source} node={node} />;
+            return <Card key={_id} name={name} source={source} type={type} node={node} />;
           })}
           {guideTypes.other.length === 0 && (
             <div>

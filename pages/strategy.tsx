@@ -5,6 +5,7 @@ import PlayerCount from '../src/components/PlayerCount';
 import Guide from '../src/interfaces/Guide.interface';
 import fetch from 'isomorphic-unfetch';
 import { GetServerSideProps } from 'next';
+import '../sass/style.scss';
 
 export default ({ guides }: { guides: Guide[] }) => (
   <>

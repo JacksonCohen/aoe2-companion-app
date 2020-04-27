@@ -1,5 +1,13 @@
+$darkleather: #533810;
+
 .service__strategy {
   margin: 20px 100px;
+
+  .strategy__videos,
+  .strategy__images {
+    // :not(.strategy__category:nth-last-child(2)
+    border-bottom: 1px solid $darkleather;
+  }
 
   .strategy__video-cards,
   .strategy__image-cards,

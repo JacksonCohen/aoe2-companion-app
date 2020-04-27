@@ -90,8 +90,8 @@ const FormSubmit = () => {
 
   return (
     <div className='strategy__form'>
-      <h2>Submit a guide? </h2>
-      <form action='submit' id='submit'>
+      <h2 id='submit'>Submit a guide? </h2>
+      <form action='submit'>
         <label htmlFor='strategy__guide-name'>Guide name: </label>
         <input
           type='text'
