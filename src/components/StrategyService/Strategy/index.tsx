@@ -25,9 +25,9 @@ const Strategy = ({ guides }: { guides: GuideInterface[] }) => {
     <div className='service__strategy'>
       <FormSubmit />
 
-      <div className='strategy__category strategy__videos'>
+      <div className='strategy__videos'>
         <h2>Videos</h2>
-        <div className='strategy__video-cards'>
+        <div className='strategy__cards'>
           {guideTypes.videos.map(({ _id, name, source, type }) => {
             return <Card key={_id} name={name} source={source} type={type} node={node} />;
           })}
@@ -40,9 +40,9 @@ const Strategy = ({ guides }: { guides: GuideInterface[] }) => {
         </div>
       </div>
 
-      <div className='strategy__category strategy__images'>
+      <div className='strategy__images'>
         <h2>Images</h2>
-        <div className='strategy__image-cards'>
+        <div className='strategy__cards'>
           {guideTypes.images.map(({ _id, name, source, type }) => {
             return <Card key={_id} name={name} source={source} type={type} node={node} />;
           })}
@@ -55,9 +55,9 @@ const Strategy = ({ guides }: { guides: GuideInterface[] }) => {
         </div>
       </div>
 
-      <div className='strategy__category strategy__other'>
+      <div className='strategy__other'>
         <h2>Other</h2>
-        <div className='strategy__other-cards'>
+        <div className='strategy__cards'>
           {guideTypes.other.map(({ _id, name, source, type }) => {
             return <Card key={_id} name={name} source={source} type={type} node={node} />;
           })}

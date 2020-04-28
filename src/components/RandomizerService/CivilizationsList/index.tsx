@@ -87,9 +87,6 @@ const CivilizationsList = () => {
   };
 
   const updateModalGif = (): void => {
-    // setLoadedGif('/static/images/scroll-modal-after.gif');
-    // setTempGif('/static/images/scroll-modal-after.gif');
-    // console.log(loadedGif, 'gif');
     const scroll: any = document.getElementById('scroll');
     scroll!.src = '/static/images/scroll-modal-after.gif';
   };

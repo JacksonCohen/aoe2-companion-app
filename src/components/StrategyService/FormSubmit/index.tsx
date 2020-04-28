@@ -99,6 +99,7 @@ const FormSubmit = () => {
       url: '',
       type: '',
     });
+    setError(false);
   };
 
   return (
@@ -108,7 +109,9 @@ const FormSubmit = () => {
         <fieldset>
           <label>
             Guide Name
-            <span className={error ? '' : 'hide'}>You must enter a guide name</span>
+            <span className={displayError('guideName') ? '' : 'hide'}>
+              You must enter a guide name
+            </span>
             <input
               type='text'
               name='guideName'
@@ -122,7 +125,7 @@ const FormSubmit = () => {
         <fieldset>
           <label>
             Guide URL
-            <span className={error ? '' : 'hide'}>You must enter a guide URL</span>
+            <span className={displayError('source') ? '' : 'hide'}>You must enter a guide URL</span>
             <input
               type='text'
               name='source'
@@ -136,7 +139,7 @@ const FormSubmit = () => {
         <fieldset>
           <div className='strategy__guide-type'>
             Select a Type
-            <span className={error ? '' : 'hide'}>You must select a guide type</span>
+            <span className={displayError('type') ? '' : 'hide'}>You must select a guide type</span>
             <div className='strategy__type-options'>
               <input
                 type='radio'

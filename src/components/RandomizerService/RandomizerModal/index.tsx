@@ -107,8 +107,6 @@ const RandomizerModal = ({ civilization, updateModalGif, closeModal, gif }: any)
             <div>
               <strong>Team bonus</strong>: {teamBonus}
             </div>
-
-            {/* <div className="guide">View guides for the {name}</div> */}
           </div>
         )}
       </div>

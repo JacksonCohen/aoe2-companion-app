@@ -6,7 +6,7 @@ $distance: 8px;
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 #scroll {
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -30,7 +30,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .modal__body {
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -175,14 +175,16 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 }
 
-// Non-desktop devices
-// @media (max-width: 1223.98px) {
-//   .modal {
-//     width: 90%;
-//     top: 200%;
-//     font-size: 16px;
-//     .modal__results {
-//       font-size: 18px;
-//     }
-//   }
-// }
+@media only screen and (max-width: 767.98px) {
+  #scroll {
+    transform: translate(-50%, -50%) scaleX(0.8);
+  }
+
+  .modal__body {
+    font-size: 16px;
+
+    .modal__civ-info {
+      padding: 5px 40px;
+    }
+  }
+}
