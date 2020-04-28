@@ -15,21 +15,30 @@ const PlayerCount = () => {
   const [playerCount, setPlayerCount] = useState<any>({});
 
   useEffect(() => {
-    fetch('https://cors-anywhere.herokuapp.com/https://aoe2.net/api/stats/players?game=aoe2de')
-      .then((response) => response.json())
-      .then(({ player_stats: data }) => {
-        let players: PlayerTotals = data[data.length - 1].num_players;
-        setPlayerCount(players);
-      })
-      .catch((err) => console.error(err));
+    if (
+      !JSON.parse(sessionStorage.getItem('players')!) || // if the request hasn't been cached into session storage yet
+      Date.now() - JSON.parse(sessionStorage.getItem('lastRequest')!) > 300000 // or if its been more than 5 minutes since the last api call
+    ) {
+      fetch('https://cors-anywhere.herokuapp.com/https://aoe2.net/api/stats/players?game=aoe2de')
+        .then((response) => response.json())
+        .then(({ player_stats: data }) => {
+          let players: PlayerTotals = data[data.length - 1].num_players;
+          sessionStorage.setItem('players', JSON.stringify(players));
+          sessionStorage.setItem('lastRequest', JSON.stringify(Date.now()));
+          setPlayerCount(players);
+        })
+        .catch((err) => console.error(err));
+    } else {
+      setPlayerCount(JSON.parse(sessionStorage.getItem('players')!));
+    }
   }, []);
 
   return (
     <div className='player-count'>
       {!!Object.keys(playerCount).length ? (
         <>
-          <div>Multiplayer: {playerCount.multiplayer} players</div>
-          <div className='player-count__hover'>
+          <div className='player-count__stats'>Multiplayer: {playerCount.multiplayer} players</div>
+          <div className='player-count__stats-hover'>
             <span>Multiplayer 1h: {playerCount.multiplayer_1h} players</span>
             <span>Multiplayer 24h: {playerCount.multiplayer_24h} players</span>
             <span>Steam: {playerCount.steam} players</span>
