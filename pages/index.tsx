@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import App from '../src/components/App';
+import '../sass/style.scss';
 
 export default () => (
   <>

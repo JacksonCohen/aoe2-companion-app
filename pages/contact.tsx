@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Navbar from '../src/components/Navbar';
 import PlayerCount from '../src/components/PlayerCount';
+import '../sass/style.scss';
 
 export default () => (
   <>

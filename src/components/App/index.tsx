@@ -3,7 +3,6 @@ import Navbar from '../Navbar';
 import PlayerCount from '../PlayerCount';
 import { useRouter } from 'next/router';
 
-import '../../../sass/style.scss';
 import './_App.scss';
 
 const App = () => {

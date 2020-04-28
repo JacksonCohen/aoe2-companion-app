@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Navbar from '../src/components/Navbar';
 import Randomizer from '../src/components/RandomizerService/Randomizer';
 import PlayerCount from '../src/components/PlayerCount';
+import '../sass/style.scss';
 
 export default () => (
   <>
