@@ -3,10 +3,12 @@
   bottom: 15px;
   left: 15px;
 
-  .player-count__stats &:hover {
-    padding: 5px;
-    border-radius: 5px;
-    background: #eee;
+  .player-count__stats {
+    &:hover {
+      padding: 5px;
+      border-radius: 5px;
+      background: #eee;
+    }
   }
 
   &:hover .player-count__stats-hover {
@@ -18,7 +20,7 @@
     }
   }
 
-  .player-count__hover {
+  .player-count__stats-hover {
     display: none;
   }
 
