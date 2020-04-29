@@ -1,0 +1,49 @@
+.service__randomizer {
+  margin: 50px 100px;
+
+  .civ__container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 15px 0;
+    justify-content: center;
+  }
+
+  button {
+    outline: none;
+    color: #e1d7b3;
+    background: transparent;
+    border: 2px solid #e1d7b3;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition-duration: 0.2s;
+    background-color: #5c3700;
+    background-image: url('/static/images/dark-leather-texture.png');
+
+    &:hover {
+      background-color: #e1d7b3;
+      color: white;
+    }
+  }
+}
+
+.button__randomizer {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  button {
+    padding: 16px 24px;
+    &:disabled {
+      background-color: #e1d7b3;
+    }
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .service__randomizer {
+    margin: 10px;
+  }
+}

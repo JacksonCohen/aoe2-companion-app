@@ -45,6 +45,7 @@ $darkleather: #533810;
           margin-top: 3px;
           font-size: 16px;
           border: 2px solid #cecece;
+          cursor: pointer;
 
           &:hover {
             border-color: lighten($darkleather, 25%);
