@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Navbar from '../src/components/Navbar';
 import PlayerCount from '../src/components/PlayerCount';
+import Statistics from '../src/components/StatisticsService/Statistics';
 import '../sass/style.scss';
 
 export default () => (
@@ -12,6 +13,7 @@ export default () => (
 
     <>
       <Navbar active='statistics' />
+      <Statistics />
       <PlayerCount />
     </>
   </>
