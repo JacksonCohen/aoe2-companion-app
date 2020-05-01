@@ -1,3 +1,5 @@
+@import 'sass/_colors';
+
 .card {
   display: inline-block;
   margin: 30px 40px;
@@ -12,8 +14,8 @@
   }
 
   .card__preview-container {
-    background: #ffffff99;
-    border: 1px solid #a19898;
+    background: rgba(white, 0.7);
+    border: 1px solid $darkgrey;
 
     .card__preview {
       display: inherit;
@@ -35,9 +37,9 @@
   }
 
   .card__guide-info {
-    border-left: 1px solid #a19898;
-    border-bottom: 1px solid #a19898;
-    border-right: 1px solid #a19898;
+    border-left: 1px solid $darkgrey;
+    border-bottom: 1px solid $darkgrey;
+    border-right: 1px solid $darkgrey;
 
     .card__guide-name {
       margin-left: 5px;

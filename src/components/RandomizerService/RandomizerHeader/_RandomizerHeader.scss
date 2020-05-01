@@ -1,3 +1,5 @@
+@import 'sass/_colors';
+
 .randomizer__header {
   display: flex;
   flex-flow: row wrap;
@@ -61,7 +63,7 @@ ul {
     text-decoration: none;
     white-space: nowrap;
     color: #666666;
-    border: 1px solid #fff;
+    border: 1px solid white;
     line-height: 1.2em;
     min-width: fit-content;
     &:hover {
