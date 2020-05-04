@@ -25,7 +25,6 @@ const ProfileLookup = ({ setLookUpParams }: Props) => {
   };
 
   return (
-    // TODO: Refactor into reusable component
     <form action='submit'>
       <fieldset>
         <input
