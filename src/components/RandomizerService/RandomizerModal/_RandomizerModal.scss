@@ -1,5 +1,4 @@
-$beige: #533810;
-$brown: #584e4a;
+@import 'sass/_colors';
 
 $duration: 0.2s;
 $distance: 8px;
@@ -18,15 +17,29 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 .modal__exit {
   position: absolute;
-  right: 10px;
-  font-size: 28px;
+  top: -5px;
+  font-size: 1.5em;
+  font-weight: 700;
+  z-index: 1;
+  cursor: pointer;
 
   &:hover,
   &:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
   }
+}
+
+.modal__exit.modal__before {
+  right: -90px;
+}
+
+.modal__exit.modal__after {
+  right: 0;
+  // position: fixed;
+  // left: 65%;
+  // top: 25%;
+  // transform: translate(-50%, -50%);
 }
 
 .modal__body {
@@ -35,9 +48,10 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 16px;
-  z-index: 2;
 
   .modal__results {
+    position: relative;
+
     #civ__name,
     #civ__coatOfArms {
       color: $brown;
@@ -67,7 +81,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
         left: 0;
         right: 0;
         height: 2px;
-        background-color: $beige;
+        background-color: $darkleather;
       }
       &:before {
         opacity: 0;
@@ -178,6 +192,14 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 @media only screen and (max-width: 767.98px) {
   #scroll {
     transform: translate(-50%, -50%) scaleX(0.8);
+  }
+
+  .modal__exit.modal__before {
+    right: -50px;
+  }
+
+  .modal__exit.modal__after {
+    right: 40px;
   }
 
   .modal__body {

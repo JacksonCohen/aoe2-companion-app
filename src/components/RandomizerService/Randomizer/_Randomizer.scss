@@ -1,3 +1,5 @@
+@import 'sass/_colors';
+
 .service__randomizer {
   margin: 50px 100px;
 
@@ -10,9 +12,9 @@
 
   button {
     outline: none;
-    color: #e1d7b3;
+    color: $softyellow;
     background: transparent;
-    border: 2px solid #e1d7b3;
+    border: 2px solid $softyellow;
     border-radius: 6px;
     padding: 10px 20px;
     font-size: 14px;
@@ -20,11 +22,11 @@
     cursor: pointer;
     text-transform: uppercase;
     transition-duration: 0.2s;
-    background-color: #5c3700;
+    background-color: $darkleather;
     background-image: url('/static/images/dark-leather-texture.png');
 
     &:hover {
-      background-color: #e1d7b3;
+      background-color: $softyellow;
       color: white;
     }
   }
@@ -37,7 +39,7 @@
   button {
     padding: 16px 24px;
     &:disabled {
-      background-color: #e1d7b3;
+      background-color: $softyellow;
     }
   }
 }

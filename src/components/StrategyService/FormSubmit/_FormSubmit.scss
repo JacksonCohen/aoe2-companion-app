@@ -1,9 +1,9 @@
-$darkleather: #533810;
+@import 'sass/_colors';
 
 .strategy__form {
   display: flex;
   flex-flow: column;
-  border-bottom: 1px solid rgb(83, 56, 16);
+  border-bottom: 1px solid $darkleather;
 
   form {
     display: flex;
@@ -40,11 +40,11 @@ $darkleather: #533810;
 
         label {
           display: inline-block;
-          background-color: #fff;
+          background-color: white;
           padding: 8px 15px;
           margin-top: 3px;
           font-size: 16px;
-          border: 2px solid #cecece;
+          border: 2px solid $lightgrey;
           cursor: pointer;
 
           &:hover {
@@ -66,8 +66,8 @@ $darkleather: #533810;
       input[type='button'] {
         outline: none;
         background: $darkleather;
-        color: #e1d7b3;
-        border: 2px solid #e1d7b3;
+        color: $softyellow;
+        border: 2px solid $softyellow;
         padding: 10px 20px;
         margin: 10px 0 20px 0;
         font-size: 16px;
@@ -75,7 +75,7 @@ $darkleather: #533810;
         background-image: url(/static/images/dark-leather-texture.png);
 
         &:hover {
-          background-color: #e1d7b3;
+          background-color: $softyellow;
           color: white;
           outline-color: lighten($darkleather, 25%);
           cursor: pointer;
@@ -84,14 +84,14 @@ $darkleather: #533810;
 
       span {
         font-size: 12px;
-        color: red;
+        color: $error;
         display: block;
       }
     }
   }
 
   .error {
-    border: 1px solid red !important;
+    border: 1px solid $error !important;
   }
 
   .hide {

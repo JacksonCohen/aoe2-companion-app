@@ -1,3 +1,5 @@
+@import 'sass/_colors';
+
 .player-count {
   position: fixed;
   bottom: 15px;
@@ -7,13 +9,13 @@
     &:hover {
       padding: 5px;
       border-radius: 5px;
-      background: #eee;
+      background: lighten($lightgrey, 10);
     }
   }
 
   &:hover .player-count__stats-hover {
     display: block;
-    background: #eee;
+    background: lighten($lightgrey, 10);
 
     span {
       display: block;
