@@ -73,9 +73,7 @@ const FormSubmit = () => {
       fetch('/api/guide', {
         method: 'POST',
         body: JSON.stringify({
-          name: guideName,
-          source,
-          type,
+          userInput,
         }),
       })
         .then(() => {

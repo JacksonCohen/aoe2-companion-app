@@ -31,7 +31,11 @@ const BuildOrder = () => {
   };
 
   const handleSubmit = () => {
-    console.log('submitted');
+    console.log(buildOrder);
+    fetch('/api/buildOrder', {
+      method: 'POST',
+      body: JSON.stringify({ order: buildOrder }),
+    });
   };
 
   return (
@@ -66,7 +70,7 @@ const BuildOrder = () => {
 
         <fieldset>
           <input type='button' value='Add' onClick={handleAddClick} />
-          <input type='button' value='Submit' onSubmit={handleSubmit} />
+          <input type='button' value='Submit' onClick={handleSubmit} />
         </fieldset>
       </form>
     </div>
