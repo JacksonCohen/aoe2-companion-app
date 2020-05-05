@@ -12,9 +12,9 @@ const CivilizationsList = ({ civilizations, setCivs }: Props) => {
     // the ! represents non null assertion operator telling the compiler that the expression cannot be null or undefined
     const civs: CivilizationInterface[] = [...civilizations!];
 
-    for (let i = 0; i < civs.length; i++) {
-      if (civs[i].id === id) {
-        civs[i].checked = !civs[i].checked;
+    for (const civ of civs) {
+      if (civ.id === id) {
+        civ.checked = !civ.checked;
       }
     }
     setCivs(civs);
