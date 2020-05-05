@@ -5,9 +5,9 @@ import './_GuideModal.scss';
 
 interface Props {
   source: string;
-  type: string | undefined;
+  type: string;
   node: any;
-  closeModal: Function;
+  closeModal: () => void;
 }
 
 const GuideModal = ({ source, type, node, closeModal }: Props) => {

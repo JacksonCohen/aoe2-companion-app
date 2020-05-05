@@ -4,9 +4,9 @@ import Dropdown from '../Dropdown';
 import './_RandomizerHeader.scss';
 
 interface Props {
-  sortCivilizations: Function;
-  selectChosenCriteria: Function;
-  selectOrClearAll: Function;
+  sortCivilizations: (method: string) => void;
+  selectChosenCriteria: (criteria: string, option: string) => void;
+  selectOrClearAll: (checkedValue: boolean) => void;
 }
 
 const RandomizerHeader = ({ sortCivilizations, selectChosenCriteria, selectOrClearAll }: Props) => {

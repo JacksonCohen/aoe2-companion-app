@@ -8,7 +8,7 @@ import { civilizationData } from '../../../../data/civs';
 import './_Randomizer.scss';
 
 const Randomizer = () => {
-  const [civilizations, setCivilizations] = useState<CivilizationInterface[] | undefined>([]);
+  const [civilizations, setCivilizations] = useState<CivilizationInterface[]>([]);
   const [selectedRandomCiv, setSelectedRandomCiv] = useState({});
   const [loadedGif, setLoadedGif] = useState('/static/images/scroll-modal-before.gif');
   const [tempGif, setTempGif] = useState('/static/images/scroll-modal-before.gif');

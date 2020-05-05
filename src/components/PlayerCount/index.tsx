@@ -15,8 +15,8 @@ const PlayerCount = () => {
   const [playerCount, setPlayerCount] = useState<any>({});
 
   useEffect(() => {
-    let controller = new AbortController();
-    let signal = controller.signal;
+    const controller = new AbortController();
+    const signal = controller.signal;
 
     if (
       !JSON.parse(sessionStorage.getItem('players')!) || // if the request hasn't been cached into session storage yet
@@ -27,7 +27,7 @@ const PlayerCount = () => {
       })
         .then((response) => response.json())
         .then(({ player_stats: data }) => {
-          let players: PlayerTotals = data[data.length - 1].num_players;
+          const players: PlayerTotals = data[data.length - 1].num_players;
           setPlayerCount(players);
 
           sessionStorage.setItem('players', JSON.stringify(players));

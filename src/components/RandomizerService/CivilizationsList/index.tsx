@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import Civilization from '../Civilization';
 import CivilizationInterface from '../../../interfaces/Civilization.interface';
 
 interface Props {
   civilizations: CivilizationInterface[] | undefined;
-  setCivs: Function;
+  setCivs: Dispatch<SetStateAction<CivilizationInterface[]>>;
 }
 
 const CivilizationsList = ({ civilizations, setCivs }: Props) => {

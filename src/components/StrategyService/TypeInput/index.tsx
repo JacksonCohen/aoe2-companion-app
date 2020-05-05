@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 
 interface Props {
   value: string;
-  handleChange: any;
-  displayError: Function;
+  handleChange: (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
+  displayError: (field: string) => boolean;
 }
 
 const TypeInput = ({ value, handleChange, displayError }: Props) => {
