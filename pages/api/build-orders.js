@@ -6,11 +6,12 @@ export default mongoMiddleware(async (req, res, connection, models) => {
 
   apiHandler(res, method, {
     GET: (response) => {
-      models.BuildOrders.find({}, (error, buildOrders) => {
+      models.BuildOrder.find({}, (error, buildOrders) => {
         if (error) {
           connection.disconnect();
           response.status(500).json({ error });
         } else {
+          console.log(buildOrders, 'in find');
           response.status(200).json(buildOrders);
           connection.disconnect();
         }

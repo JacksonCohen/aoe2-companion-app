@@ -11,13 +11,18 @@ export default mongoMiddleware(async (req, res, connection, models) => {
         order: [],
       });
 
-      order.forEach((step) => {
-        doc.order.push({
-          image: step.image,
-          title: step.title,
-          info: step.info,
+      try {
+        order.forEach((step) => {
+          doc.order.push({
+            image: step.image,
+            title: step.title,
+            info: step.info,
+          });
         });
-      });
+      } catch (error) {
+        console.error(error);
+        throw Error;
+      }
 
       await doc.save((error, buildOrder) => {
         if (error) {

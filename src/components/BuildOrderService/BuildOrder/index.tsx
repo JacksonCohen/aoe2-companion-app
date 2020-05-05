@@ -1,4 +1,6 @@
 import React, { useReducer, useState, ChangeEvent } from 'react';
+import BuildOrderList from '../BuildOrderList';
+import BuildOrderInterface from '../../../interfaces/BuildOrder.interface';
 
 import './_BuildOrder.scss';
 
@@ -8,7 +10,7 @@ interface State {
   info: string;
 }
 
-const BuildOrder = () => {
+const BuildOrder = ({ buildOrders }: { buildOrders: BuildOrderInterface[] }) => {
   const initialState = {
     image: '',
     title: '',
@@ -31,10 +33,9 @@ const BuildOrder = () => {
   };
 
   const handleSubmit = () => {
-    console.log(buildOrder);
     fetch('/api/buildOrder', {
       method: 'POST',
-      body: JSON.stringify({ order: buildOrder }),
+      body: JSON.stringify(buildOrder),
     });
   };
 
@@ -73,6 +74,8 @@ const BuildOrder = () => {
           <input type='button' value='Submit' onClick={handleSubmit} />
         </fieldset>
       </form>
+
+      <BuildOrderList orders={buildOrders} />
     </div>
   );
 };
