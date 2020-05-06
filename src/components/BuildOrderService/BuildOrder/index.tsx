@@ -32,13 +32,13 @@ const BuildOrder = ({ buildOrders }: { buildOrders: BuildOrderInterface[] }) => 
 
   const handleChange = (
     event: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
-    stepNum?: number
+    stepNumber?: number
   ): void => {
     const { name, value } = event.target;
 
-    if (stepNum !== undefined) {
-      let orderCopy = [...buildOrder];
-      orderCopy[stepNum][name] = value;
+    if (stepNumber !== undefined) {
+      const orderCopy = [...buildOrder];
+      orderCopy[stepNumber][name] = value;
       setBuildOrder(orderCopy);
     } else if (name === 'orderTitle') {
       setOrderTitle(value);
@@ -48,7 +48,6 @@ const BuildOrder = ({ buildOrders }: { buildOrders: BuildOrderInterface[] }) => 
   };
 
   const handleAddClick = (): void => {
-    formData.stepNum = stepNum;
     setBuildOrder([...buildOrder, formData]);
     setFormData(initialState);
     setStepNum(stepNum + 1);

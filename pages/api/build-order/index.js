@@ -4,19 +4,19 @@ import apiHandler from '../../../lib/api/api-handler';
 export default mongoMiddleware(async (req, res, connection, models) => {
   const { method } = req;
   const order = JSON.parse(req.body);
-  console.log(order, 'order schema');
+
   apiHandler(res, method, {
     POST: async (response) => {
       const doc = await models.BuildOrder.create({
         orderTitle: order.title,
         order: [],
       });
-
       try {
-        order.order.forEach((step) => {
+        order.buildOrder.forEach((step) => {
           doc.order.push({
-            image: step.image,
-            stepTitle: step.title,
+            image: 'placeholder',
+            // image: step.image,
+            stepTitle: step.stepTitle,
             info: step.info,
           });
         });
