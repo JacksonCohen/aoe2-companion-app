@@ -1,0 +1,17 @@
+.build-order__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+
+  .build-order__step {
+    display: flex;
+
+    img {
+      width: 50px;
+    }
+
+    .step__info {
+      font-size: 16px;
+    }
+  }
+}

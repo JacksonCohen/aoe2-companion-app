@@ -1,4 +1,11 @@
-fieldset {
-  border: 0;
-  padding: 0;
+.build-order__input {
+  display: flex;
+  align-items: center;
+
+  span {
+    cursor: pointer;
+    color: red;
+    font-weight: 700;
+    padding-left: 3px;
+  }
 }
