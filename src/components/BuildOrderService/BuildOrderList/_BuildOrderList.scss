@@ -1,17 +1,22 @@
-.build-order__item {
-  display: flex;
-  flex-direction: column;
-  max-width: 30%;
+.build-order__container {
+  margin: 100px 0;
 
-  .build-order__step {
+  .build-order__item {
     display: flex;
+    flex-direction: column;
+    max-width: 45%;
 
-    img {
-      width: 50px;
-    }
+    .build-order__step {
+      display: flex;
 
-    .step__info {
-      font-size: 16px;
+      img {
+        width: 50px;
+        height: 100%;
+      }
+
+      .step__info {
+        font-size: 16px;
+      }
     }
   }
 }

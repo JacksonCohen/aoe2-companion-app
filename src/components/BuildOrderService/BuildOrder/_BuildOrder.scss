@@ -1,8 +1,12 @@
-.build-order__input {
-  display: flex;
-  align-items: center;
+.service__build-order {
+  margin: 50px 100px;
 
-  span {
+  .build-order__input {
+    display: flex;
+    align-items: center;
+  }
+
+  .build-order__delete-step {
     cursor: pointer;
     color: red;
     font-weight: 700;
