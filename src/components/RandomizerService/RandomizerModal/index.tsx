@@ -58,12 +58,15 @@ const RandomizerModal = ({ civilization, updateModalGif, closeModal, gif }: any)
 
   return (
     <div className='modal__container'>
-      <span className='modal__exit' onClick={(): void => closeModal()}>
-        &times;
-      </span>
       <img id='scroll' src={gif} />
       <div className={`modal__body hide`}>
         <div className='modal__results'>
+          <span
+            className={`modal__exit ${!learnMore ? 'modal__before' : 'modal__after'}`}
+            onClick={(): void => closeModal()}
+          >
+            &times;
+          </span>
           <div id='civ__name'>
             <strong>You've received the {name}!</strong>
           </div>

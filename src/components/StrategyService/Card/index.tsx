@@ -7,7 +7,7 @@ import './_Card.scss';
 interface Props {
   name: string;
   source: string;
-  type?: string;
+  type: string;
   node: MutableRefObject<HTMLDivElement>;
 }
 

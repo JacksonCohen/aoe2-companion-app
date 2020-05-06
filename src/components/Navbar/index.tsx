@@ -40,9 +40,13 @@ const Navbar = ({ active }: { active?: string }) => {
           <a className={active === 'strategy' ? 'active' : ''}>Strategy</a>
         </Link>
 
-        <Link href='/about'>
-          <a className={active === 'about' ? 'active' : ''}> About</a>
+        <Link href='/build-order'>
+          <a className={active === 'build-order' ? 'active' : ''}>Build Order</a>
         </Link>
+
+        {/* <Link href='/about'>
+          <a className={active === 'about' ? 'active' : ''}>About</a>
+        </Link> */}
 
         <Link href='/contact'>
           <a className={active === 'contact' ? 'active' : ''}>Contact</a>

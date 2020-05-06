@@ -1,0 +1,15 @@
+.service__build-order {
+  margin: 50px 100px;
+
+  .build-order__input {
+    display: flex;
+    align-items: center;
+  }
+
+  .build-order__delete-step {
+    cursor: pointer;
+    color: red;
+    font-weight: 700;
+    padding-left: 3px;
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useReducer, useState, ChangeEvent } from 'react';
+import TypeInput from '../TypeInput';
 import emailjs from 'emailjs-com';
 
 import './_FormSubmit.scss';
@@ -72,9 +73,7 @@ const FormSubmit = () => {
       fetch('/api/guide', {
         method: 'POST',
         body: JSON.stringify({
-          name: guideName,
-          source,
-          type,
+          userInput,
         }),
       })
         .then(() => {
@@ -141,50 +140,9 @@ const FormSubmit = () => {
             Select a Type
             <span className={displayError('type') ? '' : 'hide'}>You must select a guide type</span>
             <div className='strategy__type-options'>
-              <input
-                type='radio'
-                id='video'
-                name='type'
-                value='Video'
-                className='strategy__type-input'
-                onChange={handleChange}
-              />
-              <label
-                className={`strategy__video-label${displayError('type') ? ' error' : ''}`}
-                htmlFor='video'
-              >
-                Video
-              </label>
-              <input
-                type='radio'
-                id='image'
-                name='type'
-                value='Image'
-                className='strategy__type-input'
-                onChange={handleChange}
-              />
-              <label
-                className={`strategy__video-label${displayError('type') ? ' error' : ''}`}
-                htmlFor='image'
-              >
-                {' '}
-                Image
-              </label>
-              <input
-                type='radio'
-                id='other'
-                name='type'
-                value='Other'
-                className='strategy__type-input'
-                onChange={handleChange}
-              />
-              <label
-                className={`strategy__video-label${displayError('type') ? ' error' : ''}`}
-                htmlFor='other'
-              >
-                {' '}
-                Other
-              </label>
+              {['video', 'image', 'other'].map((type) => (
+                <TypeInput value={type} handleChange={handleChange} displayError={displayError} />
+              ))}
             </div>
           </div>
         </fieldset>

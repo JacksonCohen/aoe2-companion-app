@@ -8,6 +8,10 @@ body {
   background-image: url('/static/images/scroll.jpg');
   background-size: cover;
 }
+fieldset {
+  padding: 0;
+  border: 0;
+}
 *,
 *:after,
 *:before {

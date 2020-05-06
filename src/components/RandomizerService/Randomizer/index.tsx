@@ -8,7 +8,7 @@ import { civilizationData } from '../../../../data/civs';
 import './_Randomizer.scss';
 
 const Randomizer = () => {
-  const [civilizations, setCivilizations] = useState<CivilizationInterface[] | undefined>([]);
+  const [civilizations, setCivilizations] = useState<CivilizationInterface[]>([]);
   const [selectedRandomCiv, setSelectedRandomCiv] = useState({});
   const [loadedGif, setLoadedGif] = useState('/static/images/scroll-modal-before.gif');
   const [tempGif, setTempGif] = useState('/static/images/scroll-modal-before.gif');
@@ -36,13 +36,13 @@ const Randomizer = () => {
       ];
       civs!.sort(
         (a: CivilizationInterface, b: CivilizationInterface) =>
-          order.indexOf(a.expansion) - order.indexOf(b.expansion)
+          order.indexOf(a.expansion) - order.indexOf(b.expansion),
       );
       setCivilizations(civs);
     }
   };
 
-  const reloadGif = (gif: string, stateUpdate: Function): void => {
+  const reloadGif = (gif: string, stateUpdate: (value: string) => void): void => {
     stateUpdate('');
     setTimeout(() => {
       stateUpdate(gif);
@@ -79,7 +79,7 @@ const Randomizer = () => {
 
   const selectCiv = (): void => {
     const validCivs: CivilizationInterface[] = civilizations!.filter(
-      (civ: CivilizationInterface) => civ.checked
+      (civ: CivilizationInterface) => civ.checked,
     );
 
     if (validCivs.length > 0) {

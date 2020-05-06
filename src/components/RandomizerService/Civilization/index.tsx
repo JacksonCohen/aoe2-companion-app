@@ -6,7 +6,7 @@ interface Props {
   name: string;
   coat: string;
   checked: boolean;
-  handleChange: Function;
+  handleChange: (id: number) => void;
 }
 
 const Civilization = ({ id, name, coat, checked, handleChange }: Props) => {

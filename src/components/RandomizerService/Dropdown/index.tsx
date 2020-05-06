@@ -4,7 +4,7 @@ interface Props {
   label: string;
   options?: string[];
   criteria: string;
-  callback: Function;
+  callback: (method: string) => void;
 }
 
 const Dropdown = ({ label, options, criteria, callback }: Props) => {
@@ -17,7 +17,7 @@ const Dropdown = ({ label, options, criteria, callback }: Props) => {
             {options.map((option: string) => {
               return (
                 <li key={option}>
-                  <a onClick={(): void => callback(criteria, option)} href='#'>
+                  <a onClick={(): void => callback(criteria)} href='#'>
                     {option}
                   </a>
                 </li>

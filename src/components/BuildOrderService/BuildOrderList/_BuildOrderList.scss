@@ -1,0 +1,22 @@
+.build-order__container {
+  margin: 100px 0;
+
+  .build-order__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 45%;
+
+    .build-order__step {
+      display: flex;
+
+      img {
+        width: 50px;
+        height: 100%;
+      }
+
+      .step__info {
+        font-size: 16px;
+      }
+    }
+  }
+}
