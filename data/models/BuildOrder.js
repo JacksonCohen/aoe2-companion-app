@@ -1,24 +1,22 @@
 import mongoose, { Schema } from 'mongoose';
 
-const subSchema = new Schema(
-  {
-    image: {
-      type: String,
-      required: true,
-    },
-    title: {
-      type: String,
-      required: true,
-    },
-    info: {
-      type: String,
-      required: true,
-    },
+const subSchema = new Schema({
+  image: {
+    type: String,
+    required: true,
   },
-  { _id: false }
-);
+  stepTitle: {
+    type: String,
+    required: true,
+  },
+  info: {
+    type: String,
+    required: true,
+  },
+});
 
 const BuildOrderSchema = new Schema({
+  orderTitle: { type: String, required: true },
   order: [subSchema],
 });
 

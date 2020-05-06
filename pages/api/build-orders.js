@@ -8,10 +8,10 @@ export default mongoMiddleware(async (req, res, connection, models) => {
     GET: (response) => {
       models.BuildOrder.find({}, (error, buildOrders) => {
         if (error) {
+          console.error(error);
           connection.disconnect();
           response.status(500).json({ error });
         } else {
-          console.log(buildOrders, 'in find');
           response.status(200).json(buildOrders);
           connection.disconnect();
         }
