@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "predev": "tslint -c tslint.json -p tsconfig.json --fix",
     "dev": "next dev",
     "build": "next build",
     "prestart": "next build",

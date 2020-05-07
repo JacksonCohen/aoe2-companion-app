@@ -14,8 +14,7 @@ const BuildOrderList = ({ orders }: { orders: BuildOrderInterface[] }) => {
             <div className='build-order__title'>{orderTitle}</div>
             {order.map((step: any, innerIndex: number) => (
               <div className='build-order__step' key={innerIndex}>
-                <img src='https://vignette.wikia.nocookie.net/ageofempires/images/d/de/CastleageDE.png/revision/latest?cb=20200223093258' />
-                {/* TODO: Replace placeholder image */}
+                <img src={step.image} />
                 <div className='step__text'>
                   <div className='step__title'>{step.stepTitle}</div>
                   <div className='step__info'>{step.info}</div>

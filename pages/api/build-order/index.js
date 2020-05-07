@@ -14,8 +14,7 @@ export default mongoMiddleware(async (req, res, connection, models) => {
       try {
         order.buildOrder.forEach((step) => {
           doc.order.push({
-            image: 'placeholder',
-            // image: step.image,
+            image: step.image,
             stepTitle: step.stepTitle,
             info: step.info,
           });
