@@ -3,41 +3,11 @@
 .service__build-order {
   margin: 50px 100px;
 
-  .build-order__title-input,
-  .build-order__title,
-  .build-order__input,
-  .build-order__current-step,
-  .build-order__buttons {
-    display: flex;
-    justify-content: center;
-  }
-
-  .build-order__title {
-    margin-right: 20px;
-  }
-
-  .build-order__input {
-    align-items: center;
-
-    .icon {
-      width: 32px;
-      margin: 5px;
-    }
-  }
-
-  .build-order__current-step:not(.step-1) {
-    margin: 10px 20px 10px 0;
-  }
-
   .build-order__delete-step {
     cursor: pointer;
     color: red;
     font-weight: 700;
     padding-left: 3px;
-  }
-
-  .build-order__buttons {
-    margin: 10px;
   }
 }
 

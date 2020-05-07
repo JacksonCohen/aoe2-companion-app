@@ -1,0 +1,14 @@
+.build-order__current-step {
+  display: flex;
+  justify-content: center;
+
+  &:not(.step-1) {
+    margin: 10px 20px 10px 0;
+  }
+}
+
+.build-order__buttons {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}

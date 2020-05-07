@@ -1,15 +1,16 @@
 import React, { useReducer, useState, ChangeEvent } from 'react';
+import PastSteps from '../PastSteps';
+import TitleInput from '../TitleInput';
 import BuildOrderList from '../BuildOrderList';
-import IconSelector from '../IconSelector';
 import BuildOrderInterface from '../../../interfaces/BuildOrder.interface';
 
 import './_BuildOrder.scss';
+import CurrentStepForm from '../CurrentStepForm';
 
 interface State {
   image: string;
   stepTitle: string;
   info: string;
-  stepNum: number;
 }
 
 const BuildOrder = ({ buildOrders }: { buildOrders: BuildOrderInterface[] }) => {
@@ -24,7 +25,6 @@ const BuildOrder = ({ buildOrders }: { buildOrders: BuildOrderInterface[] }) => 
   const [formData, setFormData] = useReducer(stateReducer, initialState);
   const [stepNum, setStepNum] = useState(1);
   const [orderTitle, setOrderTitle] = useState('');
-  const [tempTitle, setTempTitle] = useState('');
   const [selectedIcon, setSelectedIcon] = useState('');
   const [error, setError] = useState(false);
 
@@ -50,7 +50,7 @@ const BuildOrder = ({ buildOrders }: { buildOrders: BuildOrderInterface[] }) => 
 
   const handleChange = (
     event: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
-    stepNumber?: number,
+    stepNumber?: number
   ): void => {
     const { name, value } = event.target;
 
@@ -58,8 +58,6 @@ const BuildOrder = ({ buildOrders }: { buildOrders: BuildOrderInterface[] }) => 
       const orderCopy = [...buildOrder];
       orderCopy[stepNumber][name] = value;
       setBuildOrder(orderCopy);
-    } else if (name === 'tempTitle') {
-      setTempTitle(value);
     } else {
       setFormData({ [name]: value });
     }
@@ -84,122 +82,36 @@ const BuildOrder = ({ buildOrders }: { buildOrders: BuildOrderInterface[] }) => 
     return false;
   };
 
-  const handleSubmit = (event: any): void => {
-    if (event.target!.name === 'tempTitle') {
-      setOrderTitle(tempTitle);
-      setTempTitle('');
-    } else {
-      fetch('/api/build-order', {
-        method: 'POST',
-        body: JSON.stringify({
-          title: orderTitle,
-          buildOrder,
-        }),
-      });
-    }
-  };
-
   return (
     <div className='service__build-order'>
-      {/* title input */}
       {orderTitle.length === 0 ? (
-        <form className='build-order__title-input'>
-          <input
-            type='text'
-            placeholder='Enter build order title'
-            name='tempTitle'
-            maxLength={20}
-            value={tempTitle}
-            className={`${displayError('title') ? ' error' : ''}`}
-            onChange={(event) => handleChange(event)}
-          />
-          <input
-            type='button'
-            name='tempTitle'
-            value='Submit title'
-            onClick={(event) => handleSubmit(event)}
-          />
-        </form>
+        <TitleInput
+          displayError={displayError}
+          orderTitle={orderTitle}
+          setOrderTitle={setOrderTitle}
+        />
       ) : (
         <>
-          {/* title */}
-          <div className='build-order__title'>{orderTitle}</div>
+          <PastSteps
+            orderTitle={orderTitle}
+            buildOrder={buildOrder}
+            handleChange={handleChange}
+            handleClick={handleClick}
+          />
 
-          {/* past steps */}
-          {buildOrder.map((step: any, index: number) => {
-            return (
-              <div className='build-order__input' key={index}>
-                <img className='icon' src={step.image} />
-                <input
-                  type='text'
-                  name='stepTitle'
-                  maxLength={30}
-                  value={step.stepTitle}
-                  onChange={(event) => handleChange(event, index)}
-                />
-                <input
-                  type='text'
-                  name='info'
-                  maxLength={40}
-                  value={step.info}
-                  onChange={(event) => handleChange(event, index)}
-                />
-                <span
-                  className='build-order__delete-step'
-                  onClick={() => handleClick('delete', index)}
-                >
-                  &#10006;
-                </span>
-              </div>
-            );
-          })}
-
-          {/* current step */}
-          <div className={`build-order__current-step step-${stepNum}`}>
-            <form action='submit'>
-              <fieldset>
-                <IconSelector
-                  setSelectedIcon={setSelectedIcon}
-                  selectedIcon={selectedIcon}
-                  setIcon={setIcon}
-                />
-                <input
-                  type='text'
-                  name='stepTitle'
-                  placeholder='Enter title'
-                  maxLength={30}
-                  value={formData.stepTitle}
-                  className={`${displayError('step', 'stepTitle') ? 'error' : ''}`}
-                  onChange={(event) => handleChange(event)}
-                />
-                <input
-                  type='text'
-                  name='info'
-                  placeholder='Enter info'
-                  maxLength={40}
-                  value={formData.info}
-                  className={`${displayError('step', 'info') ? 'error' : ''}`}
-                  onChange={(event) => handleChange(event)}
-                />
-                {stepNum === 1 && (
-                  <span className='build-order__delete-step' onClick={() => setOrderTitle('')}>
-                    &#10006;
-                  </span>
-                )}
-              </fieldset>
-
-              <fieldset>
-                {/* buttons */}
-                <div className='build-order__buttons'>
-                  <input type='button' value='Add Step' onClick={() => handleClick('add')} />
-
-                  {buildOrder.length !== 0 && (
-                    <input type='button' value='Submit' onClick={handleSubmit} />
-                  )}
-                </div>
-              </fieldset>
-            </form>
-          </div>
+          <CurrentStepForm
+            stepNum={stepNum}
+            selectedIcon={selectedIcon}
+            setIcon={setIcon}
+            setSelectedIcon={setSelectedIcon}
+            setOrderTitle={setOrderTitle}
+            formData={formData}
+            orderTitle={orderTitle}
+            buildOrder={buildOrder}
+            displayError={displayError}
+            handleChange={handleChange}
+            handleClick={handleClick}
+          />
         </>
       )}
 
