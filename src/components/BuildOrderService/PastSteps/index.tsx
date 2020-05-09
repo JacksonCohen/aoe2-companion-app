@@ -8,7 +8,7 @@ interface Props {
   buildOrder: BuildOrderInterface[];
   handleChange: (
     event: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
-    stepNumber?: number
+    stepNumber?: number,
   ) => void;
   handleClick: (type: string, index?: number) => void;
 }

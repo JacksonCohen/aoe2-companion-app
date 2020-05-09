@@ -21,7 +21,7 @@ interface Props {
   displayError: (type: string, field?: string) => boolean;
   handleChange: (
     event: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
-    stepNumber?: number
+    stepNumber?: number,
   ) => void;
   handleClick: (type: string, index?: number) => void;
   initialState: BuildOrderInterface;

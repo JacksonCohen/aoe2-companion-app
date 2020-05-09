@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CivilizationsList from '../CivilizationsList';
 import RandomizerHeader from '../RandomizerHeader';
 import RandomizerModal from '../RandomizerModal';
+import FilterModal from '../FilterModal';
 import CivilizationInterface from '../../../interfaces/Civilization.interface';
 import { civilizationData } from '../../../../data/civs';
 
@@ -12,6 +13,7 @@ const Randomizer = () => {
   const [selectedRandomCiv, setSelectedRandomCiv] = useState({});
   const [loadedGif, setLoadedGif] = useState('/static/images/scroll-modal-before.gif');
   const [tempGif, setTempGif] = useState('/static/images/scroll-modal-before.gif');
+  const [openFilterModal, setOpenFilterModal] = useState(false);
 
   useEffect((): void => {
     civilizationData.forEach((civ: CivilizationInterface) => {
@@ -91,12 +93,17 @@ const Randomizer = () => {
     }
   };
 
+  const handleFilterClick = (): void => {
+    setOpenFilterModal(true);
+  };
+
   return (
     <div className='service__randomizer'>
       <RandomizerHeader
         sortCivilizations={sortCivilizations}
         selectChosenCriteria={selectChosenCriteria}
         selectOrClearAll={selectOrClearAll}
+        handleFilterClick={handleFilterClick}
       />
 
       <CivilizationsList civilizations={civilizations} setCivs={setCivilizations} />
@@ -112,6 +119,8 @@ const Randomizer = () => {
           Randomize!
         </button>
       </div>
+
+      {openFilterModal && <FilterModal selectChosenCriteria={selectChosenCriteria} />}
 
       {/* if the randomizer has been used with 1+ civs selected, open the modal */}
       {!!Object.keys(selectedRandomCiv).length && (

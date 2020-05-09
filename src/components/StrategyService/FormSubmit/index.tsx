@@ -95,7 +95,7 @@ const FormSubmit = () => {
   const resetForm = (): void => {
     setUserInput({
       guideName: '',
-      url: '',
+      source: '',
       type: '',
     });
     setError(false);
