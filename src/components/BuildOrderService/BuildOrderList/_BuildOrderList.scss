@@ -1,8 +1,12 @@
+@import 'sass/_colors';
+
 .build-order__container {
   display: flex;
   justify-content: center;
   flex-flow: wrap;
   margin: 75px 0;
+  padding: 75px;
+  border-top: 1px solid $darkleather;
 
   .build-order__item {
     display: inline-block;
@@ -14,11 +18,12 @@
 
     .build-order__step {
       display: flex;
-      margin: 3px 0;
+      margin: 5px 0;
 
       img {
         width: 50px;
         height: 100%;
+        margin: 0 5px;
       }
 
       .step__info {

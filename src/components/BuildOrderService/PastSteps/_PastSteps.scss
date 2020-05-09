@@ -1,0 +1,18 @@
+.build-order__title,
+.build-order__input {
+  display: flex;
+  justify-content: center;
+}
+
+.build-order__title {
+  margin: 10px 0 10px 20px;
+}
+
+.build-order__input {
+  align-items: center;
+
+  .icon {
+    width: 32px;
+    margin: 5px;
+  }
+}
