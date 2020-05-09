@@ -5,10 +5,11 @@ import './_TitleInput.scss';
 interface Props {
   orderTitle: string;
   setOrderTitle: any;
-  displayError: (type: string, field?: string) => boolean;
+  error: boolean;
+  setError: any;
 }
 
-const TitleInput = ({ orderTitle, setOrderTitle, displayError }: Props) => {
+const TitleInput = ({ orderTitle, setOrderTitle, error, setError }: Props) => {
   const [tempTitle, setTempTitle] = useState('');
 
   const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>): void => {
@@ -16,8 +17,23 @@ const TitleInput = ({ orderTitle, setOrderTitle, displayError }: Props) => {
   };
 
   const handleSubmit = (): void => {
+    if (tempTitle === '' && !error) {
+      setError(true);
+    } else {
+      setError(false);
+    }
+
     setOrderTitle(tempTitle);
     setTempTitle('');
+  };
+
+  const displayError = (type: string): boolean => {
+    if (type === 'title') {
+      if (error && tempTitle === '') {
+        return true;
+      }
+    }
+    return false;
   };
 
   return (
@@ -26,14 +42,13 @@ const TitleInput = ({ orderTitle, setOrderTitle, displayError }: Props) => {
         <form className='build-order__title-input'>
           <input
             type='text'
-            placeholder='Enter build order title'
+            placeholder='Enter build order title...'
             name='tempTitle'
             maxLength={20}
-            value={tempTitle}
-            className={`${displayError('title') ? ' error' : ''}`}
+            className={`${displayError('title') ? 'error' : ''}`}
             onChange={(event) => handleChange(event)}
           />
-          <input type='button' name='tempTitle' value='Submit title' onClick={handleSubmit} />
+          <input type='button' name='tempTitle' value='Submit Title' onClick={handleSubmit} />
         </form>
       ) : (
         <div className='build-order__title'>{orderTitle}</div>

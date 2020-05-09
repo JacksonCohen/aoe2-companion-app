@@ -35,7 +35,10 @@ const PastSteps = ({ orderTitle, buildOrder, handleChange, handleClick }: Props)
             value={step.info}
             onChange={(event) => handleChange(event, index)}
           />
-          <span className='build-order__delete-step' onClick={() => handleClick('delete', index)}>
+          <span
+            className='build-order__delete-step delete-step'
+            onClick={() => handleClick('delete', index)}
+          >
             &#10006;
           </span>
         </div>

@@ -86,9 +86,10 @@ const BuildOrder = ({ buildOrders }: { buildOrders: BuildOrderInterface[] }) => 
     <div className='service__build-order'>
       {orderTitle.length === 0 ? (
         <TitleInput
-          displayError={displayError}
           orderTitle={orderTitle}
           setOrderTitle={setOrderTitle}
+          error={error}
+          setError={setError}
         />
       ) : (
         <>
@@ -105,12 +106,15 @@ const BuildOrder = ({ buildOrders }: { buildOrders: BuildOrderInterface[] }) => 
             setIcon={setIcon}
             setSelectedIcon={setSelectedIcon}
             setOrderTitle={setOrderTitle}
+            setError={setError}
             formData={formData}
             orderTitle={orderTitle}
             buildOrder={buildOrder}
             displayError={displayError}
             handleChange={handleChange}
             handleClick={handleClick}
+            initialState={initialState}
+            setFormData={setFormData}
           />
         </>
       )}

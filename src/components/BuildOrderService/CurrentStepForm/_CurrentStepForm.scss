@@ -1,6 +1,105 @@
+@import 'sass/_colors';
+
 .build-order__current-step {
   display: flex;
   justify-content: center;
+
+  input[type='text'] {
+    width: 200px;
+    overflow: auto;
+    padding: 0 5px;
+    font-size: 18px;
+
+    &:focus {
+      outline-color: $darkleather;
+    }
+  }
+
+  .current-step {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    .build-order__icon-selector {
+      display: inline-flex;
+      flex-direction: column;
+      margin: 15px 0;
+
+      input[type='button'].icon-select {
+        white-space: normal;
+        width: 64px;
+        height: 64px;
+        border-radius: 0;
+        padding: 0;
+        margin: 5px;
+      }
+
+      .current-step__selected-icon {
+        position: relative;
+
+        .icon {
+          margin: 5px;
+          cursor: default;
+        }
+
+        > span {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          font-size: 14px;
+          cursor: pointer;
+          bottom: -10px;
+          left: 10px;
+        }
+      }
+    }
+
+    .icon {
+      width: 64px;
+      cursor: pointer;
+      margin: 0 3px;
+    }
+
+    .icon__icons-list {
+      display: flex;
+      flex-flow: column;
+      margin: 10px;
+      order: 2;
+
+      input {
+        display: block;
+        margin: 10px auto;
+      }
+
+      .active-icon {
+        border: 3px solid red;
+      }
+    }
+
+    .current-step__inputs {
+      display: flex;
+      align-items: center;
+      margin-left: 5px;
+    }
+  }
+
+  input[type='button'] {
+    outline: none;
+    background: $darkleather;
+    color: $softyellow;
+    border: 2px solid $softyellow;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    background-image: url(/static/images/dark-leather-texture.png);
+
+    &:hover {
+      background-color: $softyellow;
+      color: white;
+      outline-color: lighten($darkleather, 25%);
+      cursor: pointer;
+    }
+  }
 
   &:not(.step-1) {
     margin: 10px 20px 10px 0;
