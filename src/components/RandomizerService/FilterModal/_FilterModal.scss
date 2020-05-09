@@ -1,0 +1,21 @@
+.filter {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background: sandybrown;
+  font-size: 18px;
+
+  .filter__category {
+    width: 33%;
+    margin: 10px;
+    padding: 5px;
+
+    .category__select-options {
+      button {
+        padding: 5px 10px;
+      }
+    }
+  }
+}
