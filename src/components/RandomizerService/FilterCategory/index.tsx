@@ -5,8 +5,8 @@ const FilterCategory = ({ name, selections, selectChosenCriteria }: any) => {
     <div className='filter__category'>
       <div className='category__title'>{name}</div>
       <div className='category__select-options'>
-        <button>All</button>
-        <button>None</button>
+        <button type='button'>All</button>
+        <button type='button'>None</button>
       </div>
       <div className='category__selections'>
         {selections.map((selection: any) => (

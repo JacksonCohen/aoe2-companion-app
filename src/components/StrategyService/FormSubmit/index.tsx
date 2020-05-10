@@ -78,8 +78,9 @@ const FormSubmit = () => {
       })
         .then(() => {
           resetForm();
+          window.location.reload();
         })
-        .catch((err) => console.error(err));
+        .catch((error) => console.error(error));
     } else {
       setError(true);
     }

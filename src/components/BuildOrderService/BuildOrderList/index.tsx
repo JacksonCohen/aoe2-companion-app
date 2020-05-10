@@ -10,10 +10,10 @@ const BuildOrderList = ({ orders }: { orders: BuildOrderInterface[] }) => {
         // TODO: Fix type
 
         return (
-          <div className='build-order__item' key={index}>
-            <div className='build-order__title'>{orderTitle}</div>
+          <div className='container__item' key={index}>
+            <div className='item__title'>{orderTitle}</div>
             {order.map((step: any, innerIndex: number) => (
-              <div className='build-order__step' key={innerIndex}>
+              <div className='item__step' key={innerIndex}>
                 <img src={step.image} />
                 <div className='step__text'>
                   <div className='step__title'>{step.stepTitle}</div>

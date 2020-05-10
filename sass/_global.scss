@@ -1,3 +1,5 @@
+@import 'sass/_colors';
+
 html,
 body {
   position: relative;
@@ -16,6 +18,13 @@ fieldset {
 *:after,
 *:before {
   box-sizing: border-box;
+}
+.error {
+  border: 1px solid $error !important;
+
+  &:focus {
+    outline: none;
+  }
 }
 .visually-hidden {
   position: absolute;
