@@ -95,7 +95,7 @@ const FormSubmit = () => {
   const resetForm = (): void => {
     setUserInput({
       guideName: '',
-      url: '',
+      source: '',
       type: '',
     });
     setError(false);
@@ -140,8 +140,13 @@ const FormSubmit = () => {
             Select a Type
             <span className={displayError('type') ? '' : 'hide'}>You must select a guide type</span>
             <div className='strategy__type-options'>
-              {['video', 'image', 'other'].map((type) => (
-                <TypeInput value={type} handleChange={handleChange} displayError={displayError} />
+              {['video', 'image', 'other'].map((type, index) => (
+                <TypeInput
+                  key={index}
+                  value={type}
+                  handleChange={handleChange}
+                  displayError={displayError}
+                />
               ))}
             </div>
           </div>

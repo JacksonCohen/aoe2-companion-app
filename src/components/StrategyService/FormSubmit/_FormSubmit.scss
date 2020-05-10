@@ -88,11 +88,15 @@
     }
   }
 
-  .error {
-    border: 1px solid $error !important;
-  }
-
   .hide {
     display: none;
+  }
+}
+
+.error {
+  border: 1px solid $error !important;
+
+  &:focus {
+    outline: none;
   }
 }

@@ -1,17 +1,29 @@
+@import 'sass/_colors';
+
 .build-order__container {
-  margin: 100px 0;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  margin: 75px 0;
+  padding: 75px;
+  border-top: 1px solid $darkleather;
 
   .build-order__item {
-    display: flex;
-    flex-direction: column;
-    max-width: 45%;
+    display: inline-block;
+    min-width: 30%;
+
+    .build-order__title {
+      margin: 10px 0;
+    }
 
     .build-order__step {
       display: flex;
+      margin: 5px 0;
 
       img {
         width: 50px;
         height: 100%;
+        margin: 0 5px;
       }
 
       .step__info {

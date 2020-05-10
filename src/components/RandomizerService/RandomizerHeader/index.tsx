@@ -7,9 +7,15 @@ interface Props {
   sortCivilizations: (method: string) => void;
   selectChosenCriteria: (criteria: string, option: string) => void;
   selectOrClearAll: (checkedValue: boolean) => void;
+  handleFilterClick: () => void;
 }
 
-const RandomizerHeader = ({ sortCivilizations, selectChosenCriteria, selectOrClearAll }: Props) => {
+const RandomizerHeader = ({
+  sortCivilizations,
+  selectChosenCriteria,
+  selectOrClearAll,
+  handleFilterClick,
+}: Props) => {
   // TODO: Implement selection by military type
   // 4 monks
   // 10 infantry
@@ -27,6 +33,9 @@ const RandomizerHeader = ({ sortCivilizations, selectChosenCriteria, selectOrCle
     <div className='randomizer__header'>
       <div className='button__sort-options'>
         <ul className='dropdown'>
+          <li>
+            <button onClick={handleFilterClick}>Filter</button>
+          </li>
           <li>
             <button>Sort &nbsp;▶</button>
             <ul className='sort'>

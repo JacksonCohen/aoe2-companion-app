@@ -1,15 +1,18 @@
+@import 'sass/_colors';
+
 .service__build-order {
   margin: 50px 100px;
 
-  .build-order__input {
-    display: flex;
-    align-items: center;
-  }
-
-  .build-order__delete-step {
+  .delete-step {
     cursor: pointer;
     color: red;
     font-weight: 700;
     padding-left: 3px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .service__randomizer {
+    margin: 10px;
   }
 }
