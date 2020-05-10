@@ -1,9 +1,6 @@
 @import 'sass/_colors';
 
 .build-order__current-step {
-  display: flex;
-  justify-content: center;
-
   input[type='text'] {
     width: 200px;
     overflow: auto;
@@ -16,17 +13,12 @@
   }
 
   .current-step {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-
-    .build-order__icon-selector {
-      display: inline-flex;
-      flex-direction: column;
+    .current-step__icon-selector {
       margin: 15px 0;
 
       input[type='button'].icon-select {
         white-space: normal;
+        font-size: 14px;
         width: 64px;
         height: 64px;
         border-radius: 0;
@@ -34,7 +26,7 @@
         margin: 5px;
       }
 
-      .current-step__selected-icon {
+      .icon-selector__selected-icon {
         position: relative;
 
         .icon {
@@ -43,6 +35,7 @@
         }
 
         > span {
+          color: #3390ff;
           position: absolute;
           display: flex;
           justify-content: center;
@@ -60,7 +53,7 @@
       margin: 0 3px;
     }
 
-    .icon__icons-list {
+    .current-step__icons-list {
       display: flex;
       flex-flow: column;
       margin: 10px;
@@ -76,10 +69,16 @@
       }
     }
 
-    .current-step__inputs {
+    .current-step__form {
       display: flex;
       align-items: center;
+      flex-flow: column;
       margin-left: 5px;
+
+      .form__inputs {
+        display: flex;
+        align-items: center;
+      }
     }
   }
 
@@ -95,7 +94,7 @@
 
     &:hover {
       background-color: $softyellow;
-      color: white;
+      color: $darkleather;
       outline-color: lighten($darkleather, 25%);
       cursor: pointer;
     }
@@ -110,4 +109,39 @@
   display: flex;
   justify-content: center;
   margin: 10px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .icons-list__icons {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+
+    .icon {
+      margin: 3px !important;
+    }
+  }
+
+  .current-step__form {
+    flex-flow: column;
+
+    .current-step__icon-selector {
+      order: 1;
+      margin: 0;
+
+      .icon-select {
+        font-size: 14px;
+      }
+    }
+
+    .current-step__inputs {
+      display: flex;
+      flex-flow: column;
+    }
+
+    .current-step__delete-step {
+      display: flex;
+      order: 2;
+    }
+  }
 }

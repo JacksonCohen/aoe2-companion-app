@@ -38,7 +38,7 @@ const Randomizer = () => {
       ];
       civs!.sort(
         (a: CivilizationInterface, b: CivilizationInterface) =>
-          order.indexOf(a.expansion) - order.indexOf(b.expansion),
+          order.indexOf(a.expansion) - order.indexOf(b.expansion)
       );
       setCivilizations(civs);
     }
@@ -81,7 +81,7 @@ const Randomizer = () => {
 
   const selectCiv = (): void => {
     const validCivs: CivilizationInterface[] = civilizations!.filter(
-      (civ: CivilizationInterface) => civ.checked,
+      (civ: CivilizationInterface) => civ.checked
     );
 
     if (validCivs.length > 0) {
@@ -110,6 +110,7 @@ const Randomizer = () => {
 
       <div className='button__randomizer'>
         <button
+          type='button'
           onClick={() => {
             selectCiv();
             reloadGif(tempGif, setLoadedGif);

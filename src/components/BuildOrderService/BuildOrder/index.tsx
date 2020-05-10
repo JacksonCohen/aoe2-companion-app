@@ -50,7 +50,7 @@ const BuildOrder = ({ buildOrders }: { buildOrders: BuildOrderInterface[] }) => 
 
   const handleChange = (
     event: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
-    stepNumber?: number,
+    stepNumber?: number
   ): void => {
     const { name, value } = event.target;
 

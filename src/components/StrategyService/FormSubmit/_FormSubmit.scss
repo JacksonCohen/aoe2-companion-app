@@ -74,7 +74,7 @@
 
         &:hover {
           background-color: $softyellow;
-          color: white;
+          color: $darkleather;
           outline-color: lighten($darkleather, 25%);
           cursor: pointer;
         }
@@ -90,13 +90,5 @@
 
   .hide {
     display: none;
-  }
-}
-
-.error {
-  border: 1px solid $error !important;
-
-  &:focus {
-    outline: none;
   }
 }

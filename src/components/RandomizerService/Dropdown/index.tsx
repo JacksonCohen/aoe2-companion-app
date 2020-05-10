@@ -27,7 +27,7 @@ const Dropdown = ({ label, options, criteria, callback }: Props) => {
         </li>
       ) : (
         <li>
-          <button onClick={(): void => callback(criteria)}>
+          <button type='button' onClick={(): void => callback(criteria)}>
             <li>{label}</li>
           </button>
         </li>
