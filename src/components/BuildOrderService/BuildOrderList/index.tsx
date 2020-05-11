@@ -6,7 +6,7 @@ import './_BuildOrderList.scss';
 const BuildOrderList = ({ orders }: { orders: BuildOrderInterface[] }) => {
   return (
     <div className='build-order__container'>
-      {orders.map(({ order, orderTitle }: any, index) => {
+      {orders.map(({ order, orderTitle }: any, index: number) => {
         // TODO: Fix type
 
         return (
