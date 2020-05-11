@@ -80,7 +80,7 @@ const FormSubmit = () => {
           resetForm();
           window.location.reload();
         })
-        .catch((error) => console.error(error));
+        .catch((err) => console.error(err));
     } else {
       setError(true);
     }
