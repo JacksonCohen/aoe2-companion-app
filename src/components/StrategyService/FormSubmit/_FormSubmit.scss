@@ -12,7 +12,8 @@
     fieldset {
       margin: 6px 0;
 
-      input[type='text'] {
+      input[type='text'],
+      input[type='file'] {
         width: 300px;
         display: block;
         overflow: auto;
@@ -24,8 +25,50 @@
         }
       }
 
+      .strategy__file-format {
+        .file-format__options {
+          cursor: default;
+          display: inline-block;
+
+          .options__prompt {
+            margin-bottom: 3px;
+          }
+
+          > div,
+          > input {
+            display: block;
+            margin-bottom: 0;
+          }
+
+          input {
+            margin: 0 3px 0 0;
+            padding: 5px 10px;
+          }
+        }
+
+        .options__option {
+          display: flex;
+        }
+
+        .swap {
+          width: 20px;
+          margin: 0 5px;
+        }
+
+        input[type='file'] {
+          padding-left: 0;
+          margin-top: 10px;
+          width: auto;
+        }
+
+        .file-format__image-preview {
+          width: 128px;
+          margin: 10px 0;
+        }
+      }
+
       .strategy__guide-type {
-        cursor: context-menu;
+        cursor: default;
 
         .strategy__video-label {
           border-top-left-radius: 3px;

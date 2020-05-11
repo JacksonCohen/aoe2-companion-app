@@ -10,6 +10,10 @@ interface State {
   type: string;
 }
 
+interface HTMLInputEvent extends Event {
+  target: HTMLInputElement | (HTMLSelectElement & { files: string[] });
+}
+
 const FormSubmit = () => {
   const initialState = {
     guideName: '',
@@ -20,11 +24,25 @@ const FormSubmit = () => {
 
   const [userInput, setUserInput] = useReducer(stateReducer, initialState);
   const [error, setError] = useState(false);
+  const [isURL, setIsURL] = useState<boolean | null>(null);
+  const [imagePreview, setImagePreview] = useState<string | undefined>(undefined);
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>): void => {
-    const { name, value } = event.target;
+  const handleChange = (event: any): void => {
+    const { name, value, files } = event.target;
 
-    setUserInput({ [name]: value });
+    if (files) {
+      const reader = new FileReader();
+      reader.readAsDataURL(files[0]);
+      reader.onload = (ev: any) => {
+        setImagePreview(ev.target.result);
+        setUserInput({ source: reader.result });
+      };
+      reader.onerror = (err) => {
+        console.error(err);
+      };
+    } else {
+      setUserInput({ [name]: value });
+    }
   };
 
   const sendEmail = (): void => {
@@ -115,7 +133,7 @@ const FormSubmit = () => {
             <input
               type='text'
               name='guideName'
-              className={`strategy__text-input${displayError('guideName') ? ' error' : ''}`}
+              className={displayError('guideName') ? 'error' : ''}
               value={userInput.guideName}
               onChange={handleChange}
             />
@@ -123,17 +141,74 @@ const FormSubmit = () => {
         </fieldset>
 
         <fieldset>
-          <label>
-            Guide URL
-            <span className={displayError('source') ? '' : 'hide'}>You must enter a guide URL</span>
-            <input
-              type='text'
-              name='source'
-              className={`strategy__text-input${displayError('source') ? ' error' : ''}`}
-              value={userInput.source}
-              onChange={handleChange}
-            />
-          </label>
+          <div className='strategy__file-format'>
+            {isURL === null ? (
+              <div className='file-format__options'>
+                <div className='options__prompt'>Choose an Upload Format</div>
+                <span className={displayError('source') ? '' : 'hide'}>
+                  You must select an upload format
+                </span>
+                <div className={displayError('source') ? 'error' : ''}>
+                  <input type='button' value='Enter a URL' onClick={() => setIsURL(true)} />
+                  <input type='button' value='Upload a File' onClick={() => setIsURL(false)} />
+                </div>
+              </div>
+            ) : isURL ? (
+              <>
+                <label className='options__option'>
+                  Guide URL{' '}
+                  <img
+                    src='/static/images/swap.png'
+                    className='swap'
+                    onClick={() => {
+                      setIsURL(!isURL);
+                      setUserInput({
+                        source: '',
+                      });
+                    }}
+                  />
+                </label>
+                <span className={displayError('source') ? '' : 'hide'}>
+                  You must enter a guide URL
+                </span>
+                <input
+                  type='text'
+                  name='source'
+                  className={displayError('source') ? 'error' : ''}
+                  value={userInput.source}
+                  onChange={handleChange}
+                />
+              </>
+            ) : (
+              <>
+                <label className='options__option'>
+                  Upload a File{' '}
+                  <img
+                    src='/static/images/swap.png'
+                    className='swap'
+                    onClick={() => {
+                      setIsURL(!isURL);
+                      setImagePreview(undefined);
+                      setUserInput({
+                        source: '',
+                      });
+                    }}
+                  />
+                </label>
+                <span className={displayError('source') ? '' : 'hide'}>You must upload a file</span>
+                <input
+                  type='file'
+                  name='source'
+                  className={`file-input${displayError('source') ? ' error' : ''}`}
+                  onChange={handleChange}
+                />
+                <img
+                  className={`file-format__image-preview ${imagePreview ? '' : 'hide'}`}
+                  src={imagePreview}
+                />
+              </>
+            )}
+          </div>
         </fieldset>
 
         <fieldset>
